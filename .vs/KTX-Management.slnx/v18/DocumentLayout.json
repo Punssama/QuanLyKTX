@@ -1,22 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Administrator\\Desktop\\Code\\WinForm\\KTX-Management\\",
+  "WorkspaceRootPath": "C:\\Users\\Administrator\\Desktop\\Code\\WinForm\\QuanLyKTX\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{74F9E244-D891-2AEA-4155-76A88CE93486}|KTX-Management\\KTX-Management.csproj|C:\\Users\\Administrator\\Desktop\\Code\\WinForm\\KTX-Management\\ktx-management\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{74F9E244-D891-2AEA-4155-76A88CE93486}|KTX-Management\\KTX-Management.csproj|c:\\users\\administrator\\desktop\\code\\winform\\quanlyktx\\ktx-management\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74F9E244-D891-2AEA-4155-76A88CE93486}|KTX-Management\\KTX-Management.csproj|solutionrelative:ktx-management\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74F9E244-D891-2AEA-4155-76A88CE93486}|KTX-Management\\KTX-Management.csproj|c:\\users\\administrator\\desktop\\code\\winform\\quanlyktx\\ktx-management\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{74F9E244-D891-2AEA-4155-76A88CE93486}|KTX-Management\\KTX-Management.csproj|solutionrelative:ktx-management\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{74F9E244-D891-2AEA-4155-76A88CE93486}|KTX-Management\\KTX-Management.csproj|c:\\users\\administrator\\desktop\\code\\winform\\ktx-management\\ktx-management\\registerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{74F9E244-D891-2AEA-4155-76A88CE93486}|KTX-Management\\KTX-Management.csproj|C:\\Users\\Administrator\\Desktop\\Code\\WinForm\\QuanLyKTX\\ktx-management\\registerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{74F9E244-D891-2AEA-4155-76A88CE93486}|KTX-Management\\KTX-Management.csproj|solutionrelative:ktx-management\\registerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{74F9E244-D891-2AEA-4155-76A88CE93486}|KTX-Management\\KTX-Management.csproj|c:\\users\\administrator\\desktop\\code\\winform\\ktx-management\\ktx-management\\registerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{74F9E244-D891-2AEA-4155-76A88CE93486}|KTX-Management\\KTX-Management.csproj|c:\\users\\administrator\\desktop\\code\\winform\\quanlyktx\\ktx-management\\registerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{74F9E244-D891-2AEA-4155-76A88CE93486}|KTX-Management\\KTX-Management.csproj|solutionrelative:ktx-management\\registerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{74F9E244-D891-2AEA-4155-76A88CE93486}|KTX-Management\\KTX-Management.csproj|c:\\users\\administrator\\desktop\\code\\winform\\ktx-management\\ktx-management\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{74F9E244-D891-2AEA-4155-76A88CE93486}|KTX-Management\\KTX-Management.csproj|solutionrelative:ktx-management\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,24 +34,24 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "registerForm.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Code\\WinForm\\KTX-Management\\KTX-Management\\registerForm.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Code\\WinForm\\QuanLyKTX\\KTX-Management\\registerForm.cs",
               "RelativeDocumentMoniker": "KTX-Management\\registerForm.cs",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Code\\WinForm\\KTX-Management\\KTX-Management\\registerForm.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Code\\WinForm\\QuanLyKTX\\KTX-Management\\registerForm.cs",
               "RelativeToolTip": "KTX-Management\\registerForm.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAewBAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-27T10:47:07.354Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "registerForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Code\\WinForm\\KTX-Management\\KTX-Management\\registerForm.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Code\\WinForm\\QuanLyKTX\\KTX-Management\\registerForm.cs",
               "RelativeDocumentMoniker": "KTX-Management\\registerForm.cs",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Code\\WinForm\\KTX-Management\\KTX-Management\\registerForm.cs [Design]",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Code\\WinForm\\QuanLyKTX\\KTX-Management\\registerForm.cs [Design]",
               "RelativeToolTip": "KTX-Management\\registerForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-26T04:25:52.527Z",
@@ -59,11 +59,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "loginForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Code\\WinForm\\KTX-Management\\KTX-Management\\loginForm.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Code\\WinForm\\QuanLyKTX\\KTX-Management\\loginForm.cs",
               "RelativeDocumentMoniker": "KTX-Management\\loginForm.cs",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Code\\WinForm\\KTX-Management\\KTX-Management\\loginForm.cs [Design]",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Code\\WinForm\\QuanLyKTX\\KTX-Management\\loginForm.cs [Design]",
               "RelativeToolTip": "KTX-Management\\loginForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-26T03:39:32.864Z",
@@ -71,15 +71,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "loginForm.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Code\\WinForm\\KTX-Management\\KTX-Management\\loginForm.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Code\\WinForm\\QuanLyKTX\\KTX-Management\\loginForm.cs",
               "RelativeDocumentMoniker": "KTX-Management\\loginForm.cs",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Code\\WinForm\\KTX-Management\\KTX-Management\\loginForm.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Code\\WinForm\\QuanLyKTX\\KTX-Management\\loginForm.cs",
               "RelativeToolTip": "KTX-Management\\loginForm.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAvwA8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAewA0AAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-26T03:50:08.529Z"
+              "WhenOpened": "2026-02-26T03:50:08.529Z",
+              "EditorCaption": ""
             }
           ]
         }
