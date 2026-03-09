@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Administrator\\Desktop\\Code\\WinForm\\KTX-Management\\KTX-Management\\KTX-Management.csproj",
+      "projectUniqueName": "C:\\Users\\Administrator\\Desktop\\Code\\WinForm\\QuanLyKTX\\KTX-Management\\KTX-Management.csproj",
       "projectName": "KTX-Management",
-      "projectPath": "C:\\Users\\Administrator\\Desktop\\Code\\WinForm\\KTX-Management\\KTX-Management\\KTX-Management.csproj",
+      "projectPath": "C:\\Users\\Administrator\\Desktop\\Code\\WinForm\\QuanLyKTX\\KTX-Management\\KTX-Management.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Administrator\\Desktop\\Code\\WinForm\\KTX-Management\\KTX-Management\\obj\\",
+      "outputPath": "C:\\Users\\Administrator\\Desktop\\Code\\WinForm\\QuanLyKTX\\KTX-Management\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

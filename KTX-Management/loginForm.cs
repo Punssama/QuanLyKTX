@@ -11,7 +11,7 @@ namespace KTX_Management
         {
             this.Hide();
             registerForm registerForm = new registerForm();
-            registerForm.Show();
+            registerForm.ShowDialog();
         }
     }
 }
