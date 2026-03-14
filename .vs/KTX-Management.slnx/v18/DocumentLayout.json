@@ -7,16 +7,32 @@
       "RelativeMoniker": "D:0:0:{74F9E244-D891-2AEA-4155-76A88CE93486}|KTX-Management\\KTX-Management.csproj|solutionrelative:ktx-management\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{AC3652B4-7F31-81C1-33E3-CDB6FB02A6C9}|BigProject.API\\BigProject.API.csproj|c:\\users\\administrator\\desktop\\code\\winform\\quanlyktx\\bigproject.api\\controllers\\taikhoancontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC3652B4-7F31-81C1-33E3-CDB6FB02A6C9}|BigProject.API\\BigProject.API.csproj|solutionrelative:bigproject.api\\controllers\\taikhoancontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74F9E244-D891-2AEA-4155-76A88CE93486}|KTX-Management\\KTX-Management.csproj|c:\\users\\administrator\\desktop\\code\\winform\\quanlyktx\\ktx-management\\loginform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74F9E244-D891-2AEA-4155-76A88CE93486}|KTX-Management\\KTX-Management.csproj|solutionrelative:ktx-management\\loginform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{74F9E244-D891-2AEA-4155-76A88CE93486}|KTX-Management\\KTX-Management.csproj|c:\\users\\administrator\\desktop\\code\\winform\\quanlyktx\\ktx-management\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{74F9E244-D891-2AEA-4155-76A88CE93486}|KTX-Management\\KTX-Management.csproj|solutionrelative:ktx-management\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{74F9E244-D891-2AEA-4155-76A88CE93486}|KTX-Management\\KTX-Management.csproj|C:\\Users\\Administrator\\Desktop\\Code\\WinForm\\QuanLyKTX\\ktx-management\\registerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{74F9E244-D891-2AEA-4155-76A88CE93486}|KTX-Management\\KTX-Management.csproj|solutionrelative:ktx-management\\registerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{AC3652B4-7F31-81C1-33E3-CDB6FB02A6C9}|BigProject.API\\BigProject.API.csproj|c:\\users\\administrator\\desktop\\code\\winform\\quanlyktx\\bigproject.api\\dbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC3652B4-7F31-81C1-33E3-CDB6FB02A6C9}|BigProject.API\\BigProject.API.csproj|solutionrelative:bigproject.api\\dbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{74F9E244-D891-2AEA-4155-76A88CE93486}|KTX-Management\\KTX-Management.csproj|c:\\users\\administrator\\desktop\\code\\winform\\quanlyktx\\ktx-management\\registerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{74F9E244-D891-2AEA-4155-76A88CE93486}|KTX-Management\\KTX-Management.csproj|solutionrelative:ktx-management\\registerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AC3652B4-7F31-81C1-33E3-CDB6FB02A6C9}|BigProject.API\\BigProject.API.csproj|c:\\users\\administrator\\desktop\\code\\winform\\quanlyktx\\bigproject.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC3652B4-7F31-81C1-33E3-CDB6FB02A6C9}|BigProject.API\\BigProject.API.csproj|solutionrelative:bigproject.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC3652B4-7F31-81C1-33E3-CDB6FB02A6C9}|BigProject.API\\BigProject.API.csproj|c:\\users\\administrator\\desktop\\code\\winform\\quanlyktx\\bigproject.api\\models\\taikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC3652B4-7F31-81C1-33E3-CDB6FB02A6C9}|BigProject.API\\BigProject.API.csproj|solutionrelative:bigproject.api\\models\\taikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC3652B4-7F31-81C1-33E3-CDB6FB02A6C9}|BigProject.API\\BigProject.API.csproj|c:\\users\\administrator\\desktop\\code\\winform\\quanlyktx\\bigproject.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{AC3652B4-7F31-81C1-33E3-CDB6FB02A6C9}|BigProject.API\\BigProject.API.csproj|solutionrelative:bigproject.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -35,39 +51,40 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "registerForm.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Code\\WinForm\\QuanLyKTX\\KTX-Management\\registerForm.cs",
-              "RelativeDocumentMoniker": "KTX-Management\\registerForm.cs",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Code\\WinForm\\QuanLyKTX\\KTX-Management\\registerForm.cs",
-              "RelativeToolTip": "KTX-Management\\registerForm.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-27T10:47:07.354Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "registerForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Code\\WinForm\\QuanLyKTX\\KTX-Management\\registerForm.cs",
-              "RelativeDocumentMoniker": "KTX-Management\\registerForm.cs",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Code\\WinForm\\QuanLyKTX\\KTX-Management\\registerForm.cs [Design]",
-              "RelativeToolTip": "KTX-Management\\registerForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-26T04:25:52.527Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "loginForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Code\\WinForm\\QuanLyKTX\\KTX-Management\\loginForm.cs",
               "RelativeDocumentMoniker": "KTX-Management\\loginForm.cs",
               "ToolTip": "C:\\Users\\Administrator\\Desktop\\Code\\WinForm\\QuanLyKTX\\KTX-Management\\loginForm.cs [Design]",
               "RelativeToolTip": "KTX-Management\\loginForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-26T03:39:32.864Z",
+              "WhenOpened": "2026-03-14T07:48:36.359Z",
               "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "loginForm.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Code\\WinForm\\QuanLyKTX\\KTX-Management\\loginForm.Designer.cs",
+              "RelativeDocumentMoniker": "KTX-Management\\loginForm.Designer.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Code\\WinForm\\QuanLyKTX\\KTX-Management\\loginForm.Designer.cs",
+              "RelativeToolTip": "KTX-Management\\loginForm.Designer.cs",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAewGcAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-14T07:47:53.371Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TaiKhoanController.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Code\\WinForm\\QuanLyKTX\\BigProject.API\\Controllers\\TaiKhoanController.cs",
+              "RelativeDocumentMoniker": "BigProject.API\\Controllers\\TaiKhoanController.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Code\\WinForm\\QuanLyKTX\\BigProject.API\\Controllers\\TaiKhoanController.cs",
+              "RelativeToolTip": "BigProject.API\\Controllers\\TaiKhoanController.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAswCAAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-14T06:23:05.779Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -77,9 +94,61 @@
               "RelativeDocumentMoniker": "KTX-Management\\loginForm.cs",
               "ToolTip": "C:\\Users\\Administrator\\Desktop\\Code\\WinForm\\QuanLyKTX\\KTX-Management\\loginForm.cs",
               "RelativeToolTip": "KTX-Management\\loginForm.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAewA0AAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAABQAAAAAAAAAAIA2wCcAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-26T03:50:08.529Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Code\\WinForm\\QuanLyKTX\\BigProject.API\\appsettings.json",
+              "RelativeDocumentMoniker": "BigProject.API\\appsettings.json",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Code\\WinForm\\QuanLyKTX\\BigProject.API\\appsettings.json",
+              "RelativeToolTip": "BigProject.API\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAACHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-03-14T06:29:49.967Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "TaiKhoan.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Code\\WinForm\\QuanLyKTX\\BigProject.API\\Models\\TaiKhoan.cs",
+              "RelativeDocumentMoniker": "BigProject.API\\Models\\TaiKhoan.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Code\\WinForm\\QuanLyKTX\\BigProject.API\\Models\\TaiKhoan.cs",
+              "RelativeToolTip": "BigProject.API\\Models\\TaiKhoan.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-14T06:17:04.302Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DBContext.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Code\\WinForm\\QuanLyKTX\\BigProject.API\\DBContext.cs",
+              "RelativeDocumentMoniker": "BigProject.API\\DBContext.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Code\\WinForm\\QuanLyKTX\\BigProject.API\\DBContext.cs",
+              "RelativeToolTip": "BigProject.API\\DBContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-14T06:06:40.168Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Code\\WinForm\\QuanLyKTX\\BigProject.API\\Program.cs",
+              "RelativeDocumentMoniker": "BigProject.API\\Program.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Code\\WinForm\\QuanLyKTX\\BigProject.API\\Program.cs",
+              "RelativeToolTip": "BigProject.API\\Program.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAswAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-14T06:03:06.52Z",
               "EditorCaption": ""
             }
           ]

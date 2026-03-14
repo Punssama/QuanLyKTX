@@ -1,8 +1,24 @@
 {
   "version": 2,
-  "dgSpecHash": "fjsAlsAs4TY=",
+  "dgSpecHash": "k5msBZGPRzM=",
   "success": true,
   "projectFilePath": "C:\\Users\\Administrator\\Desktop\\Code\\WinForm\\QuanLyKTX\\KTX-Management\\KTX-Management.csproj",
-  "expectedPackageFiles": [],
-  "logs": []
+  "expectedPackageFiles": [
+    "C:\\Users\\Administrator\\.nuget\\packages\\newtonsoft.json\\13.0.4\\newtonsoft.json.13.0.4.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\system.text.json\\10.0.5\\system.text.json.10.0.5.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1510",
+      "level": "Warning",
+      "message": "PackageReference System.Text.Json will not be pruned. Consider removing this package from your dependencies, as it is likely unnecessary.",
+      "projectPath": "C:\\Users\\Administrator\\Desktop\\Code\\WinForm\\QuanLyKTX\\KTX-Management\\KTX-Management.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\Administrator\\Desktop\\Code\\WinForm\\QuanLyKTX\\KTX-Management\\KTX-Management.csproj",
+      "libraryId": "System.Text.Json",
+      "targetGraphs": [
+        "net10.0-windows7.0"
+      ]
+    }
+  ]
 }

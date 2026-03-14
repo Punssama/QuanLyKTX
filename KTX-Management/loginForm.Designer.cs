@@ -31,15 +31,15 @@
             LoginTopPanel = new Panel();
             LoginTitleLabel = new Label();
             LoginMidPanel = new Panel();
+            ForgetPassWordLb = new LinkLabel();
             LoginBtn = new Button();
             signUpLinkLb = new LinkLabel();
-            textBox2 = new TextBox();
-            textBox1 = new TextBox();
+            MatKhauTb = new TextBox();
+            TenDangNhaptb = new TextBox();
             LoginPasswordLabel = new Label();
             LoginAccountNameLabel = new Label();
             LoginBotPanel = new Panel();
             sloganLb = new Label();
-            ForgetPassWordLb = new LinkLabel();
             LoginTopPanel.SuspendLayout();
             LoginMidPanel.SuspendLayout();
             LoginBotPanel.SuspendLayout();
@@ -71,8 +71,8 @@
             LoginMidPanel.Controls.Add(ForgetPassWordLb);
             LoginMidPanel.Controls.Add(LoginBtn);
             LoginMidPanel.Controls.Add(signUpLinkLb);
-            LoginMidPanel.Controls.Add(textBox2);
-            LoginMidPanel.Controls.Add(textBox1);
+            LoginMidPanel.Controls.Add(MatKhauTb);
+            LoginMidPanel.Controls.Add(TenDangNhaptb);
             LoginMidPanel.Controls.Add(LoginPasswordLabel);
             LoginMidPanel.Controls.Add(LoginAccountNameLabel);
             LoginMidPanel.Dock = DockStyle.Fill;
@@ -80,6 +80,16 @@
             LoginMidPanel.Name = "LoginMidPanel";
             LoginMidPanel.Size = new Size(882, 337);
             LoginMidPanel.TabIndex = 1;
+            // 
+            // ForgetPassWordLb
+            // 
+            ForgetPassWordLb.AutoSize = true;
+            ForgetPassWordLb.Location = new Point(629, 121);
+            ForgetPassWordLb.Name = "ForgetPassWordLb";
+            ForgetPassWordLb.Size = new Size(109, 20);
+            ForgetPassWordLb.TabIndex = 6;
+            ForgetPassWordLb.TabStop = true;
+            ForgetPassWordLb.Text = "Quên mật khẩu";
             // 
             // LoginBtn
             // 
@@ -91,6 +101,7 @@
             LoginBtn.TabIndex = 5;
             LoginBtn.Text = "Đăng nhập";
             LoginBtn.UseVisualStyleBackColor = true;
+            LoginBtn.Click += LoginBtn_Click;
             // 
             // signUpLinkLb
             // 
@@ -105,24 +116,24 @@
             signUpLinkLb.Text = "Đăng ký";
             signUpLinkLb.LinkClicked += signUpLinkLb_LinkClicked;
             // 
-            // textBox2
+            // MatKhauTb
             // 
-            textBox2.Anchor = AnchorStyles.None;
-            textBox2.Font = new Font("Montserrat", 13.1999989F);
-            textBox2.Location = new Point(351, 107);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(272, 34);
-            textBox2.TabIndex = 3;
-            textBox2.UseSystemPasswordChar = true;
+            MatKhauTb.Anchor = AnchorStyles.None;
+            MatKhauTb.Font = new Font("Montserrat", 13.1999989F);
+            MatKhauTb.Location = new Point(351, 107);
+            MatKhauTb.Name = "MatKhauTb";
+            MatKhauTb.Size = new Size(272, 34);
+            MatKhauTb.TabIndex = 3;
+            MatKhauTb.UseSystemPasswordChar = true;
             // 
-            // textBox1
+            // TenDangNhaptb
             // 
-            textBox1.Anchor = AnchorStyles.None;
-            textBox1.Font = new Font("Montserrat", 13.1999989F);
-            textBox1.Location = new Point(351, 52);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(272, 34);
-            textBox1.TabIndex = 2;
+            TenDangNhaptb.Anchor = AnchorStyles.None;
+            TenDangNhaptb.Font = new Font("Montserrat", 13.1999989F);
+            TenDangNhaptb.Location = new Point(351, 52);
+            TenDangNhaptb.Name = "TenDangNhaptb";
+            TenDangNhaptb.Size = new Size(272, 34);
+            TenDangNhaptb.TabIndex = 2;
             // 
             // LoginPasswordLabel
             // 
@@ -167,16 +178,6 @@
             sloganLb.TabIndex = 0;
             sloganLb.Text = "Manage everything at ease!";
             // 
-            // ForgetPassWordLb
-            // 
-            ForgetPassWordLb.AutoSize = true;
-            ForgetPassWordLb.Location = new Point(629, 121);
-            ForgetPassWordLb.Name = "ForgetPassWordLb";
-            ForgetPassWordLb.Size = new Size(109, 20);
-            ForgetPassWordLb.TabIndex = 6;
-            ForgetPassWordLb.TabStop = true;
-            ForgetPassWordLb.Text = "Quên mật khẩu";
-            // 
             // loginForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -206,8 +207,8 @@
         private Label LoginTitleLabel;
         private Panel LoginMidPanel;
         private LinkLabel signUpLinkLb;
-        private TextBox textBox2;
-        private TextBox textBox1;
+        private TextBox MatKhauTb;
+        private TextBox TenDangNhaptb;
         private Label LoginPasswordLabel;
         private Label LoginAccountNameLabel;
         private Panel LoginBotPanel;
