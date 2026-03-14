@@ -44,7 +44,7 @@ namespace KTX_Management
                     }
                     else
                     {
-                        MessageBox.Show("failed!");
+                        MessageBox.Show("failedddd!");
                     }
 
                 }
