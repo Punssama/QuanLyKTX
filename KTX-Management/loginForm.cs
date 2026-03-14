@@ -44,7 +44,7 @@ namespace KTX_Management
                     }
                     else
                     {
-                        MessageBox.Show("Dang nhap that bai!");
+                        MessageBox.Show("Dang nhap that baiiiii!");
                     }
 
                 }
