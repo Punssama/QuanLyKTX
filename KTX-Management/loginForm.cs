@@ -1,39 +1,59 @@
-using System;
-using System.Data.SqlClient;
-
-namespace QuanLyKTX
+using System.Net.Http;
+using System.Net.Http.Json;
+using System.Threading.Tasks;
+namespace KTX_Management
 {
-    public class StudentService
+    public partial class loginForm : Form
     {
-        // SMELL: Tên biến không theo chuẩn camelCase, chứa số vô nghĩa
-        private string string1 = "connection_string_here";
 
-        public void ProcessStudent(string studentId)
+        public loginForm()
         {
-            // VULNERABILITY: SQL Injection cực kỳ nguy hiểm (Cộng chuỗi trực tiếp)
-            string query = "SELECT * FROM Students WHERE Id = '" + studentId + "'";
-
-            try
-            {
-                // BUG: Sử dụng đối tượng mà không khởi tạo (Potential NullReference)
-                SqlConnection conn = null;
-                conn.Open();
-
-                // SMELL: Khai báo biến mà không bao giờ dùng đến
-                int temporaryValue = 100;
-
-                Console.WriteLine("Executing: " + query);
-            }
-            catch (Exception ex)
-            {
-                // SMELL: Nuốt chửng ngoại lệ (Empty catch block) - Cực kỳ độc hại khi debug
-            }
+            InitializeComponent();
         }
 
-        // SMELL: Hàm quá đơn giản hoặc vô dụng (Dead code)
-        public int Add(int a, int b)
+        private void signUpLinkLb_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            return a + b;
+            this.Hide();
+            registerForm registerForm = new registerForm();
+            registerForm.ShowDialog();
+        }
+
+        private async void LoginBtn_Click(object sender, EventArgs e)
+        {
+
+            ThemTaiKhoan themtaikhoan = new ThemTaiKhoan();
+            var taikhoan = new
+            {
+                TenDangNhap = TenDangNhaptb.Text,
+                MatKhau = MatKhauTb.Text
+            };
+            using (HttpClient client = new HttpClient())
+            {
+                try
+                {
+                    string url = "http://localhost:5294/api/TaiKhoan/dangnhap";
+                    var response = await client.PostAsJsonAsync(url, taikhoan);
+                    if (response.IsSuccessStatusCode)
+                    {
+                        string result = await response.Content.ReadAsStringAsync();
+                        MessageBox.Show("successful action!" + result, "Thong bao");
+                        themtaikhoan.ShowDialog();
+                        this.Dispose();
+                      
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("failedddddddddddđ!");
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
+            }
+
         }
     }
 }
