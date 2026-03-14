@@ -12,7 +12,7 @@ builder.Services.AddDbContext<DBContext>(options =>
 builder.Services.AddControllers();
 
 var app = builder.Build();
-app.MapGet("/", () => "Hello Worlddddđ!");
+app.MapGet("/", () => "Hello Worlddddđđ!");
 app.UseRouting();
 app.MapControllers();
 app.Run();
