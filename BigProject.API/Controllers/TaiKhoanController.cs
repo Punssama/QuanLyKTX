@@ -51,7 +51,7 @@ namespace BigProject.API.Controllers
             }
             else
             {
-                return BadRequest("Tạo tài khoản thất bại, tên người dùng đã tồn tại!");
+                return BadRequest("Tạo tài khoản thất bại, tên người dùng đã tồn tại");
             }
         }
         [HttpDelete("xoataikhoan/{id}")]
