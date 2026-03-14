@@ -124,6 +124,7 @@
             MatKhauTb.Name = "MatKhauTb";
             MatKhauTb.Size = new Size(272, 34);
             MatKhauTb.TabIndex = 3;
+            MatKhauTb.Text = "12345";
             MatKhauTb.UseSystemPasswordChar = true;
             // 
             // TenDangNhaptb
@@ -134,6 +135,7 @@
             TenDangNhaptb.Name = "TenDangNhaptb";
             TenDangNhaptb.Size = new Size(272, 34);
             TenDangNhaptb.TabIndex = 2;
+            TenDangNhaptb.Text = "PhongDang";
             // 
             // LoginPasswordLabel
             // 

@@ -1,0 +1,14 @@
+$kind: http-request
+name: Login
+url: "{{baseUrl}}/api/TaiKhoan/dangnhap"
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"TenDangNhap\":\"PhongDang\",\r
+
+    \    \"MatKhau\":\"12345\"\r
+
+    }"
+order: 4259133527927124

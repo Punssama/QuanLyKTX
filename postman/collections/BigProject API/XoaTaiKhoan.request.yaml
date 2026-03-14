@@ -1,0 +1,5 @@
+$kind: http-request
+name: XoaTaiKhoan
+url: "{{baseUrl}}/api/TaiKhoan/xoataikhoan/15"
+method: DELETE
+order: 3912761494995074

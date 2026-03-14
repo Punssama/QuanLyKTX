@@ -1,0 +1,16 @@
+$kind: http-request
+name: themtaikhoan
+url: "{{baseUrl}}/api/TaiKhoan/themtaikhoan"
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"id\":120,\r
+
+    \    \"TenDangNhap\":\"PhongDan\",\r
+
+    \    \"MatKhau\":\"12345\"\r
+
+    }"
+order: 4349614196351183

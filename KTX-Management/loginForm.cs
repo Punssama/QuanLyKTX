@@ -21,7 +21,7 @@ namespace KTX_Management
         private async void LoginBtn_Click(object sender, EventArgs e)
         {
 
-            registerForm registerForm = new registerForm();
+            ThemTaiKhoan themtaikhoan = new ThemTaiKhoan();
             var taikhoan = new
             {
                 TenDangNhap = TenDangNhaptb.Text,
@@ -37,7 +37,7 @@ namespace KTX_Management
                     {
                         string result = await response.Content.ReadAsStringAsync();
                         MessageBox.Show("Dang nhap thanh cong!" + result, "Thong bao");
-                        registerForm.ShowDialog();
+                        themtaikhoan.ShowDialog();
                         this.Dispose();
                       
 
