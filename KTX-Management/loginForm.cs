@@ -36,7 +36,7 @@ namespace KTX_Management
                     if (response.IsSuccessStatusCode)
                     {
                         string result = await response.Content.ReadAsStringAsync();
-                        MessageBox.Show("successful action!" + result, "Thong bao");
+                        MessageBox.Show("successful!" + result, "Thong bao");
                         themtaikhoan.ShowDialog();
                         this.Dispose();
                       
