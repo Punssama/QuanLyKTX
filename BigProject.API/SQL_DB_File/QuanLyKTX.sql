@@ -14,3 +14,7 @@ CREATE TABLE TAIKHOAN
 INSERT INTO TAIKHOAN VALUES
 (1,'PhongDang','12345'),
 (2,'DuyenTran','12345')
+
+select * from TAIKHOAN
+
+update TAIKHOAN set QUYEN = 'admin' where id = '12'
