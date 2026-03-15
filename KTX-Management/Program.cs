@@ -1,5 +1,6 @@
 namespace KTX_Management
 {
+    // test git
     internal static class Program
     {
         /// <summary>
