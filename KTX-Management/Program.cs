@@ -1,6 +1,6 @@
 namespace KTX_Management
 {
-    // test git
+    // abc123
     internal static class Program
     {
         /// <summary>
