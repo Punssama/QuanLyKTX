@@ -2,6 +2,8 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using BigProject.API.Models;
+using BigProject.API.Services;
+using BigProject.API.DTOs;
 
 namespace BigProject.API.Controllers
 {
@@ -9,21 +11,24 @@ namespace BigProject.API.Controllers
     [ApiController]
     public class TaiKhoanController : ControllerBase
     {
-        private readonly DBContext _context;
-        public TaiKhoanController(DBContext context)
+        private readonly ITaiKhoanServices _taiKhoanServices;
+
+        public TaiKhoanController(ITaiKhoanServices taiKhoanServices)
         {
-            _context = context;
+            _taiKhoanServices = taiKhoanServices;
         }
+
         [HttpGet]
         public async Task<ActionResult<IEnumerable<TaiKhoan>>> GetTaiKhoan()
         {
-            return await _context.TaiKhoans.ToListAsync();
+            var taiKhoans = await _taiKhoanServices.GetTaiKhoansAsync();
+            return Ok(taiKhoans);
         }
 
         [HttpPost("dangnhap")]
-        public async Task<IActionResult> Login([FromBody] LoginRequest request)
+        public async Task<IActionResult> Login([FromBody] LoginRequestDto request)
         {
-            var taikhoan = await _context.TaiKhoans.FirstOrDefaultAsync(t => t.TenDangNhap == request.TenDangNhap && t.MatKhau == request.MatKhau);
+            var taikhoan = await _taiKhoanServices.LoginAsync(request.TenDangNhap, request.MatKhau);
 
             if (taikhoan == null)
             {
@@ -33,11 +38,23 @@ namespace BigProject.API.Controllers
             return Ok(taikhoan);
         }
 
-    }
+        [HttpPost("themtaikhoan")]
+        public async Task<IActionResult> CreateAccount([FromBody] CreatedAccountDto request)
+        {
+            var taikhoan = await _taiKhoanServices.CreateAccountAsync(request);
+            return Ok(taikhoan);
+        }
 
-    public class LoginRequest
-    {
-        public string TenDangNhap { get; set; }
-        public string MatKhau { get; set; }
+        [HttpDelete("xoataikhoan/{id}")]
+        public async Task<IActionResult> DeleteAccount([FromRoute] int id)
+        {
+            var taikhoan = await _taiKhoanServices.DeleteAccountAsync(id);
+            if (taikhoan == null)
+            {
+                return NotFound("Account not found.");
+            }
+
+            return Ok("Deleted successfully.");
+        }
     }
 }
