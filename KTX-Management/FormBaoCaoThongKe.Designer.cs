@@ -161,7 +161,7 @@
             button9.Name = "button9";
             button9.Size = new Size(65, 34);
             button9.TabIndex = 3;
-            button9.Text = "Hoàn tác";
+            button9.Text = "Làm mới";
             toolTip1.SetToolTip(button9, "Hủy lọc dữ liệu");
             button9.UseVisualStyleBackColor = true;
             // 
@@ -229,7 +229,7 @@
             btHoanTac.Name = "btHoanTac";
             btHoanTac.Size = new Size(65, 34);
             btHoanTac.TabIndex = 2;
-            btHoanTac.Text = "Hoàn tác";
+            btHoanTac.Text = "Làm mới";
             toolTip1.SetToolTip(btHoanTac, "Hủy lọc dữ liệu");
             btHoanTac.UseVisualStyleBackColor = true;
             // 
