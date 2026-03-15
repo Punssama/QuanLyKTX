@@ -13,5 +13,20 @@ namespace KTX_Management
             registerForm registerForm = new registerForm();
             registerForm.ShowDialog();
         }
+
+        private void LoginAccountNameLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LoginTitleLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LoginTopPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
