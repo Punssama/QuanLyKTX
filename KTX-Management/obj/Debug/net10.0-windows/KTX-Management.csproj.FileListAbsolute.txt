@@ -37,6 +37,7 @@ C:\Users\Administrator\Desktop\Code\WinForm\QuanLyKTX\KTX-Management\obj\Debug\n
 C:\Users\Administrator\Desktop\Code\WinForm\QuanLyKTX\KTX-Management\obj\Debug\net10.0-windows\KTX-Management.csproj.AssemblyReference.cache
 C:\Users\Administrator\Desktop\Code\WinForm\QuanLyKTX\KTX-Management\bin\Debug\net10.0-windows\Newtonsoft.Json.dll
 C:\Users\Administrator\Desktop\Code\WinForm\QuanLyKTX\KTX-Management\obj\Debug\net10.0-windows\KTX-Mana.64FC0ED4.Up2Date
+<<<<<<< HEAD
 C:\Users\the lam\Desktop\QuanLyKTX\KTX-Management\bin\Debug\net10.0-windows\KTX-Management.exe
 C:\Users\the lam\Desktop\QuanLyKTX\KTX-Management\bin\Debug\net10.0-windows\KTX-Management.deps.json
 C:\Users\the lam\Desktop\QuanLyKTX\KTX-Management\bin\Debug\net10.0-windows\KTX-Management.runtimeconfig.json
@@ -59,3 +60,11 @@ C:\Users\the lam\Desktop\QuanLyKTX\KTX-Management\obj\Debug\net10.0-windows\refi
 C:\Users\the lam\Desktop\QuanLyKTX\KTX-Management\obj\Debug\net10.0-windows\KTX-Management.pdb
 C:\Users\the lam\Desktop\QuanLyKTX\KTX-Management\obj\Debug\net10.0-windows\KTX-Management.genruntimeconfig.cache
 C:\Users\the lam\Desktop\QuanLyKTX\KTX-Management\obj\Debug\net10.0-windows\ref\KTX-Management.dll
+=======
+C:\Users\Administrator\Desktop\Code\WinForm\QuanLyKTX\KTX-Management\obj\Debug\net10.0-windows\KTX_Management.ThemTaiKhoan.resources
+C:\Users\Administrator\Desktop\Code\WinForm\QuanLyKTX\KTX-Management\obj\Debug\net10.0-windows\KTX_Management.MainForm.resources
+>>>>>>> 81bb86379363751b6755fff5731919d50010a2ef
+C:\Users\the lam\Desktop\QuanLyKTX\KTX-Management\obj\Debug\net10.0-windows\KTX_Management.MainForm.resources
+C:\Users\the lam\Desktop\QuanLyKTX\KTX-Management\obj\Debug\net10.0-windows\KTX_Management.ThemTaiKhoan.resources
+C:\Users\the lam\Desktop\QuanLyKTX\KTX-Management\bin\Debug\net10.0-windows\WinForms.DataVisualization.Utilities.dll
+C:\Users\the lam\Desktop\QuanLyKTX\KTX-Management\bin\Debug\net10.0-windows\WinForms.DataVisualization.dll

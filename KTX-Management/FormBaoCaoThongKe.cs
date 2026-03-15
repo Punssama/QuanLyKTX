@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization;
 
 namespace KTX_Management
 {
@@ -25,11 +26,6 @@ namespace KTX_Management
             tcBaoCaoThongKe.SelectedTab = tpThongKeDoanhThu;
         }
 
-        private void btThongKePhanAnh_Click(object sender, EventArgs e)
-        {
-            tcBaoCaoThongKe.SelectedTab = tpThongKePhanAnh;
-        }
-
         private void btLocSVPhong_Click(object sender, EventArgs e)
         {
             pnThongKeSVPhong.Visible = !pnThongKeSVPhong.Visible;
@@ -40,16 +36,10 @@ namespace KTX_Management
             pnThongKeDoanhThu.Visible = !pnThongKeDoanhThu.Visible;
         }
 
-        private void btLocPhanAnh_Click(object sender, EventArgs e)
-        {
-            pnThongKePhanAnh.Visible = !pnThongKePhanAnh.Visible;
-        }
-
         private void tcBaoCaoThongKe_SelectedIndexChanged(object sender, EventArgs e)
         {
             pnThongKeSVPhong.Visible = false;
             pnThongKeDoanhThu.Visible = false;
-            pnThongKePhanAnh.Visible = false;
         }
 
         private void btQuayVeTrangChu_Click(object sender, EventArgs e)
