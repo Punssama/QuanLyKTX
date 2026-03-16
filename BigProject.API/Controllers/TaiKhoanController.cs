@@ -22,7 +22,14 @@ namespace BigProject.API.Controllers
         public async Task<ActionResult<IEnumerable<TaiKhoan>>> GetTaiKhoan()
         {
             var taiKhoans = await _taiKhoanServices.GetTaiKhoansAsync();
-            return Ok(taiKhoans);
+            if (taiKhoans == null)
+            {
+                return BadRequest("ERROR!, CANT GET YOUR ACCOUNTS");
+            }
+            else
+            {
+                return Ok(taiKhoans);
+            }
         }
 
         [HttpPost("dangnhap")]
