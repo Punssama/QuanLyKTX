@@ -54,7 +54,7 @@ namespace BigProject.API.Controllers
                 return NotFound("Account not found!");
             }
 
-            return Ok("Deleted successfully.");
+            return Ok("Deleted successfully!!!!!");
         }
     }
 }
