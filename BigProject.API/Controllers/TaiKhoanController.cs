@@ -51,10 +51,10 @@ namespace BigProject.API.Controllers
             var taikhoan = await _taiKhoanServices.DeleteAccountAsync(id);
             if (taikhoan == null)
             {
-                return NotFound("Account not found.");
+                return NotFound("Account not found!");
             }
 
-            return Ok("Deleted successfully!!!!!");
+            return Ok("Deleted successfully!");
         }
     }
 }

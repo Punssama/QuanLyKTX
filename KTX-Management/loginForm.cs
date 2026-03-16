@@ -31,12 +31,12 @@ namespace KTX_Management
             {
                 try
                 {
-                    string url = "http://localhost:5294/api/TaiKhoan/dangnhap";
+                    string url = " https://mustily-noncharacterized-niko.ngrok-free.dev/api/TaiKhoan/dangnhap";
                     var response = await client.PostAsJsonAsync(url, taikhoan);
                     if (response.IsSuccessStatusCode)
                     {
                         string result = await response.Content.ReadAsStringAsync();
-                        MessageBox.Show("successful action!" + result, "Thong bao");
+                        MessageBox.Show("successful!" + result, "Thong bao");
                         themtaikhoan.ShowDialog();
                         this.Dispose();
                       
@@ -44,7 +44,7 @@ namespace KTX_Management
                     }
                     else
                     {
-                        MessageBox.Show("failedddddddddddđ!");
+                        MessageBox.Show("failed!");
                     }
 
                 }
