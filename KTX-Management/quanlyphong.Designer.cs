@@ -30,6 +30,8 @@
         {
             components = new System.ComponentModel.Container();
             splitContainer1 = new SplitContainer();
+            button4 = new Button();
+            textBox4 = new TextBox();
             button3 = new Button();
             comboBox4 = new ComboBox();
             label7 = new Label();
@@ -37,17 +39,17 @@
             button1 = new Button();
             button2 = new Button();
             splitContainer2 = new SplitContainer();
-            comboBox3 = new ComboBox();
-            comboBox2 = new ComboBox();
+            txtTrangThai = new TextBox();
+            cboLoaiPhong = new ComboBox();
             label6 = new Label();
             label5 = new Label();
-            comboBox1 = new ComboBox();
+            cboSucChua = new ComboBox();
             label4 = new Label();
-            textBox3 = new TextBox();
+            txtSoNguoi = new TextBox();
             label3 = new Label();
-            textBox2 = new TextBox();
+            txtTenPhong = new TextBox();
             label2 = new Label();
-            textBox1 = new TextBox();
+            txtMaPhong = new TextBox();
             label1 = new Label();
             dataGridView1 = new DataGridView();
             Column1 = new DataGridViewTextBoxColumn();
@@ -77,6 +79,8 @@
             // 
             // splitContainer1.Panel1
             // 
+            splitContainer1.Panel1.Controls.Add(button4);
+            splitContainer1.Panel1.Controls.Add(textBox4);
             splitContainer1.Panel1.Controls.Add(button3);
             splitContainer1.Panel1.Controls.Add(comboBox4);
             splitContainer1.Panel1.Controls.Add(label7);
@@ -87,9 +91,25 @@
             // splitContainer1.Panel2
             // 
             splitContainer1.Panel2.Controls.Add(splitContainer2);
-            splitContainer1.Size = new Size(1260, 640);
+            splitContainer1.Size = new Size(1293, 640);
             splitContainer1.SplitterDistance = 166;
             splitContainer1.TabIndex = 0;
+            // 
+            // button4
+            // 
+            button4.Location = new Point(1141, 62);
+            button4.Name = "button4";
+            button4.Size = new Size(112, 34);
+            button4.TabIndex = 7;
+            button4.Text = "Tìm kiếm";
+            button4.UseVisualStyleBackColor = true;
+            // 
+            // textBox4
+            // 
+            textBox4.Location = new Point(929, 65);
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(182, 31);
+            textBox4.TabIndex = 6;
             // 
             // button3
             // 
@@ -99,11 +119,13 @@
             button3.TabIndex = 5;
             button3.Text = "<- Thoát";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // comboBox4
             // 
             comboBox4.FormattingEnabled = true;
-            comboBox4.Location = new Point(929, 125);
+            comboBox4.Items.AddRange(new object[] { "Mã phòng", "Tên phòng", "Loại phòng", "Số người" });
+            comboBox4.Location = new Point(929, 120);
             comboBox4.Name = "comboBox4";
             comboBox4.Size = new Size(182, 33);
             comboBox4.TabIndex = 4;
@@ -111,7 +133,7 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(839, 128);
+            label7.Location = new Point(839, 71);
             label7.Name = "label7";
             label7.Size = new Size(84, 25);
             label7.TabIndex = 3;
@@ -154,44 +176,43 @@
             // 
             // splitContainer2.Panel1
             // 
-            splitContainer2.Panel1.Controls.Add(comboBox3);
-            splitContainer2.Panel1.Controls.Add(comboBox2);
+            splitContainer2.Panel1.Controls.Add(txtTrangThai);
+            splitContainer2.Panel1.Controls.Add(cboLoaiPhong);
             splitContainer2.Panel1.Controls.Add(label6);
             splitContainer2.Panel1.Controls.Add(label5);
-            splitContainer2.Panel1.Controls.Add(comboBox1);
+            splitContainer2.Panel1.Controls.Add(cboSucChua);
             splitContainer2.Panel1.Controls.Add(label4);
-            splitContainer2.Panel1.Controls.Add(textBox3);
+            splitContainer2.Panel1.Controls.Add(txtSoNguoi);
             splitContainer2.Panel1.Controls.Add(label3);
-            splitContainer2.Panel1.Controls.Add(textBox2);
+            splitContainer2.Panel1.Controls.Add(txtTenPhong);
             splitContainer2.Panel1.Controls.Add(label2);
-            splitContainer2.Panel1.Controls.Add(textBox1);
+            splitContainer2.Panel1.Controls.Add(txtMaPhong);
             splitContainer2.Panel1.Controls.Add(label1);
             splitContainer2.Panel1.Paint += splitContainer2_Panel1_Paint;
             // 
             // splitContainer2.Panel2
             // 
             splitContainer2.Panel2.Controls.Add(dataGridView1);
-            splitContainer2.Size = new Size(1260, 470);
-            splitContainer2.SplitterDistance = 357;
+            splitContainer2.Size = new Size(1293, 470);
+            splitContainer2.SplitterDistance = 366;
             splitContainer2.TabIndex = 0;
             // 
-            // comboBox3
+            // txtTrangThai
             // 
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Items.AddRange(new object[] { "Còn", "Trống" });
-            comboBox3.Location = new Point(120, 385);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(182, 33);
-            comboBox3.TabIndex = 11;
+            txtTrangThai.Location = new Point(120, 385);
+            txtTrangThai.Name = "txtTrangThai";
+            txtTrangThai.ReadOnly = true;
+            txtTrangThai.Size = new Size(182, 31);
+            txtTrangThai.TabIndex = 11;
             // 
-            // comboBox2
+            // cboLoaiPhong
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Items.AddRange(new object[] { "Nam", "Nữ" });
-            comboBox2.Location = new Point(120, 318);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(182, 33);
-            comboBox2.TabIndex = 10;
+            cboLoaiPhong.FormattingEnabled = true;
+            cboLoaiPhong.Items.AddRange(new object[] { "Nam", "Nữ" });
+            cboLoaiPhong.Location = new Point(120, 318);
+            cboLoaiPhong.Name = "cboLoaiPhong";
+            cboLoaiPhong.Size = new Size(182, 33);
+            cboLoaiPhong.TabIndex = 10;
             // 
             // label6
             // 
@@ -212,29 +233,32 @@
             label5.TabIndex = 8;
             label5.Text = "Loại phòng";
             // 
-            // comboBox1
+            // cboSucChua
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(120, 250);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(182, 33);
-            comboBox1.TabIndex = 7;
+            cboSucChua.FormattingEnabled = true;
+            cboSucChua.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8" });
+            cboSucChua.Location = new Point(120, 250);
+            cboSucChua.Name = "cboSucChua";
+            cboSucChua.Size = new Size(182, 33);
+            cboSucChua.TabIndex = 7;
+            cboSucChua.SelectedIndexChanged += cboSucChua_SelectedIndexChanged;
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(19, 171);
+            label4.Location = new Point(12, 171);
             label4.Name = "label4";
-            label4.Size = new Size(95, 25);
+            label4.Size = new Size(85, 25);
             label4.TabIndex = 6;
-            label4.Text = "Giá phòng";
+            label4.Text = "Số người";
             // 
-            // textBox3
+            // txtSoNguoi
             // 
-            textBox3.Location = new Point(120, 165);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(150, 31);
-            textBox3.TabIndex = 5;
+            txtSoNguoi.Location = new Point(120, 165);
+            txtSoNguoi.Name = "txtSoNguoi";
+            txtSoNguoi.Size = new Size(182, 31);
+            txtSoNguoi.TabIndex = 5;
+            txtSoNguoi.Leave += txtSoNguoi_Leave;
             // 
             // label3
             // 
@@ -245,12 +269,12 @@
             label3.TabIndex = 4;
             label3.Text = "Sức chứa";
             // 
-            // textBox2
+            // txtTenPhong
             // 
-            textBox2.Location = new Point(120, 101);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(150, 31);
-            textBox2.TabIndex = 3;
+            txtTenPhong.Location = new Point(120, 101);
+            txtTenPhong.Name = "txtTenPhong";
+            txtTenPhong.Size = new Size(182, 31);
+            txtTenPhong.TabIndex = 3;
             // 
             // label2
             // 
@@ -261,12 +285,12 @@
             label2.TabIndex = 2;
             label2.Text = "Tên phòng";
             // 
-            // textBox1
+            // txtMaPhong
             // 
-            textBox1.Location = new Point(120, 30);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(150, 31);
-            textBox1.TabIndex = 1;
+            txtMaPhong.Location = new Point(120, 30);
+            txtMaPhong.Name = "txtMaPhong";
+            txtMaPhong.Size = new Size(182, 31);
+            txtMaPhong.TabIndex = 1;
             // 
             // label1
             // 
@@ -285,12 +309,13 @@
             dataGridView1.Location = new Point(0, 0);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.Size = new Size(899, 470);
+            dataGridView1.Size = new Size(923, 470);
             dataGridView1.TabIndex = 0;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // Column1
             // 
+            Column1.DataPropertyName = "maPhong";
             Column1.HeaderText = "Mã phòng";
             Column1.MinimumWidth = 8;
             Column1.Name = "Column1";
@@ -298,6 +323,7 @@
             // 
             // Column2
             // 
+            Column2.DataPropertyName = "tenPhong";
             Column2.HeaderText = "Tên phòng";
             Column2.MinimumWidth = 8;
             Column2.Name = "Column2";
@@ -305,6 +331,7 @@
             // 
             // Column3
             // 
+            Column3.DataPropertyName = "loaiPhong";
             Column3.HeaderText = "Loại phòng";
             Column3.MinimumWidth = 8;
             Column3.Name = "Column3";
@@ -312,6 +339,7 @@
             // 
             // Column4
             // 
+            Column4.DataPropertyName = "sucChua";
             Column4.HeaderText = "Sức chứa";
             Column4.MinimumWidth = 8;
             Column4.Name = "Column4";
@@ -319,6 +347,7 @@
             // 
             // Column5
             // 
+            Column5.DataPropertyName = "soNguoi";
             Column5.HeaderText = "Số người";
             Column5.MinimumWidth = 8;
             Column5.Name = "Column5";
@@ -326,6 +355,7 @@
             // 
             // Column6
             // 
+            Column6.DataPropertyName = "trangThai";
             Column6.HeaderText = "Trạng thái";
             Column6.MinimumWidth = 8;
             Column6.Name = "Column6";
@@ -340,10 +370,11 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1260, 640);
+            ClientSize = new Size(1293, 640);
             Controls.Add(splitContainer1);
             Name = "quanlyphong";
             Text = "quanlyphong";
+            Load += quanlyphong_Load;
             splitContainer1.Panel1.ResumeLayout(false);
             splitContainer1.Panel1.PerformLayout();
             splitContainer1.Panel2.ResumeLayout(false);
@@ -367,28 +398,31 @@
         private Button button2;
         private Button Xóa;
         private Label label4;
-        private TextBox textBox3;
+        private TextBox txtSoNguoi;
         private Label label3;
-        private TextBox textBox2;
+        private TextBox txtTenPhong;
         private Label label2;
-        private TextBox textBox1;
+        private TextBox txtMaPhong;
         private Label label1;
-        private ComboBox comboBox3;
-        private ComboBox comboBox2;
+        private ComboBox cboLoaiPhong;
         private Label label6;
         private Label label5;
-        private ComboBox comboBox1;
+        private ComboBox cboSucChua;
         private DataGridView dataGridView1;
+        private Label label7;
+        private ComboBox comboBox4;
+        private NotifyIcon notifyIcon1;
+        private Button button3;
+        private Button BTxoa;
+        private TextBox textBox4;
+        private Button button4;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Column2;
         private DataGridViewTextBoxColumn Column3;
         private DataGridViewTextBoxColumn Column4;
         private DataGridViewTextBoxColumn Column5;
         private DataGridViewTextBoxColumn Column6;
-        private Label label7;
-        private ComboBox comboBox4;
-        private NotifyIcon notifyIcon1;
-        private Button button3;
-        private Button BTxoa;
+        private TextBox textBox1;
+        private TextBox txtTrangThai;
     }
 }
