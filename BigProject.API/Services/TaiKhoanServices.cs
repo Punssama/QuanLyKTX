@@ -9,7 +9,7 @@ namespace BigProject.API.Services
     public interface ITaiKhoanServices
     {
         Task<IEnumerable<TaiKhoan>> GetTaiKhoansAsync();
-        Task<TaiKhoan> LoginAsync(string tenDangNhap, string matKhau);
+        Task<LoginResponseDto?> LoginAsync(string tenDangNhap, string matKhau);
         Task<TaiKhoan> DeleteAccountAsync(int id);
         Task<TaiKhoan> CreateAccountAsync(CreatedAccountDto accountDto);
     }
@@ -28,9 +28,23 @@ namespace BigProject.API.Services
             return await _context.TaiKhoans.ToListAsync();
         }
 
-        public async Task<TaiKhoan> LoginAsync(string tenDangNhap, string matKhau)
+        public async Task<LoginResponseDto?> LoginAsync(string tenDangNhap, string matKhau)
         {
-            return await _context.TaiKhoans.FirstOrDefaultAsync(t => t.TenDangNhap == tenDangNhap && t.MatKhau == matKhau);
+            var user = await _context.TaiKhoans
+                .AsNoTracking()
+                .Where(t => t.TenDangNhap == tenDangNhap && t.MatKhau == matKhau)
+                .Select(t => new { t.TenDangNhap, t.QuyenHan })
+                .FirstOrDefaultAsync();
+
+            if (user == null)
+            {
+                return null;
+            }
+            return new LoginResponseDto
+            {
+                TenDangNhap = user.TenDangNhap,
+                QuyenHan = user.QuyenHan
+            };
         }
 
         public async Task<TaiKhoan> DeleteAccountAsync(int id)
@@ -49,7 +63,10 @@ namespace BigProject.API.Services
             var taiKhoan = new TaiKhoan
             {
                 TenDangNhap = accountDto.TenDangNhap,
-                MatKhau = accountDto.MatKhau
+                MatKhau = accountDto.MatKhau,
+                QuyenHan = accountDto.QuyenHan,
+                MaNV = accountDto.MaNV,
+                TrangThai = accountDto.TrangThai
             };
             if (accountDto.Id > 0)
             {
