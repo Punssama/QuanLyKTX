@@ -18,6 +18,8 @@ namespace BigProject.API.Models
         public string trangthai { get; set; } = "Trống";
         [Column("MATOA")]
         public string matoa { get; set; } = string.Empty;
+        [Column("NGAYCAPNHAT")]
+        public DateTime? ngaycapnhat { get; set; }
 
 
     }
