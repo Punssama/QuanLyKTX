@@ -32,7 +32,7 @@
             lbTitle = new Label();
             panel2 = new Panel();
             btnLogOut = new Button();
-            btnGoBCTK = new Button();
+            btnGoQLPO = new Button();
             btnGoQLHD = new Button();
             tableLayoutPanel1 = new TableLayoutPanel();
             panel3 = new Panel();
@@ -43,6 +43,7 @@
             lbNumOfPeople = new Label();
             lbRoomName = new Label();
             dgrvPhongO = new DataGridView();
+            button1 = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
@@ -76,7 +77,8 @@
             // 
             panel2.BorderStyle = BorderStyle.FixedSingle;
             panel2.Controls.Add(btnLogOut);
-            panel2.Controls.Add(btnGoBCTK);
+            panel2.Controls.Add(button1);
+            panel2.Controls.Add(btnGoQLPO);
             panel2.Controls.Add(btnGoQLHD);
             panel2.Dock = DockStyle.Left;
             panel2.Location = new Point(0, 83);
@@ -96,21 +98,20 @@
             btnLogOut.UseVisualStyleBackColor = true;
             btnLogOut.Click += btnLogOut_Click;
             // 
-            // btnGoBCTK
+            // btnGoQLPO
             // 
-            btnGoBCTK.Font = new Font("Montserrat", 9F);
-            btnGoBCTK.Location = new Point(6, 123);
-            btnGoBCTK.Name = "btnGoBCTK";
-            btnGoBCTK.Size = new Size(153, 77);
-            btnGoBCTK.TabIndex = 0;
-            btnGoBCTK.Text = "Báo cáo thống kê";
-            btnGoBCTK.UseVisualStyleBackColor = true;
-            btnGoBCTK.Click += btnGoBCTK_Click;
+            btnGoQLPO.Font = new Font("Montserrat", 9F);
+            btnGoQLPO.Location = new Point(5, 200);
+            btnGoQLPO.Name = "btnGoQLPO";
+            btnGoQLPO.Size = new Size(153, 77);
+            btnGoQLPO.TabIndex = 0;
+            btnGoQLPO.Text = "Quản lý phòng ở";
+            btnGoQLPO.UseVisualStyleBackColor = true;
             // 
             // btnGoQLHD
             // 
             btnGoQLHD.Font = new Font("Montserrat", 9F);
-            btnGoQLHD.Location = new Point(6, 37);
+            btnGoQLHD.Location = new Point(5, 37);
             btnGoQLHD.Name = "btnGoQLHD";
             btnGoQLHD.Size = new Size(153, 74);
             btnGoQLHD.TabIndex = 0;
@@ -216,6 +217,17 @@
             dgrvPhongO.Size = new Size(586, 310);
             dgrvPhongO.TabIndex = 0;
             // 
+            // button1
+            // 
+            button1.Font = new Font("Montserrat", 9F);
+            button1.Location = new Point(5, 117);
+            button1.Name = "button1";
+            button1.Size = new Size(153, 77);
+            button1.TabIndex = 0;
+            button1.Text = "Báo cáo thống kê";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += btnGoBCTK_Click;
+            // 
             // FormTrangChu
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -243,7 +255,7 @@
         private Label lbTitle;
         private Panel panel2;
         private Button btnLogOut;
-        private Button btnGoBCTK;
+        private Button btnGoQLPO;
         private Button btnGoQLHD;
         private TableLayoutPanel tableLayoutPanel1;
         private DataGridView dgrvPhongO;
@@ -254,5 +266,6 @@
         private TextBox tbState;
         private TextBox tbNumOPeople;
         private TextBox tbRoomName;
+        private Button button1;
     }
 }

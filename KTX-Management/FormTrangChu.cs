@@ -36,7 +36,7 @@ namespace KTX_Management
         {
             try
             {
-                string url = "http://localhost:5294/api/PhongO";
+                string url = "http://huyphongprojectapi.dev:5294/api/PhongO";
                 HttpResponseMessage response = await client.GetAsync(url);
                 response.EnsureSuccessStatusCode();
 
