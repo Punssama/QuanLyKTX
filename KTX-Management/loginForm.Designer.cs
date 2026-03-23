@@ -33,7 +33,6 @@
             LoginMidPanel = new Panel();
             ForgetPassWordLb = new LinkLabel();
             LoginBtn = new Button();
-            signUpLinkLb = new LinkLabel();
             MatKhauTb = new TextBox();
             TenDangNhaptb = new TextBox();
             LoginPasswordLabel = new Label();
@@ -70,7 +69,6 @@
             // 
             LoginMidPanel.Controls.Add(ForgetPassWordLb);
             LoginMidPanel.Controls.Add(LoginBtn);
-            LoginMidPanel.Controls.Add(signUpLinkLb);
             LoginMidPanel.Controls.Add(MatKhauTb);
             LoginMidPanel.Controls.Add(TenDangNhaptb);
             LoginMidPanel.Controls.Add(LoginPasswordLabel);
@@ -90,6 +88,7 @@
             ForgetPassWordLb.TabIndex = 6;
             ForgetPassWordLb.TabStop = true;
             ForgetPassWordLb.Text = "Quên mật khẩu";
+            ForgetPassWordLb.LinkClicked += ForgetPassWordLb_LinkClicked;
             // 
             // LoginBtn
             // 
@@ -103,19 +102,6 @@
             LoginBtn.UseVisualStyleBackColor = true;
             LoginBtn.Click += LoginBtn_Click;
             // 
-            // signUpLinkLb
-            // 
-            signUpLinkLb.Anchor = AnchorStyles.None;
-            signUpLinkLb.AutoSize = true;
-            signUpLinkLb.Font = new Font("Montserrat", 10.2F);
-            signUpLinkLb.Location = new Point(442, 188);
-            signUpLinkLb.Name = "signUpLinkLb";
-            signUpLinkLb.Size = new Size(82, 27);
-            signUpLinkLb.TabIndex = 4;
-            signUpLinkLb.TabStop = true;
-            signUpLinkLb.Text = "Đăng ký";
-            signUpLinkLb.LinkClicked += signUpLinkLb_LinkClicked;
-            // 
             // MatKhauTb
             // 
             MatKhauTb.Anchor = AnchorStyles.None;
@@ -124,7 +110,7 @@
             MatKhauTb.Name = "MatKhauTb";
             MatKhauTb.Size = new Size(272, 34);
             MatKhauTb.TabIndex = 3;
-            MatKhauTb.Text = "12345";
+            MatKhauTb.Text = "123456";
             MatKhauTb.UseSystemPasswordChar = true;
             // 
             // TenDangNhaptb
@@ -208,7 +194,6 @@
         private Panel LoginTopPanel;
         private Label LoginTitleLabel;
         private Panel LoginMidPanel;
-        private LinkLabel signUpLinkLb;
         private TextBox MatKhauTb;
         private TextBox TenDangNhaptb;
         private Label LoginPasswordLabel;

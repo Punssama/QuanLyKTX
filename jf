@@ -1,0 +1,271 @@
+[1mdiff --git a/KTX-Management/FormTrangChu.Designer.cs b/KTX-Management/FormTrangChu.Designer.cs[m
+[1mindex b13408c..b3979ed 100644[m
+[1m--- a/KTX-Management/FormTrangChu.Designer.cs[m
+[1m+++ b/KTX-Management/FormTrangChu.Designer.cs[m
+[36m@@ -28,89 +28,194 @@[m
+         /// </summary>[m
+         private void InitializeComponent()[m
+         {[m
+[31m-            button1 = new Button();[m
+[31m-            button2 = new Button();[m
+[31m-            button3 = new Button();[m
+[31m-            label1 = new Label();[m
+[31m-            button4 = new Button();[m
+[32m+[m[32m            panel1 = new Panel();[m
+[32m+[m[32m            lbTitle = new Label();[m
+[32m+[m[32m            panel2 = new Panel();[m
+[32m+[m[32m            btnLogOut = new Button();[m
+[32m+[m[32m            btnGoBCTK = new Button();[m
+[32m+[m[32m            btnGoQLHD = new Button();[m
+[32m+[m[32m            tableLayoutPanel1 = new TableLayoutPanel();[m
+[32m+[m[32m            panel3 = new Panel();[m
+[32m+[m[32m            lbState = new Label();[m
+[32m+[m[32m            lbNumOfPeople = new Label();[m
+[32m+[m[32m            lbRoomName = new Label();[m
+[32m+[m[32m            dgrvPhongO = new DataGridView();[m
+[32m+[m[32m            panel1.SuspendLayout();[m
+[32m+[m[32m            panel2.SuspendLayout();[m
+[32m+[m[32m            tableLayoutPanel1.SuspendLayout();[m
+[32m+[m[32m            panel3.SuspendLayout();[m
+[32m+[m[32m            ((System.ComponentModel.ISupportInitialize)dgrvPhongO).BeginInit();[m
+             SuspendLayout();[m
+             // [m
+[31m-            // button1[m
+[31m-            // [m
+[31m-            button1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;[m
+[31m-            button1.Font = new Font("Segoe UI", 13F);[m
+[31m-            button1.Location = new Point(80, 306);[m
+[31m-            button1.Name = "button1";[m
+[31m-            button1.Size = new Size(187, 100);[m
+[31m-            button1.TabIndex = 0;[m
+[31m-            button1.Text = "Quản lý hợp đồng";[m
+[31m-            button1.UseVisualStyleBackColor = true;[m
+[31m-            // [m
+[31m-            // button2[m
+[31m-            // [m
+[31m-            button2.Anchor = AnchorStyles.Top | AnchorStyles.Right;[m
+[31m-            button2.Font = new Font("Segoe UI", 13F);[m
+[31m-            button2.Location = new Point(413, 169);[m
+[31m-            button2.Name = "button2";[m
+[31m-            button2.Size = new Size(182, 100);[m
+[31m-            button2.TabIndex = 0;[m
+[31m-            button2.Text = "Quản lý thu chi";[m
+[31m-            button2.UseVisualStyleBackColor = true;[m
+[31m-            // [m
+[31m-            // button3[m
+[31m-            // [m
+[31m-            button3.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;[m
+[31m-            button3.Font = new Font("Segoe UI", 13F);[m
+[31m-            button3.Location = new Point(413, 306);[m
+[31m-            button3.Name = "button3";[m
+[31m-            button3.Size = new Size(182, 100);[m
+[31m-            button3.TabIndex = 0;[m
+[31m-            button3.Text = "Báo cáo thống kê";[m
+[31m-            button3.UseVisualStyleBackColor = true;[m
+[31m-            // [m
+[31m-            // label1[m
+[31m-            // [m
+[31m-            label1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;[m
+[31m-            label1.AutoSize = true;[m
+[31m-            label1.Font = new Font("Segoe UI", 30F);[m
+[31m-            label1.Location = new Point(268, 52);[m
+[31m-            label1.Name = "label1";[m
+[31m-            label1.Size = new Size(136, 54);[m
+[31m-            label1.TabIndex = 1;[m
+[31m-            label1.Text = "MENU";[m
+[31m-            // [m
+[31m-            // button4[m
+[31m-            // [m
+[31m-            button4.Font = new Font("Segoe UI", 13F);[m
+[31m-            button4.Location = new Point(80, 169);[m
+[31m-            button4.Name = "button4";[m
+[31m-            button4.Size = new Size(187, 100);[m
+[31m-            button4.TabIndex = 0;[m
+[31m-            button4.Text = "Quản lý phòng";[m
+[31m-            button4.UseVisualStyleBackColor = true;[m
+[32m+[m[32m            // panel1[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            panel1.AccessibleRole = AccessibleRole.None;[m
+[32m+[m[32m            panel1.BorderStyle = BorderStyle.FixedSingle;[m
+[32m+[m[32m            panel1.Controls.Add(lbTitle);[m
+[32m+[m[32m            panel1.Dock = DockStyle.Top;[m
+[32m+[m[32m            panel1.Location = new Point(0, 0);[m
+[32m+[m[32m            panel1.Name = "panel1";[m
+[32m+[m[32m            panel1.Size = new Size(759, 83);[m
+[32m+[m[32m            panel1.TabIndex = 0;[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            // lbTitle[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            lbTitle.AccessibleDescription = "";[m
+[32m+[m[32m            lbTitle.AutoSize = true;[m
+[32m+[m[32m            lbTitle.Font = new Font("Montserrat", 20F, FontStyle.Bold);[m
+[32m+[m[32m            lbTitle.Location = new Point(179, 8);[m
+[32m+[m[32m            lbTitle.Name = "lbTitle";[m
+[32m+[m[32m            lbTitle.Size = new Size(381, 53);[m
+[32m+[m[32m            lbTitle.TabIndex = 0;[m
+[32m+[m[32m            lbTitle.Text = "QUẢN LÝ KÝ TÚC XÁ";[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            // panel2[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            panel2.BorderStyle = BorderStyle.FixedSingle;[m
+[32m+[m[32m            panel2.Controls.Add(btnLogOut);[m
+[32m+[m[32m            panel2.Controls.Add(btnGoBCTK);[m
+[32m+[m[32m            panel2.Controls.Add(btnGoQLHD);[m
+[32m+[m[32m            panel2.Dock = DockStyle.Left;[m
+[32m+[m[32m            panel2.Location = new Point(0, 83);[m
+[32m+[m[32m            panel2.Name = "panel2";[m
+[32m+[m[32m            panel2.Size = new Size(165, 505);[m
+[32m+[m[32m            panel2.TabIndex = 1;[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            // btnLogOut[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            btnLogOut.Font = new Font("Montserrat", 8F);[m
+[32m+[m[32m            btnLogOut.Location = new Point(26, 396);[m
+[32m+[m[32m            btnLogOut.Name = "btnLogOut";[m
+[32m+[m[32m            btnLogOut.Size = new Size(94, 29);[m
+[32m+[m[32m            btnLogOut.TabIndex = 0;[m
+[32m+[m[32m            btnLogOut.Text = "Đăng xuất";[m
+[32m+[m[32m            btnLogOut.UseVisualStyleBackColor = true;[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            // btnGoBCTK[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            btnGoBCTK.Font = new Font("Montserrat", 9F);[m
+[32m+[m[32m            btnGoBCTK.Location = new Point(6, 123);[m
+[32m+[m[32m            btnGoBCTK.Name = "btnGoBCTK";[m
+[32m+[m[32m            btnGoBCTK.Size = new Size(153, 77);[m
+[32m+[m[32m            btnGoBCTK.TabIndex = 0;[m
+[32m+[m[32m            btnGoBCTK.Text = "Báo cáo thống kê";[m
+[32m+[m[32m            btnGoBCTK.UseVisualStyleBackColor = true;[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            // btnGoQLHD[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            btnGoQLHD.Font = new Font("Montserrat", 9F);[m
+[32m+[m[32m            btnGoQLHD.Location = new Point(6, 37);[m
+[32m+[m[32m            btnGoQLHD.Name = "btnGoQLHD";[m
+[32m+[m[32m            btnGoQLHD.Size = new Size(153, 74);[m
+[32m+[m[32m            btnGoQLHD.TabIndex = 0;[m
+[32m+[m[32m            btnGoQLHD.Text = "Quản lý hợp đồng";[m
+[32m+[m[32m            btnGoQLHD.UseVisualStyleBackColor = true;[m
+[32m+[m[32m            btnGoQLHD.Click += btnGoQLHD_Click;[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            // tableLayoutPanel1[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            tableLayoutPanel1.CellBorderStyle = TableLayoutPanelCellBorderStyle.Single;[m
+[32m+[m[32m            tableLayoutPanel1.ColumnCount = 1;[m
+[32m+[m[32m            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));[m
+[32m+[m[32m            tableLayoutPanel1.Controls.Add(panel3, 0, 0);[m
+[32m+[m[32m            tableLayoutPanel1.Controls.Add(dgrvPhongO, 0, 1);[m
+[32m+[m[32m            tableLayoutPanel1.Dock = DockStyle.Fill;[m
+[32m+[m[32m            tableLayoutPanel1.Font = new Font("Montserrat", 7.79999971F);[m
+[32m+[m[32m            tableLayoutPanel1.Location = new Point(165, 83);[m
+[32m+[m[32m            tableLayoutPanel1.Name = "tableLayoutPanel1";[m
+[32m+[m[32m            tableLayoutPanel1.RowCount = 2;[m
+[32m+[m[32m            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 37.1031761F));[m
+[32m+[m[32m            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 62.8968239F));[m
+[32m+[m[32m            tableLayoutPanel1.Size = new Size(594, 505);[m
+[32m+[m[32m            tableLayoutPanel1.TabIndex = 2;[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            // panel3[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            panel3.Controls.Add(lbState);[m
+[32m+[m[32m            panel3.Controls.Add(lbNumOfPeople);[m
+[32m+[m[32m            panel3.Controls.Add(lbRoomName);[m
+[32m+[m[32m            panel3.Dock = DockStyle.Fill;[m
+[32m+[m[32m            panel3.Location = new Point(4, 4);[m
+[32m+[m[32m            panel3.Name = "panel3";[m
+[32m+[m[32m            panel3.Size = new Size(586, 180);[m
+[32m+[m[32m            panel3.TabIndex = 1;[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            // lbState[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            lbState.AutoSize = true;[m
+[32m+[m[32m            lbState.Font = new Font("Montserrat", 12F);[m
+[32m+[m[32m            lbState.Location = new Point(11, 120);[m
+[32m+[m[32m            lbState.Name = "lbState";[m
+[32m+[m[32m            lbState.Size = new Size(120, 31);[m
+[32m+[m[32m            lbState.TabIndex = 0;[m
+[32m+[m[32m            lbState.Text = "Trạng thái:";[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            // lbNumOfPeople[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            lbNumOfPeople.AutoSize = true;[m
+[32m+[m[32m            lbNumOfPeople.Font = new Font("Montserrat", 12F);[m
+[32m+[m[32m            lbNumOfPeople.Location = new Point(23, 77);[m
+[32m+[m[32m            lbNumOfPeople.Name = "lbNumOfPeople";[m
+[32m+[m[32m            lbNumOfPeople.Size = new Size(108, 31);[m
+[32m+[m[32m            lbNumOfPeople.TabIndex = 0;[m
+[32m+[m[32m            lbNumOfPeople.Text = "Số lượng:";[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            // lbRoomName[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            lbRoomName.AutoSize = true;[m
+[32m+[m[32m            lbRoomName.Font = new Font("Montserrat", 12F);[m
+[32m+[m[32m            lbRoomName.Location = new Point(3, 34);[m
+[32m+[m[32m            lbRoomName.Name = "lbRoomName";[m
+[32m+[m[32m            lbRoomName.Size = new Size(128, 31);[m
+[32m+[m[32m            lbRoomName.TabIndex = 0;[m
+[32m+[m[32m            lbRoomName.Text = "Tên phòng:";[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            // dgrvPhongO[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            dgrvPhongO.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;[m
+[32m+[m[32m            dgrvPhongO.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;[m
+[32m+[m[32m            dgrvPhongO.Dock = DockStyle.Fill;[m
+[32m+[m[32m            dgrvPhongO.Location = new Point(4, 191);[m
+[32m+[m[32m            dgrvPhongO.Name = "dgrvPhongO";[m
+[32m+[m[32m            dgrvPhongO.RowHeadersWidth = 51;[m
+[32m+[m[32m            dgrvPhongO.SelectionMode = DataGridViewSelectionMode.FullColumnSelect;[m
+[32m+[m[32m            dgrvPhongO.Size = new Size(586, 310);[m
+[32m+[m[32m            dgrvPhongO.TabIndex = 0;[m
+             // [m
+             // FormTrangChu[m
+             // [m
+[31m-            AutoScaleDimensions = new SizeF(7F, 15F);[m
+[32m+[m[32m            AutoScaleDimensions = new SizeF(8F, 20F);[m
+             AutoScaleMode = AutoScaleMode.Font;[m
+[31m-            ClientSize = new Size(664, 441);[m
+[31m-            Controls.Add(label1);[m
+[31m-            Controls.Add(button3);[m
+[31m-            Controls.Add(button2);[m
+[31m-            Controls.Add(button4);[m
+[31m-            Controls.Add(button1);[m
+[32m+[m[32m            ClientSize = new Size(759, 588);[m
+[32m+[m[32m            Controls.Add(tableLayoutPanel1);[m
+[32m+[m[32m            Controls.Add(panel2);[m
+[32m+[m[32m            Controls.Add(panel1);[m
+[32m+[m[32m            Margin = new Padding(3, 4, 3, 4);[m
+             Name = "FormTrangChu";[m
+             Text = "FormTrangChu";[m
+[32m+[m[32m            panel1.ResumeLayout(false);[m
+[32m+[m[32m            panel1.PerformLayout();[m
+[32m+[m[32m            panel2.ResumeLayout(false);[m
+[32m+[m[32m            tableLayoutPanel1.ResumeLayout(false);[m
+[32m+[m[32m            panel3.ResumeLayout(false);[m
+[32m+[m[32m            panel3.PerformLayout();[m
+[32m+[m[32m            ((System.ComponentModel.ISupportInitialize)dgrvPhongO).EndInit();[m
+             ResumeLayout(false);[m
+[31m-            PerformLayout();[m
+         }[m
+ [m
+         #endregion[m
+ [m
+[31m-        private Button button1;[m
+[31m-        private Button button2;[m
+[31m-        private Button button3;[m
+[31m-        private Label label1;[m
+[31m-        private Button button4;[m
+[32m+[m[32m        private Panel panel1;[m
+[32m+[m[32m        private Label lbTitle;[m
+[32m+[m[32m        private Panel panel2;[m
+[32m+[m[32m        private Button btnLogOut;[m
+[32m+[m[32m        private Button btnGoBCTK;[m
+[32m+[m[32m        private Button btnGoQLHD;[m
+[32m+[m[32m        private TableLayoutPanel tableLayoutPanel1;[m
+[32m+[m[32m        private DataGridView dgrvPhongO;[m
+[32m+[m[32m        private Panel panel3;[m
+[32m+[m[32m        private Label lbNumOfPeople;[m
+[32m+[m[32m        private Label lbRoomName;[m
+[32m+[m[32m        private Label lbState;[m
+     }[m
+ }[m
+\ No newline at end of file[m

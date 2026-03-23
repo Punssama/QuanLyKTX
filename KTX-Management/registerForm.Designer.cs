@@ -76,11 +76,11 @@
             tableLayoutPanel1.Controls.Add(SchoolMailLb, 0, 3);
             tableLayoutPanel1.Controls.Add(RegisterPassWordTb, 1, 1);
             tableLayoutPanel1.Controls.Add(RecheckPassWordTb, 1, 2);
-            tableLayoutPanel1.Controls.Add(SchoolEmailTb, 1, 3);
             tableLayoutPanel1.Controls.Add(RegisterAccountNameLb, 0, 0);
             tableLayoutPanel1.Controls.Add(RegisterPassWordLb, 0, 1);
-            tableLayoutPanel1.Controls.Add(RegisterAccountNameTb, 1, 0);
             tableLayoutPanel1.Controls.Add(panel1, 1, 4);
+            tableLayoutPanel1.Controls.Add(RegisterAccountNameTb, 1, 0);
+            tableLayoutPanel1.Controls.Add(SchoolEmailTb, 1, 3);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(0, 125);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -98,11 +98,11 @@
             ReCheckPassLb.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             ReCheckPassLb.AutoSize = true;
             ReCheckPassLb.Font = new Font("Montserrat SemiBold", 10.8F, FontStyle.Bold);
-            ReCheckPassLb.Location = new Point(112, 70);
+            ReCheckPassLb.Location = new Point(161, 70);
             ReCheckPassLb.Name = "ReCheckPassLb";
-            ReCheckPassLb.Size = new Size(186, 28);
+            ReCheckPassLb.Size = new Size(137, 28);
             ReCheckPassLb.TabIndex = 2;
-            ReCheckPassLb.Text = "Nhập lại mật khẩu:";
+            ReCheckPassLb.Text = "Số điện thoại:";
             // 
             // SchoolMailLb
             // 
