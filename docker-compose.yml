@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  db:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: sqlserver
+    ports:
+      - "1433:1433"
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=Minh020099#1234
+      - MSSQL_PID=Developer
+    volumes:
+      - /root/sql_data:/var/opt/mssql # Lưu dữ liệu vào ổ cứng VPS để không bị mất khi stop
+    networks:
+      - ktx_network
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ktx_api
+    ports:
+      - "5294:5294"
+    environment:
+      - ConnectionStrings__DefaultConnection=Server=db;Database=QuanLyKTX;User Id=sa;Password=Minh020099#1234;TrustServerCertificate=True
+    depends_on:
+      - db
+    networks:
+      - ktx_network
+
+networks:
+  ktx_network:
+    driver: bridge
