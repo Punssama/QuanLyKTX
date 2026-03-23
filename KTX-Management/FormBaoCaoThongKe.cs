@@ -20,15 +20,12 @@ namespace KTX_Management
         public FormBaoCaoThongKe()
         {
             InitializeComponent();
-            this.Load += FormBaoCaoThongKe_Load;
-
-            button11.Click += Button11_Click;
-            button9.Click += Button9_Click;
+            
         }
 
         private async void Button11_Click(object? sender, EventArgs e)
         {
-            await LoadThongKeDoanhThuAsync(dateTimePicker1.Value, dateTimePicker2.Value);
+            
         }
 
         private async void Button9_Click(object? sender, EventArgs e)
@@ -128,9 +125,6 @@ namespace KTX_Management
             tcBaoCaoThongKe.SelectedTab = tpTrangChu;
         }
 
-        private void FormBaoCaoThongKe_Load(object sender, EventArgs e)
-        {
-            dtpNamDoanhThu.MaxDate = DateTime.Today;
-        }
+        
     }
 }
