@@ -270,6 +270,18 @@ UpgradeLog*.htm
 ServiceFabricBackup/
 *.rptproj.bak
 
+# Visual Studio temporary files
+.vs/
+[Bb]in/
+[Obj]/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
 # SQL Server files
 *.mdf
 *.ldf
