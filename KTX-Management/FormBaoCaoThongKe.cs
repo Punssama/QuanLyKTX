@@ -118,20 +118,19 @@ namespace KTX_Management
             pnThongKeSVPhong.Visible = !pnThongKeSVPhong.Visible;
         }
 
-        private void btLocDoanhThu_Click(object sender, EventArgs e)
-        {
-            pnThongKeDoanhThu.Visible = !pnThongKeDoanhThu.Visible;
-        }
-
         private void tcBaoCaoThongKe_SelectedIndexChanged(object sender, EventArgs e)
         {
             pnThongKeSVPhong.Visible = false;
-            pnThongKeDoanhThu.Visible = false;
         }
 
         private void btQuayVeTrangChu_Click(object sender, EventArgs e)
         {
             tcBaoCaoThongKe.SelectedTab = tpTrangChu;
+        }
+
+        private void FormBaoCaoThongKe_Load(object sender, EventArgs e)
+        {
+            dtpNamDoanhThu.MaxDate = DateTime.Today;
         }
     }
 }

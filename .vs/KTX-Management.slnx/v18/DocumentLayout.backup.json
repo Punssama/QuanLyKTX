@@ -1,0 +1,74 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\the lam\\Desktop\\QuanLyKTX\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{74F9E244-D891-2AEA-4155-76A88CE93486}|KTX-Management\\KTX-Management.csproj|c:\\users\\the lam\\desktop\\quanlyktx\\ktx-management\\formbaocaothongke.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{74F9E244-D891-2AEA-4155-76A88CE93486}|KTX-Management\\KTX-Management.csproj|solutionrelative:ktx-management\\formbaocaothongke.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74F9E244-D891-2AEA-4155-76A88CE93486}|KTX-Management\\KTX-Management.csproj|c:\\users\\the lam\\desktop\\quanlyktx\\ktx-management\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74F9E244-D891-2AEA-4155-76A88CE93486}|KTX-Management\\KTX-Management.csproj|solutionrelative:ktx-management\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74F9E244-D891-2AEA-4155-76A88CE93486}|KTX-Management\\KTX-Management.csproj|c:\\users\\the lam\\desktop\\quanlyktx\\ktx-management\\formbaocaothongke.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74F9E244-D891-2AEA-4155-76A88CE93486}|KTX-Management\\KTX-Management.csproj|solutionrelative:ktx-management\\formbaocaothongke.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\the lam\\Desktop\\QuanLyKTX\\KTX-Management\\Program.cs",
+              "RelativeDocumentMoniker": "KTX-Management\\Program.cs",
+              "ToolTip": "C:\\Users\\the lam\\Desktop\\QuanLyKTX\\KTX-Management\\Program.cs",
+              "RelativeToolTip": "KTX-Management\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-23T12:33:08.26Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FormBaoCaoThongKe.cs",
+              "DocumentMoniker": "C:\\Users\\the lam\\Desktop\\QuanLyKTX\\KTX-Management\\FormBaoCaoThongKe.cs",
+              "RelativeDocumentMoniker": "KTX-Management\\FormBaoCaoThongKe.cs",
+              "ToolTip": "C:\\Users\\the lam\\Desktop\\QuanLyKTX\\KTX-Management\\FormBaoCaoThongKe.cs",
+              "RelativeToolTip": "KTX-Management\\FormBaoCaoThongKe.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAewCUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-23T12:20:46.281Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FormBaoCaoThongKe.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\the lam\\Desktop\\QuanLyKTX\\KTX-Management\\FormBaoCaoThongKe.cs",
+              "RelativeDocumentMoniker": "KTX-Management\\FormBaoCaoThongKe.cs",
+              "ToolTip": "C:\\Users\\the lam\\Desktop\\QuanLyKTX\\KTX-Management\\FormBaoCaoThongKe.cs [Design]",
+              "RelativeToolTip": "KTX-Management\\FormBaoCaoThongKe.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-23T04:12:13.042Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
