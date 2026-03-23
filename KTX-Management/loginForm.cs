@@ -32,7 +32,7 @@ namespace KTX_Management
             {
                 try
                 {
-                    string url = " https://mustily-noncharacterized-niko.ngrok-free.dev/api/TaiKhoan/dangnhap";
+                    string url = "http://huyphongprojectapi.dev:5294/api/TaiKhoan/dangnhap";
                     var response = await client.PostAsJsonAsync(url, taikhoan);
 
                     if (response.IsSuccessStatusCode)
