@@ -1,7 +1,7 @@
 $kind: http-request
 name: LayTaiKhoan
 method: GET
-url: https://mustily-noncharacterized-niko.ngrok-free.dev/api/TaiKhoan
+url: "{{/api/TaiKhoan"
 body:
   type: json
   content: "{\r

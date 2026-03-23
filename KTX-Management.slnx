@@ -1,4 +1,5 @@
 <Solution>
   <Project Path="BigProject.API/BigProject.API.csproj" />
   <Project Path="KTX-Management/KTX-Management.csproj" />
+  <Project Path="KTX.Shared/KTX.Shared.csproj" />
 </Solution>
