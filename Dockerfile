@@ -9,7 +9,7 @@ RUN dotnet restore ./BigProject.API/BigProject.API.csproj
 # Copy toàn bộ code và publish
 COPY . .
 WORKDIR /app/BigProject.API
-RUN dotnet publish -c Release -o /out
+RUN dotnet publish -c Release -o /out /p:UseAppHost=false /p:PublishReadyToRun=false --no-restore
 
 # Sử dụng Runtime .NET 10.0 để chạy cho nhẹ
 FROM mcr.microsoft.com/dotnet/aspnet:10.0
