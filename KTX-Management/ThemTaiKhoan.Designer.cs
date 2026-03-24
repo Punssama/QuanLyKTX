@@ -31,22 +31,22 @@
             components = new System.ComponentModel.Container();
             tabControlQuanLyTaiKhoan = new TabControl();
             tabPage1 = new TabPage();
-            tabPage2 = new TabPage();
+            roleTb = new TextBox();
             MatKhauTb = new TextBox();
             IDLb = new Label();
             ThemTaiKhoanBtn = new Button();
             TenDangNhapTb = new TextBox();
+            roleLb = new Label();
             IDTb = new TextBox();
             MatKhauLb = new Label();
             TenDangNhapLb = new Label();
-            contextMenuStrip1 = new ContextMenuStrip(components);
+            tabPage2 = new TabPage();
             splitContainer1 = new SplitContainer();
             dataGridView1 = new DataGridView();
             flowLayoutPanel1 = new FlowLayoutPanel();
-            btnXoaTk = new Button();
             btnHienTatCa = new Button();
-            roleLb = new Label();
-            roleTb = new TextBox();
+            btnXoaTk = new Button();
+            contextMenuStrip1 = new ContextMenuStrip(components);
             tabControlQuanLyTaiKhoan.SuspendLayout();
             tabPage1.SuspendLayout();
             tabPage2.SuspendLayout();
@@ -88,16 +88,13 @@
             tabPage1.Text = "Thêm tài khoản";
             tabPage1.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // roleTb
             // 
-            tabPage2.Controls.Add(splitContainer1);
-            tabPage2.Location = new Point(4, 29);
-            tabPage2.Name = "tabPage2";
-            tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(792, 417);
-            tabPage2.TabIndex = 1;
-            tabPage2.Text = "Xoá tài khoản";
-            tabPage2.UseVisualStyleBackColor = true;
+            roleTb.Font = new Font("Segoe UI", 16.2F);
+            roleTb.Location = new Point(357, 251);
+            roleTb.Name = "roleTb";
+            roleTb.Size = new Size(197, 43);
+            roleTb.TabIndex = 13;
             // 
             // MatKhauTb
             // 
@@ -135,6 +132,16 @@
             TenDangNhapTb.Size = new Size(197, 43);
             TenDangNhapTb.TabIndex = 10;
             // 
+            // roleLb
+            // 
+            roleLb.AutoSize = true;
+            roleLb.Font = new Font("Segoe UI", 16.2F);
+            roleLb.Location = new Point(216, 256);
+            roleLb.Name = "roleLb";
+            roleLb.Size = new Size(105, 38);
+            roleLb.TabIndex = 8;
+            roleLb.Text = "Quyền:";
+            // 
             // IDTb
             // 
             IDTb.Font = new Font("Segoe UI", 16.2F);
@@ -163,11 +170,16 @@
             TenDangNhapLb.TabIndex = 7;
             TenDangNhapLb.Text = "Tên đăng nhập:";
             // 
-            // contextMenuStrip1
+            // tabPage2
             // 
-            contextMenuStrip1.ImageScalingSize = new Size(20, 20);
-            contextMenuStrip1.Name = "contextMenuStrip1";
-            contextMenuStrip1.Size = new Size(61, 4);
+            tabPage2.Controls.Add(splitContainer1);
+            tabPage2.Location = new Point(4, 29);
+            tabPage2.Name = "tabPage2";
+            tabPage2.Padding = new Padding(3);
+            tabPage2.Size = new Size(792, 417);
+            tabPage2.TabIndex = 1;
+            tabPage2.Text = "Xoá tài khoản";
+            tabPage2.UseVisualStyleBackColor = true;
             // 
             // splitContainer1
             // 
@@ -189,11 +201,13 @@
             // 
             // dataGridView1
             // 
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Dock = DockStyle.Fill;
             dataGridView1.Location = new Point(0, 0);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridView1.Size = new Size(786, 343);
             dataGridView1.TabIndex = 0;
             // 
@@ -207,15 +221,6 @@
             flowLayoutPanel1.Size = new Size(786, 64);
             flowLayoutPanel1.TabIndex = 0;
             // 
-            // btnXoaTk
-            // 
-            btnXoaTk.Location = new Point(103, 3);
-            btnXoaTk.Name = "btnXoaTk";
-            btnXoaTk.Size = new Size(120, 29);
-            btnXoaTk.TabIndex = 0;
-            btnXoaTk.Text = "Xoá tài khoản";
-            btnXoaTk.UseVisualStyleBackColor = true;
-            // 
             // btnHienTatCa
             // 
             btnHienTatCa.Location = new Point(3, 3);
@@ -224,24 +229,23 @@
             btnHienTatCa.TabIndex = 1;
             btnHienTatCa.Text = "Hiện tất cả";
             btnHienTatCa.UseVisualStyleBackColor = true;
+            btnHienTatCa.Click += btnHienTatCa_Click;
             // 
-            // roleLb
+            // btnXoaTk
             // 
-            roleLb.AutoSize = true;
-            roleLb.Font = new Font("Segoe UI", 16.2F);
-            roleLb.Location = new Point(216, 256);
-            roleLb.Name = "roleLb";
-            roleLb.Size = new Size(105, 38);
-            roleLb.TabIndex = 8;
-            roleLb.Text = "Quyền:";
+            btnXoaTk.Location = new Point(103, 3);
+            btnXoaTk.Name = "btnXoaTk";
+            btnXoaTk.Size = new Size(120, 29);
+            btnXoaTk.TabIndex = 0;
+            btnXoaTk.Text = "Xoá tài khoản";
+            btnXoaTk.UseVisualStyleBackColor = true;
+            btnXoaTk.Click += btnXoaTk_Click;
             // 
-            // roleTb
+            // contextMenuStrip1
             // 
-            roleTb.Font = new Font("Segoe UI", 16.2F);
-            roleTb.Location = new Point(357, 251);
-            roleTb.Name = "roleTb";
-            roleTb.Size = new Size(197, 43);
-            roleTb.TabIndex = 13;
+            contextMenuStrip1.ImageScalingSize = new Size(20, 20);
+            contextMenuStrip1.Name = "contextMenuStrip1";
+            contextMenuStrip1.Size = new Size(61, 4);
             // 
             // ThemTaiKhoan
             // 

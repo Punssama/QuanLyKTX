@@ -13,7 +13,7 @@ namespace KTX.Shared.DTOs
     }
     public class loginResponse
     {
-        public string tendangnhap { get; set; } = string.Empty;
-        public string quyen { get; set; } = string.Empty;
+        public string tenDangNhap { get; set; } = string.Empty;
+        public string quyenHan { get; set; } = string.Empty;
     }
 }
