@@ -315,7 +315,7 @@
             // 
             // Column1
             // 
-            Column1.DataPropertyName = "maPhong";
+            Column1.DataPropertyName = "maphong";
             Column1.HeaderText = "Mã phòng";
             Column1.MinimumWidth = 8;
             Column1.Name = "Column1";
@@ -323,39 +323,39 @@
             // 
             // Column2
             // 
-            Column2.DataPropertyName = "tenPhong";
-            Column2.HeaderText = "Tên phòng";
+            Column2.DataPropertyName = "matoa";
+            Column2.HeaderText = "Loại phòng";
             Column2.MinimumWidth = 8;
             Column2.Name = "Column2";
             Column2.Width = 150;
             // 
             // Column3
             // 
-            Column3.DataPropertyName = "loaiPhong";
-            Column3.HeaderText = "Loại phòng";
+            Column3.DataPropertyName = "succhua";
+            Column3.HeaderText = "Sức chứa";
             Column3.MinimumWidth = 8;
             Column3.Name = "Column3";
             Column3.Width = 150;
             // 
             // Column4
             // 
-            Column4.DataPropertyName = "sucChua";
-            Column4.HeaderText = "Sức chứa";
+            Column4.DataPropertyName = "songuoihientai";
+            Column4.HeaderText = "Số người";
             Column4.MinimumWidth = 8;
             Column4.Name = "Column4";
             Column4.Width = 150;
             // 
             // Column5
             // 
-            Column5.DataPropertyName = "soNguoi";
-            Column5.HeaderText = "Số người";
+            Column5.DataPropertyName = "giatien";
+            Column5.HeaderText = "Giá Tiền";
             Column5.MinimumWidth = 8;
             Column5.Name = "Column5";
             Column5.Width = 150;
             // 
             // Column6
             // 
-            Column6.DataPropertyName = "trangThai";
+            Column6.DataPropertyName = "trangthai";
             Column6.HeaderText = "Trạng thái";
             Column6.MinimumWidth = 8;
             Column6.Name = "Column6";

@@ -8,6 +8,7 @@ namespace KTX.Shared.DTOs
         public int songuoihientai { get; set; }
         public double giatien { get; set; }
         public string trangthai { get; set; } = "Trống";
+        public DateTime? ngaycapnhat { get; set; }
     }
     public class loginResponse
     {

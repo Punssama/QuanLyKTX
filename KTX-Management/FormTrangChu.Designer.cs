@@ -32,6 +32,7 @@
             lbTitle = new Label();
             panel2 = new Panel();
             btnLogOut = new Button();
+            button1 = new Button();
             btnGoQLPO = new Button();
             btnGoQLHD = new Button();
             tableLayoutPanel1 = new TableLayoutPanel();
@@ -43,7 +44,6 @@
             lbNumOfPeople = new Label();
             lbRoomName = new Label();
             dgrvPhongO = new DataGridView();
-            button1 = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
@@ -98,6 +98,17 @@
             btnLogOut.UseVisualStyleBackColor = true;
             btnLogOut.Click += btnLogOut_Click;
             // 
+            // button1
+            // 
+            button1.Font = new Font("Montserrat", 9F);
+            button1.Location = new Point(5, 117);
+            button1.Name = "button1";
+            button1.Size = new Size(153, 77);
+            button1.TabIndex = 0;
+            button1.Text = "Báo cáo thống kê";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += btnGoBCTK_Click;
+            // 
             // btnGoQLPO
             // 
             btnGoQLPO.Font = new Font("Montserrat", 9F);
@@ -107,6 +118,7 @@
             btnGoQLPO.TabIndex = 0;
             btnGoQLPO.Text = "Quản lý phòng ở";
             btnGoQLPO.UseVisualStyleBackColor = true;
+            btnGoQLPO.Click += btnGoQLPO_Click;
             // 
             // btnGoQLHD
             // 
@@ -217,17 +229,6 @@
             dgrvPhongO.Size = new Size(586, 310);
             dgrvPhongO.TabIndex = 0;
             // 
-            // button1
-            // 
-            button1.Font = new Font("Montserrat", 9F);
-            button1.Location = new Point(5, 117);
-            button1.Name = "button1";
-            button1.Size = new Size(153, 77);
-            button1.TabIndex = 0;
-            button1.Text = "Báo cáo thống kê";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += btnGoBCTK_Click;
-            // 
             // FormTrangChu
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -238,6 +239,7 @@
             Controls.Add(panel1);
             Margin = new Padding(3, 4, 3, 4);
             Name = "FormTrangChu";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "FormTrangChu";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();

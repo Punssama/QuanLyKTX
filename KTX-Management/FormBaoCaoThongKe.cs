@@ -16,87 +16,197 @@ namespace KTX_Management
     public partial class FormBaoCaoThongKe : Form
     {
         private static readonly HttpClient client = new HttpClient { BaseAddress = new Uri("http://huyphongprojectapi.dev:5294/") };
+        private List<PhongODTO> _allPhong = new List<PhongODTO>();
 
         public FormBaoCaoThongKe()
         {
             InitializeComponent();
-            
+            this.Load += FormBaoCaoThongKe_Load;
+
         }
 
-        private async void Button11_Click(object? sender, EventArgs e)
-        {
-            
-        }
 
-        private async void Button9_Click(object? sender, EventArgs e)
-        {
-            await LoadThongKeDoanhThuAsync(null, null);
-        }
 
         private async void FormBaoCaoThongKe_Load(object? sender, EventArgs e)
         {
-            await LoadThongKeSinhVienAsync();
-            await LoadThongKeDoanhThuAsync(null, null);
+            await FetchAllDataAsync();
+            InitComboBoxes();
+            UpdateDataViewSV();
+            UpdateDataViewDoanhThu(dtpNamDoanhThu.Value.Year);
         }
 
-        private async Task LoadThongKeSinhVienAsync()
+        private async Task FetchAllDataAsync()
         {
             try
             {
-                var url = "api/BaoCaoThongKe/thong-ke-sinh-vien";
-                var data = await client.GetFromJsonAsync<List<ThongKeSinhVienToaDTO>>(url);
-                if (data != null && chart1 != null)
+                var response = await client.GetAsync("api/PhongO");
+                if (response.IsSuccessStatusCode)
                 {
-                    chart1.Series.Clear();
-                    Series series = new Series("Số Sinh Viên");
-                    series.ChartType = SeriesChartType.Column;
-
-                    foreach (var item in data)
-                    {
-                        series.Points.AddXY(item.MaToa ?? "Chưa rõ", item.TongSoSinhVien);
-                    }
-                    chart1.Series.Add(series);
-                    chart1.ChartAreas[0].AxisX.Title = "Tòa";
-                    chart1.ChartAreas[0].AxisY.Title = "Tổng số sinh viên";
+                    var data = await response.Content.ReadFromJsonAsync<List<PhongODTO>>();
+                    if (data != null)
+                        _allPhong = data;
+                }
+                else
+                {
+                    MessageBox.Show("Không thể kết nối đến máy chủ API.");
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Lỗi lấy dữ liệu thống kê sinh viên: " + ex.Message);
+                MessageBox.Show("Lỗi lấy dữ liệu API: " + ex.Message);
             }
         }
 
-        private async Task LoadThongKeDoanhThuAsync(DateTime? tuNgay, DateTime? denNgay)
+        private void InitComboBoxes()
         {
-            try
+            comboBox1.Items.Clear();
+            comboBox1.Items.Add("Tất cả");
+            foreach (var toa in _allPhong.Select(p => p.matoa).Distinct())
             {
-                var url = "api/BaoCaoThongKe/thong-ke-doanh-thu";
-                if (tuNgay.HasValue && denNgay.HasValue)
-                {
-                    // Lấy ngày đầu của tháng đầu và ngày cuối của tháng cuối do CustomFormat là "MM/yyyy"
-                    var start = new DateTime(tuNgay.Value.Year, tuNgay.Value.Month, 1);
-                    var end = new DateTime(denNgay.Value.Year, denNgay.Value.Month, DateTime.DaysInMonth(denNgay.Value.Year, denNgay.Value.Month));
-                    url += $"?tuNgay={start:yyyy-MM-dd}&denNgay={end:yyyy-MM-dd}";
-                }
-
-                var data = await client.GetFromJsonAsync<List<ThongKeDoanhThuToaDTO>>(url);
-                if (data != null && chart2 != null)
-                {
-                    chart2.Series.Clear();
-                    Series series = new Series("Doanh Thu");
-                    series.ChartType = SeriesChartType.Pie;
-                    series.IsValueShownAsLabel = true;
-
-                    foreach (var item in data)
-                    {
-                        series.Points.AddXY(item.MaToa ?? "Chưa rõ", item.TongDoanhThu);
-                    }
-                    chart2.Series.Add(series);
-                }
+                comboBox1.Items.Add(toa);
             }
-            catch (Exception ex)
+            comboBox1.SelectedIndex = 0;
+
+            comboBox2.Items.Clear();
+            comboBox2.Items.Add("Tất cả");
+            foreach (var phong in _allPhong.Select(p => p.maphong).Distinct())
             {
-                MessageBox.Show("Lỗi lấy dữ liệu thống kê doanh thu: " + ex.Message);
+                comboBox2.Items.Add(phong);
+            }
+            comboBox2.SelectedIndex = 0;
+
+            comboBox3.Items.Clear();
+            comboBox3.Items.Add("Tất cả");
+            comboBox3.Items.Add("Đang ở");
+            comboBox3.Items.Add("Đã đầy");
+            comboBox3.Items.Add("Trống");
+            comboBox3.SelectedIndex = 0;
+        }
+
+        private void Button2_Click(object? sender, EventArgs e)
+        {
+            UpdateDataViewSV();
+        }
+
+        private void BtHoanTac_Click(object? sender, EventArgs e)
+        {
+            comboBox1.SelectedIndex = 0;
+            comboBox2.SelectedIndex = 0;
+            comboBox3.SelectedIndex = 0;
+            UpdateDataViewSV();
+        }
+
+        private void DtpNamDoanhThu_ValueChanged(object? sender, EventArgs e)
+        {
+            UpdateDataViewDoanhThu(dtpNamDoanhThu.Value.Year);
+        }
+
+        private void UpdateDataViewSV()
+        {
+            var filtered = _allPhong.AsEnumerable();
+
+            if (comboBox1.SelectedIndex > 0)
+                filtered = filtered.Where(p => p.matoa == comboBox1.SelectedItem?.ToString());
+
+            if (comboBox2.SelectedIndex > 0)
+                filtered = filtered.Where(p => p.maphong == comboBox2.SelectedItem?.ToString());
+
+            if (comboBox3.SelectedIndex > 0)
+                filtered = filtered.Where(p => p.trangthai == comboBox3.SelectedItem?.ToString());
+
+            var resultList = filtered.ToList();
+
+            dataGridView1.DataSource = resultList;
+
+            if (dataGridView1.Columns["maphong"] != null) dataGridView1.Columns["maphong"].HeaderText = "Mã Phòng";
+            if (dataGridView1.Columns["matoa"] != null) dataGridView1.Columns["matoa"].HeaderText = "Loại/Tòa";
+            if (dataGridView1.Columns["succhua"] != null) dataGridView1.Columns["succhua"].HeaderText = "Sức chứa";
+            if (dataGridView1.Columns["songuoihientai"] != null) dataGridView1.Columns["songuoihientai"].HeaderText = "Số người";
+            if (dataGridView1.Columns["giatien"] != null) dataGridView1.Columns["giatien"].HeaderText = "Giá tiền";
+            if (dataGridView1.Columns["trangthai"] != null) dataGridView1.Columns["trangthai"].HeaderText = "Trạng thái";
+            if (dataGridView1.Columns["ngaycapnhat"] != null) dataGridView1.Columns["ngaycapnhat"].HeaderText = "Ngày Cập Nhật";
+
+            chart1.Series.Clear();
+            Series series = new Series("Số Sinh Viên");
+            series.ChartType = SeriesChartType.Column;
+
+           
+            var stats = resultList.GroupBy(p => p.matoa)
+                                  .Select(g => new { MaToa = g.Key, TongSV = g.Sum(p => p.songuoihientai) })
+                                  .ToList();
+
+            foreach (var item in stats)
+            {
+                series.Points.AddXY(item.MaToa ?? "Chưa rõ", item.TongSV);
+            }
+            chart1.Series.Add(series);
+            chart1.ChartAreas[0].AxisX.Title = "Tòa";
+            chart1.ChartAreas[0].AxisY.Title = "Tổng số sinh viên";
+        }
+
+        private void UpdateDataViewDoanhThu(int nam)
+        {
+            // Lọc các phòng có ngày cập nhật/ngày thu tiền thuộc Năm hiện tại 
+            var filtered = _allPhong.Where(p => p.ngaycapnhat.HasValue && p.ngaycapnhat.Value.Year == nam).ToList();
+            if (!filtered.Any())
+            {
+                chart2.Series.Clear();
+                dataGridView2.DataSource = null;
+                textBox1.Text = "";
+                textBox2.Text = "0";
+                return;
+            }
+
+        
+            var dtResult = filtered.Select(p => new
+            {
+                Toa = p.matoa,
+                Phong = p.maphong,
+                Thang = p.ngaycapnhat.Value.Month,
+                Nam = p.ngaycapnhat.Value.Year,
+                DoanhThu = p.songuoihientai * p.giatien
+            }).ToList();
+            dataGridView2.DataSource = dtResult;
+
+            if (dataGridView2.Columns["Toa"] != null) dataGridView2.Columns["Toa"].HeaderText = "Tòa (Loại)";
+            if (dataGridView2.Columns["Phong"] != null) dataGridView2.Columns["Phong"].HeaderText = "Phòng";
+            if (dataGridView2.Columns["Thang"] != null) dataGridView2.Columns["Thang"].HeaderText = "Tháng";
+            if (dataGridView2.Columns["Nam"] != null) dataGridView2.Columns["Nam"].HeaderText = "Năm";
+            if (dataGridView2.Columns["DoanhThu"] != null) 
+            {
+                dataGridView2.Columns["DoanhThu"].HeaderText = "Doanh thu";
+                dataGridView2.Columns["DoanhThu"].DefaultCellStyle.Format = "N0";
+            }
+
+            chart2.Series.Clear();
+            Series series = new Series("Doanh Thu");
+            series.ChartType = SeriesChartType.Pie;
+            series.IsValueShownAsLabel = true;
+
+            var statsToa = dtResult.GroupBy(x => x.Toa)
+                                   .Select(g => new { MaToa = g.Key, TongDT = g.Sum(x => x.DoanhThu) })
+                                   .ToList();
+
+            foreach (var item in statsToa)
+            {
+                series.Points.AddXY(item.MaToa ?? "Chưa rõ", item.TongDT);
+            }
+            chart2.Series.Add(series);
+
+            var statsThang = dtResult.GroupBy(x => x.Thang)
+                                     .Select(g => new { Thang = g.Key, TongDT = g.Sum(x => x.DoanhThu) })
+                                     .OrderByDescending(x => x.TongDT)
+                                     .FirstOrDefault();
+
+            if (statsThang != null)
+            {
+                textBox1.Text = statsThang.Thang.ToString();
+                textBox2.Text = statsThang.TongDT.ToString("N0") + " VNĐ";
+            }
+            else
+            {
+                textBox1.Text = "";
+                textBox2.Text = "0 VNĐ";
             }
         }
 
@@ -125,6 +235,6 @@ namespace KTX_Management
             tcBaoCaoThongKe.SelectedTab = tpTrangChu;
         }
 
-        
+
     }
 }

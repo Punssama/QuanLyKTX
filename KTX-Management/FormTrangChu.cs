@@ -45,7 +45,7 @@ namespace KTX_Management
                 var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
                 List<PhongODTO>? phongOs = JsonSerializer.Deserialize<List<PhongODTO>>(responseBody, options);
 
-                if (phongOs != null)  
+                if (phongOs != null)
                 {
                     dgrvPhongO.DataSource = phongOs;
 
@@ -66,7 +66,7 @@ namespace KTX_Management
 
         private void DgrvPhongO_CellClick(object? sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0) 
+            if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = dgrvPhongO.Rows[e.RowIndex];
 
@@ -79,7 +79,7 @@ namespace KTX_Management
                 tbNumOPeople.Text = $"{numPeople}/{capacity}";
                 tbState.Text = $"{status}";
 
-               
+
                 if (status.ToLower().Contains("đầy"))
                 {
                     lbState.ForeColor = Color.Red;
@@ -105,6 +105,12 @@ namespace KTX_Management
         private void btnLogOut_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnGoQLPO_Click(object sender, EventArgs e)
+        {
+            quanlyphong quanlyphong = new quanlyphong();
+            quanlyphong.ShowDialog();
         }
     }
 }

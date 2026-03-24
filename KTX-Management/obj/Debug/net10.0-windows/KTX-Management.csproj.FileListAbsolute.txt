@@ -228,8 +228,6 @@ C:\Users\the lam\Desktop\QuanLyKTX\KTX-Management\bin\Debug\net10.0-windows\KTX.
 C:\Users\the lam\Desktop\QuanLyKTX\KTX-Management\bin\Debug\net10.0-windows\KTX.Shared.pdb
 C:\Users\Administrator\Desktop\Code\WinForm\QuanLyKTX\KTX-Management\obj\Debug\net10.0-windows\KTX_Management.Properties.Resources.resources
 C:\Users\Administrator\Desktop\Code\WinForm\QuanLyKTX\KTX-Management\obj\Debug\net10.0-windows\KTX_Management.quanlyphong.resources
-C:\Users\Administrator\Desktop\Code\WinForm\QuanLyKTX\KTX-Management\bin\Debug\net10.0-windows\appsettings.Development.json
-C:\Users\Administrator\Desktop\Code\WinForm\QuanLyKTX\KTX-Management\bin\Debug\net10.0-windows\appsettings.json
 C:\Users\Administrator\Desktop\Code\WinForm\QuanLyKTX\KTX-Management\bin\Debug\net10.0-windows\Humanizer.dll
 C:\Users\Administrator\Desktop\Code\WinForm\QuanLyKTX\KTX-Management\bin\Debug\net10.0-windows\Microsoft.Build.Framework.dll
 C:\Users\Administrator\Desktop\Code\WinForm\QuanLyKTX\KTX-Management\bin\Debug\net10.0-windows\Microsoft.CodeAnalysis.dll
