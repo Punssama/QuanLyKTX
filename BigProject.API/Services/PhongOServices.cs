@@ -30,6 +30,7 @@ namespace BigProject.API.Services
             {
                 maphong = p.maphong,
                 matoa = p.matoa,
+                loaiphong = p.loaiphong,
                 succhua = p.succhua,
                 songuoihientai = p.songuoihientai,
                 giatien = p.giatien, 
@@ -46,6 +47,7 @@ namespace BigProject.API.Services
             {
                 maphong = p.maphong,
                 matoa = p.matoa,
+                loaiphong = p.loaiphong,
                 succhua = p.succhua,
                 songuoihientai = p.songuoihientai,
                 giatien = p.giatien, 
@@ -60,6 +62,7 @@ namespace BigProject.API.Services
             {
                 maphong = pDto.maphong,
                 matoa = pDto.matoa,
+                loaiphong = pDto.loaiphong,
                 succhua = pDto.succhua,
                 songuoihientai = pDto.songuoihientai,
                 giatien = pDto.giatien, 
@@ -77,6 +80,7 @@ namespace BigProject.API.Services
             if(p == null) return null;
 
             p.matoa = pDto.matoa;
+            p.loaiphong = pDto.loaiphong;
             p.succhua = pDto.succhua;
             p.songuoihientai = pDto.songuoihientai;
             p.giatien = pDto.giatien;

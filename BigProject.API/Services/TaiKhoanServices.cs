@@ -25,7 +25,7 @@ namespace BigProject.API.Services
 
         public async Task<IEnumerable<TaiKhoan>> GetTaiKhoansAsync()
         {
-            return await _context.TaiKhoans.ToListAsync();
+            return await _context.TaiKhoans.Where(t => t.TrangThai == true).ToListAsync();
         }
 
         public async Task<LoginResponseDto?> LoginAsync(string tenDangNhap, string matKhau)
@@ -52,7 +52,7 @@ namespace BigProject.API.Services
             var taiKhoan = await _context.TaiKhoans.FindAsync(id);
             if (taiKhoan != null)
             {
-                _context.TaiKhoans.Remove(taiKhoan);
+                taiKhoan.TrangThai = false;
                 await _context.SaveChangesAsync();
             }
             return taiKhoan;

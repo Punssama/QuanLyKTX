@@ -144,7 +144,6 @@ namespace KTX_Management
             var resultList = filtered.ToList();
             dataGridView1.DataSource = resultList;
 
-            // Xóa cấu hình header Grid nếu cần (tương tự PhongO)
             if (dataGridView1.Columns["MaHopDong"] != null) dataGridView1.Columns["MaHopDong"].HeaderText = "Mã Hợp Đồng";
             if (dataGridView1.Columns["MaSV"] != null) dataGridView1.Columns["MaSV"].HeaderText = "Mã SV";
             if (dataGridView1.Columns["TenSV"] != null) dataGridView1.Columns["TenSV"].HeaderText = "Tên Sinh Viên";
@@ -153,25 +152,22 @@ namespace KTX_Management
             if (dataGridView1.Columns["TinhTrang"] != null) dataGridView1.Columns["TinhTrang"].HeaderText = "Tình Trạng";
         }
 
-        // Clear search inputs and results (extracted to reuse from delete handler)
+
         private void ClearSearchFields()
         {
-            // Clear basic search
+      
             TenSVtxb.Text = string.Empty;
 
-            // Clear advanced search fields
             txbMSV.Text = string.Empty;
             txbContractNumber.Text = string.Empty;
             txbSignedDate.Text = string.Empty;
             txbRoomNumber.Text = string.Empty;
 
-            // Reset radio buttons and hide advanced panel
             rdbtnTImKiemNangCao.Checked = false;
             rdbtnCtAvail.Checked = false;
             rdbtnCtNotAvail.Checked = false;
             BangTimKiemNangCao.Visible = false;
 
-            // Xóa bộ lọc thay vì xóa hẳn grid
             UpdateDataView();
         }
 

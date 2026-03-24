@@ -47,13 +47,14 @@
             label4 = new Label();
             txtSoNguoi = new TextBox();
             label3 = new Label();
-            txtTenPhong = new TextBox();
+            txtToa = new TextBox();
             label2 = new Label();
             txtMaPhong = new TextBox();
             label1 = new Label();
             dataGridView1 = new DataGridView();
             Column1 = new DataGridViewTextBoxColumn();
             Column2 = new DataGridViewTextBoxColumn();
+            Column8 = new DataGridViewTextBoxColumn();
             Column3 = new DataGridViewTextBoxColumn();
             Column4 = new DataGridViewTextBoxColumn();
             Column5 = new DataGridViewTextBoxColumn();
@@ -185,7 +186,7 @@
             splitContainer2.Panel1.Controls.Add(label4);
             splitContainer2.Panel1.Controls.Add(txtSoNguoi);
             splitContainer2.Panel1.Controls.Add(label3);
-            splitContainer2.Panel1.Controls.Add(txtTenPhong);
+            splitContainer2.Panel1.Controls.Add(txtToa);
             splitContainer2.Panel1.Controls.Add(label2);
             splitContainer2.Panel1.Controls.Add(txtMaPhong);
             splitContainer2.Panel1.Controls.Add(label1);
@@ -270,12 +271,12 @@
             label3.TabIndex = 4;
             label3.Text = "Sức chứa";
             // 
-            // txtTenPhong
+            // txtToa
             // 
-            txtTenPhong.Location = new Point(120, 101);
-            txtTenPhong.Name = "txtTenPhong";
-            txtTenPhong.Size = new Size(182, 31);
-            txtTenPhong.TabIndex = 3;
+            txtToa.Location = new Point(120, 101);
+            txtToa.Name = "txtToa";
+            txtToa.Size = new Size(182, 31);
+            txtToa.TabIndex = 3;
             // 
             // label2
             // 
@@ -284,7 +285,7 @@
             label2.Name = "label2";
             label2.Size = new Size(96, 25);
             label2.TabIndex = 2;
-            label2.Text = "Tên phòng";
+            label2.Text = "Tòa phòng";
             // 
             // txtMaPhong
             // 
@@ -308,7 +309,7 @@
             dataGridView1.AllowUserToDeleteRows = false;
             dataGridView1.AutoGenerateColumns = false;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5, Column6, Column7 });
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column8, Column3, Column4, Column5, Column6, Column7 });
             dataGridView1.Dock = DockStyle.Fill;
             dataGridView1.Location = new Point(0, 0);
             dataGridView1.Name = "dataGridView1";
@@ -331,11 +332,20 @@
             // Column2
             // 
             Column2.DataPropertyName = "matoa";
-            Column2.HeaderText = "Loại/Tòa phòng";
+            Column2.HeaderText = "Tòa phòng";
             Column2.MinimumWidth = 8;
             Column2.Name = "Column2";
             Column2.Width = 150;
             Column2.ReadOnly = true;
+            // 
+            // Column8
+            // 
+            Column8.DataPropertyName = "loaiphong";
+            Column8.HeaderText = "Loại phòng";
+            Column8.MinimumWidth = 8;
+            Column8.Name = "Column8";
+            Column8.Width = 150;
+            Column8.ReadOnly = true;
             // 
             // Column3
             // 
@@ -421,7 +431,7 @@
         private Label label4;
         private TextBox txtSoNguoi;
         private Label label3;
-        private TextBox txtTenPhong;
+        private TextBox txtToa;
         private Label label2;
         private TextBox txtMaPhong;
         private Label label1;
@@ -444,6 +454,7 @@
         private DataGridViewTextBoxColumn Column5;
         private DataGridViewTextBoxColumn Column6;
         private DataGridViewTextBoxColumn Column7;
+        private DataGridViewTextBoxColumn Column8;
         private TextBox textBox1;
         private TextBox txtTrangThai;
     }

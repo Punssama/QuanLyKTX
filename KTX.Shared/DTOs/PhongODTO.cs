@@ -4,6 +4,7 @@ namespace KTX.Shared.DTOs
     {
         public string maphong { get; set; } = string.Empty;
         public string matoa { get; set; } = string.Empty;
+        public string loaiphong { get; set; } = "Nam";
         public int succhua { get; set; }
         public int songuoihientai { get; set; }
         public double giatien { get; set; }
