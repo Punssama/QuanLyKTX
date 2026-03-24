@@ -38,15 +38,10 @@ namespace KTX_Management
                 if (data != null)
                 {
                     listPhong = new BindingList<PhongODTO>(data);
-                    dataGridView1.DataSource = listPhong;
 
-                    if (dataGridView1.Columns["maphong"] != null) dataGridView1.Columns["maphong"].HeaderText = "Mã Phòng";
-                    if (dataGridView1.Columns["matoa"] != null) dataGridView1.Columns["matoa"].HeaderText = "Tòa (Loại)";
-                    if (dataGridView1.Columns["succhua"] != null) dataGridView1.Columns["succhua"].HeaderText = "Sức chứa";
-                    if (dataGridView1.Columns["songuoihientai"] != null) dataGridView1.Columns["songuoihientai"].HeaderText = "Số người";
-                    if (dataGridView1.Columns["giatien"] != null) dataGridView1.Columns["giatien"].HeaderText = "Giá tiền";
-                    if (dataGridView1.Columns["trangthai"] != null) dataGridView1.Columns["trangthai"].HeaderText = "Trạng thái";
-                    if (dataGridView1.Columns["ngaycapnhat"] != null) dataGridView1.Columns["ngaycapnhat"].HeaderText = "Ngày Cập Nhật";
+                    // Xóa auto-generate để DataGridView chỉ bind cột đã cấu hình bằng tay trong Designer
+                    dataGridView1.AutoGenerateColumns = false;
+                    dataGridView1.DataSource = listPhong;
                 }
             }
             catch (Exception ex)
