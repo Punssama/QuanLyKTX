@@ -14,8 +14,7 @@ namespace KTX_Management
         public ThemTaiKhoan()
         {
             InitializeComponent();
-            btnHienTatCa.Click += btnHienTatCa_Click;
-            btnXoaTk.Click += btnXoaTk_Click;
+            
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
 
@@ -160,7 +159,7 @@ namespace KTX_Management
                         var data = await response.Content.ReadAsStringAsync();
                         MessageBox.Show("Thêm tài khoản thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                        // Clear fields after success
+                     
                         IDTb.Clear();
                         TenDangNhapTb.Clear();
                         MatKhauTb.Clear();
@@ -179,15 +178,7 @@ namespace KTX_Management
             }
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 
     public class TaiKhoanModel

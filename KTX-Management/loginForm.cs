@@ -43,9 +43,9 @@ namespace KTX_Management
                             PropertyNameCaseInsensitive = true
                         };
                         loginResponse? loginResp = JsonSerializer.Deserialize<loginResponse>(responseContent, options);
-                        quyen = loginResp?.quyen ?? "";
+                        quyen = loginResp?.quyenHan ?? "";
 
-                         if (quyen != "Quản lý")
+                         if (quyen.ToLower() == "quản lý")
                         {
                             MessageBox.Show("Đăng nhập thành công với quyền Quản lý!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
@@ -54,7 +54,7 @@ namespace KTX_Management
                             MessageBox.Show("Đăng nhập thành công với quyền Nhân viên!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         this.Hide();
-                        FormTrangChu formTrangChu = new FormTrangChu();
+                        FormTrangChu formTrangChu = new FormTrangChu(quyen);
                         formTrangChu.ShowDialog();
                         this.Show();
 

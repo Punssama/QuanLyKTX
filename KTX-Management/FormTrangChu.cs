@@ -15,10 +15,19 @@ namespace KTX_Management
     public partial class FormTrangChu : Form
     {
         private static readonly HttpClient client = new HttpClient();
-
-        public FormTrangChu()
+        string role;
+        public FormTrangChu(string role2)
         {
             InitializeComponent();
+            role = role2.ToLower();
+            if (role.ToLower() == "quản lý")
+            {
+                btnQuanLyTaiKhoan.Visible = true;
+            }
+            else
+            {
+                btnQuanLyTaiKhoan.Visible = false;
+            }
             this.Load += FormTrangChu_Load;
 
             // Allow selecting the entire row instead of single cell
@@ -26,7 +35,7 @@ namespace KTX_Management
             // Handle cell click
             dgrvPhongO.CellClick += DgrvPhongO_CellClick;
         }
-
+        
         private async void FormTrangChu_Load(object? sender, EventArgs e)
         {
             await LoadDanhSachPhongO();
