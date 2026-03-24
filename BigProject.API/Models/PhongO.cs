@@ -16,7 +16,7 @@ namespace BigProject.API.Models
         public double giatien { get; set; }
         [Column("TRANGTHAI")]
         public string trangthai { get; set; } = "Trống";
-        [Column("MATOA")]
+        [Column("MATOA", TypeName = "nvarchar(50)")]
         public string matoa { get; set; } = string.Empty;
         [Column("NGAYCAPNHAT")]
         public DateTime? ngaycapnhat { get; set; }
