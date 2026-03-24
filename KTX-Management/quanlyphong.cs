@@ -1,22 +1,58 @@
-﻿using Microsoft.IdentityModel.Tokens;
+﻿using KTX.Shared.DTOs;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Net.Http;
+using System.Net.Http.Json;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace KTX_Management
 {
     public partial class quanlyphong : Form
     {
-        public BindingList<Phong> listPhong = new BindingList<Phong>();
+        private static readonly HttpClient client = new HttpClient { BaseAddress = new Uri("http://huyphongprojectapi.dev:5294/") };
+        public BindingList<PhongODTO> listPhong = new BindingList<PhongODTO>();
         int soNguoi;
         int sucChua;
+
         public quanlyphong()
         {
             InitializeComponent();
+            this.Load += quanlyphong_Load;
+        }
+
+        private async void quanlyphong_Load(object? sender, EventArgs e)
+        {
+            await LoadDataAsync();
+        }
+
+        private async Task LoadDataAsync()
+        {
+            try
+            {
+                var data = await client.GetFromJsonAsync<List<PhongODTO>>("api/PhongO");
+                if (data != null)
+                {
+                    listPhong = new BindingList<PhongODTO>(data);
+                    dataGridView1.DataSource = listPhong;
+
+                    if (dataGridView1.Columns["maphong"] != null) dataGridView1.Columns["maphong"].HeaderText = "Mã Phòng";
+                    if (dataGridView1.Columns["matoa"] != null) dataGridView1.Columns["matoa"].HeaderText = "Tòa (Loại)";
+                    if (dataGridView1.Columns["succhua"] != null) dataGridView1.Columns["succhua"].HeaderText = "Sức chứa";
+                    if (dataGridView1.Columns["songuoihientai"] != null) dataGridView1.Columns["songuoihientai"].HeaderText = "Số người";
+                    if (dataGridView1.Columns["giatien"] != null) dataGridView1.Columns["giatien"].HeaderText = "Giá tiền";
+                    if (dataGridView1.Columns["trangthai"] != null) dataGridView1.Columns["trangthai"].HeaderText = "Trạng thái";
+                    if (dataGridView1.Columns["ngaycapnhat"] != null) dataGridView1.Columns["ngaycapnhat"].HeaderText = "Ngày Cập Nhật";
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi tải dữ liệu phòng: " + ex.Message);
+            }
         }
 
         private void splitContainer2_Panel1_Paint(object sender, PaintEventArgs e)
@@ -29,36 +65,63 @@ namespace KTX_Management
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private async void button1_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txtMaPhong.Text) || string.IsNullOrEmpty(txtTenPhong.Text))
             {
-                MessageBox.Show("Vui lòng nhập đầy đủ thông tin phòng.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin phòng (Mã, Tên).", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
-            if (txtTrangThai.Text == "Còn trống" || txtTrangThai.Text == "Đầy")
+
+            if (txtTrangThai.Text == "Còn trống" || txtTrangThai.Text == "Đầy" || txtTrangThai.Text == "Trống" || txtTrangThai.Text == "Đang ở")
             {
-                Phong p = new Phong();
-                p.maPhong = Convert.ToInt32(txtMaPhong.Text);
-                p.tenPhong = txtTenPhong.Text;
-                p.soNguoi = Convert.ToInt32(txtSoNguoi.Text);
-                p.loaiPhong = cboLoaiPhong.Text;
-                p.sucChua = Convert.ToInt32(cboSucChua.Text);
-                p.trangThai = txtTrangThai.Text;
+                PhongODTO p = new PhongODTO();
+                p.maphong = txtMaPhong.Text;  // Sử dụng maphong thay vì thuộc tính int
+                p.matoa = cboLoaiPhong.Text; // Map LoaiPhong sang Tòa
 
-                listPhong.Add(p);
+                int.TryParse(txtSoNguoi.Text, out int parsedSoNguoi);
+                p.songuoihientai = parsedSoNguoi;
 
-                txtMaPhong.Clear();
-                txtSoNguoi.Clear();
-                txtTenPhong.Clear();
-                cboSucChua.SelectedIndex = -1;
-                cboLoaiPhong.SelectedIndex = -1;
-                txtTrangThai.Clear();
+                int.TryParse(cboSucChua.Text, out int parsedSucChua);
+                p.succhua = parsedSucChua;
+
+                p.trangthai = txtTrangThai.Text;
+                p.giatien = 1500000; // Giá mặc định nếu ko có ô trỏ
+                p.ngaycapnhat = DateTime.Now;
+
+                try
+                {
+                    var response = await client.PostAsJsonAsync("api/PhongO", p);
+                    if(response.IsSuccessStatusCode)
+                    {
+                        MessageBox.Show("Thêm phòng thành công!");
+                        await LoadDataAsync();
+                        ClearInputs();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Thêm phòng thất bại: " + response.ReasonPhrase);
+                    }
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show("Lỗi khi thêm phòng: " + ex.Message);
+                }
             }
             else
             {
-                MessageBox.Show("Số người hiện tại không được vượt quá sức chứa của phòng.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Trạng thái không hợp lệ.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            dataGridView1.DataSource = listPhong;
+        }
+
+        private void ClearInputs()
+        {
+            txtMaPhong.Clear();
+            txtSoNguoi.Clear();
+            txtTenPhong.Clear();
+            cboSucChua.SelectedIndex = -1;
+            cboLoaiPhong.SelectedIndex = -1;
+            txtTrangThai.Clear();
         }
 
         private void label6_Click(object sender, EventArgs e)
@@ -68,7 +131,8 @@ namespace KTX_Management
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            // Nút Chuyển phòng (chưa implement chi tiết)
+            MessageBox.Show("Chức năng đang phát triển.");
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -76,23 +140,19 @@ namespace KTX_Management
             this.Close();
         }
 
-        private void quanlyphong_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void cboSucChua_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
             {
+                if(cboSucChua.SelectedItem == null) return;
                 sucChua = Convert.ToInt32(cboSucChua.SelectedItem);
                 if (sucChua > soNguoi)
                 {
-                    txtTrangThai.Text = "Còn trống";
+                    txtTrangThai.Text = "Trống";
                 }
                 else if (sucChua == soNguoi)
                 {
-                    txtTrangThai.Text = "Đầy";
+                    txtTrangThai.Text = "Đã đầy";
                 }
                 else if (sucChua < soNguoi)
                 {
@@ -110,7 +170,10 @@ namespace KTX_Management
         {
             try
             {
+                if (string.IsNullOrEmpty(txtSoNguoi.Text)) return;
                 soNguoi = Convert.ToInt32(txtSoNguoi.Text);
+                // Call change logic
+                cboSucChua_SelectedIndexChanged(sender, e);
             }
             catch (FormatException)
             {

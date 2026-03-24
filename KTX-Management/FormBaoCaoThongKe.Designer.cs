@@ -173,7 +173,7 @@
             btQuayVeTrangChu.Location = new Point(6, 368);
             btQuayVeTrangChu.Margin = new Padding(3, 4, 3, 4);
             btQuayVeTrangChu.Name = "btQuayVeTrangChu";
-            btQuayVeTrangChu.Size = new Size(78, 75);
+            btQuayVeTrangChu.Size = new Size(86, 75);
             btQuayVeTrangChu.TabIndex = 1;
             btQuayVeTrangChu.Text = "Quay về trang chủ";
             toolTip1.SetToolTip(btQuayVeTrangChu, "Quay về trang chủ Báo cáo thống kê");
@@ -191,6 +191,7 @@
             button2.Text = "OK";
             toolTip1.SetToolTip(button2, "Xác nhận lọc dữ liệu");
             button2.UseVisualStyleBackColor = true;
+            button2.Click += Button2_Click;
             // 
             // btHoanTac
             // 
@@ -198,11 +199,12 @@
             btHoanTac.Location = new Point(3, 256);
             btHoanTac.Margin = new Padding(3, 4, 3, 4);
             btHoanTac.Name = "btHoanTac";
-            btHoanTac.Size = new Size(74, 45);
+            btHoanTac.Size = new Size(83, 45);
             btHoanTac.TabIndex = 2;
             btHoanTac.Text = "Làm mới";
             toolTip1.SetToolTip(btHoanTac, "Hủy lọc dữ liệu");
             btHoanTac.UseVisualStyleBackColor = true;
+            btHoanTac.Click += BtHoanTac_Click;
             // 
             // btThongKeDoanhThu
             // 
@@ -249,13 +251,14 @@
             dtpNamDoanhThu.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             dtpNamDoanhThu.CustomFormat = "yyyy";
             dtpNamDoanhThu.Format = DateTimePickerFormat.Custom;
-            dtpNamDoanhThu.Location = new Point(143, 9);
+            dtpNamDoanhThu.Location = new Point(152, 17);
             dtpNamDoanhThu.Margin = new Padding(3, 4, 3, 4);
             dtpNamDoanhThu.Name = "dtpNamDoanhThu";
             dtpNamDoanhThu.ShowUpDown = true;
             dtpNamDoanhThu.Size = new Size(59, 27);
             dtpNamDoanhThu.TabIndex = 10;
             toolTip1.SetToolTip(dtpNamDoanhThu, "Hiển thị doanh thu theo năm vừa chọn");
+            dtpNamDoanhThu.ValueChanged += DtpNamDoanhThu_ValueChanged;
             // 
             // textBox2
             // 
@@ -650,7 +653,7 @@
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.3333321F));
             tableLayoutPanel1.Controls.Add(panel1, 0, 0);
             tableLayoutPanel1.Controls.Add(panel2, 1, 0);
-            tableLayoutPanel1.Location = new Point(105, 58);
+            tableLayoutPanel1.Location = new Point(105, 55);
             tableLayoutPanel1.Margin = new Padding(3, 4, 3, 4);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 1;
@@ -700,6 +703,7 @@
             Controls.Add(tcBaoCaoThongKe);
             Margin = new Padding(3, 4, 3, 4);
             Name = "FormBaoCaoThongKe";
+            StartPosition = FormStartPosition.CenterParent;
             Text = "Báo cáo thống kê";
             tpThongKeDoanhThu.ResumeLayout(false);
             panel4.ResumeLayout(false);

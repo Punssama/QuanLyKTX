@@ -67,6 +67,21 @@ CREATE TABLE PHONG
 )
 GO
 
+IF OBJECT_ID('dbo.HOPDONG', 'U') IS NOT NULL
+	DROP TABLE dbo.HOPDONG;
+GO
+
+CREATE TABLE dbo.HOPDONG
+(
+	MaHopDong VARCHAR(50) PRIMARY KEY NOT NULL,
+	MaSV VARCHAR(50) NOT NULL,
+	TenSV NVARCHAR(100),
+	NgayKy DATE,
+	SoPhong VARCHAR(50),
+	TinhTrang NVARCHAR(50) DEFAULT N'Vẫn còn'
+)
+GO
+
 
 CREATE TABLE dbo.ThongKeSinhVienToa
 (
@@ -109,6 +124,13 @@ VALUES
 	('C102', 6, 0, 1800000, 'C', N'Trống', '2023-11-01'),
 	('C201', 6, 3, 1800000, 'C', N'Đang ở', '2023-11-18'),
 	('C202', 6, 5, 1800000, 'C', N'Đang ở', '2023-12-10');
+GO
+
+INSERT INTO dbo.HOPDONG (MaHopDong, MaSV, TenSV, NgayKy, SoPhong, TinhTrang)
+VALUES
+	('HD001', 'SV001', N'Nguyễn Văn A', '2023-10-15', 'A102', N'Vẫn còn'),
+	('HD002', 'SV002', N'Trần Thị B', '2023-11-05', 'A103', N'Vẫn còn'),
+	('HD003', 'SV003', N'Lê Văn C', '2023-09-01', 'A101', N'Không còn');
 GO
 
 

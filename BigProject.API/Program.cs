@@ -8,6 +8,7 @@ builder.Services.AddDbContext<DBContext>(options =>
 
 builder.Services.AddScoped<BigProject.API.Services.ITaiKhoanServices, BigProject.API.Services.TaiKhoanServices>();
 builder.Services.AddScoped<BigProject.API.Services.IPhongOServices, BigProject.API.Services.PhongOServices>();
+builder.Services.AddScoped<BigProject.API.Services.IHopDongServices, BigProject.API.Services.HopDongServices>();
 builder.Services.AddScoped<BigProject.API.Services.IBaoCaoThongKeServices, BigProject.API.Services.BaoCaoThongKeServices>();
 
 builder.Services.AddControllers();
