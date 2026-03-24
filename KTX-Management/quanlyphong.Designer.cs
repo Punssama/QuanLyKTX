@@ -58,6 +58,7 @@
             Column4 = new DataGridViewTextBoxColumn();
             Column5 = new DataGridViewTextBoxColumn();
             Column6 = new DataGridViewTextBoxColumn();
+            Column7 = new DataGridViewTextBoxColumn();
             notifyIcon1 = new NotifyIcon(components);
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
             splitContainer1.Panel1.SuspendLayout();
@@ -303,12 +304,17 @@
             // 
             // dataGridView1
             // 
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.AllowUserToDeleteRows = false;
+            dataGridView1.AutoGenerateColumns = false;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5, Column6 });
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5, Column6, Column7 });
             dataGridView1.Dock = DockStyle.Fill;
             dataGridView1.Location = new Point(0, 0);
             dataGridView1.Name = "dataGridView1";
+            dataGridView1.ReadOnly = true;
             dataGridView1.RowHeadersWidth = 62;
+            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridView1.Size = new Size(923, 470);
             dataGridView1.TabIndex = 0;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
@@ -320,14 +326,16 @@
             Column1.MinimumWidth = 8;
             Column1.Name = "Column1";
             Column1.Width = 150;
+            Column1.ReadOnly = true;
             // 
             // Column2
             // 
             Column2.DataPropertyName = "matoa";
-            Column2.HeaderText = "Loại phòng";
+            Column2.HeaderText = "Loại/Tòa phòng";
             Column2.MinimumWidth = 8;
             Column2.Name = "Column2";
             Column2.Width = 150;
+            Column2.ReadOnly = true;
             // 
             // Column3
             // 
@@ -336,6 +344,7 @@
             Column3.MinimumWidth = 8;
             Column3.Name = "Column3";
             Column3.Width = 150;
+            Column3.ReadOnly = true;
             // 
             // Column4
             // 
@@ -344,6 +353,7 @@
             Column4.MinimumWidth = 8;
             Column4.Name = "Column4";
             Column4.Width = 150;
+            Column4.ReadOnly = true;
             // 
             // Column5
             // 
@@ -352,6 +362,7 @@
             Column5.MinimumWidth = 8;
             Column5.Name = "Column5";
             Column5.Width = 150;
+            Column5.ReadOnly = true;
             // 
             // Column6
             // 
@@ -360,6 +371,16 @@
             Column6.MinimumWidth = 8;
             Column6.Name = "Column6";
             Column6.Width = 150;
+            Column6.ReadOnly = true;
+            // 
+            // Column7
+            // 
+            Column7.DataPropertyName = "ngaycapnhat";
+            Column7.HeaderText = "Ngày cập nhật";
+            Column7.MinimumWidth = 8;
+            Column7.Name = "Column7";
+            Column7.Width = 150;
+            Column7.ReadOnly = true;
             // 
             // notifyIcon1
             // 
@@ -422,6 +443,7 @@
         private DataGridViewTextBoxColumn Column4;
         private DataGridViewTextBoxColumn Column5;
         private DataGridViewTextBoxColumn Column6;
+        private DataGridViewTextBoxColumn Column7;
         private TextBox textBox1;
         private TextBox txtTrangThai;
     }
