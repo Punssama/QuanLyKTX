@@ -75,7 +75,7 @@ namespace KTX_Management
 
         private void rdbtnTImKiemNangCao_CheckedChanged(object sender, EventArgs e)
         {
-            if(rdbtnTImKiemNangCao.Checked)
+            if (rdbtnTImKiemNangCao.Checked)
             {
                 BangTimKiemNangCao.Visible = true;
             }
@@ -155,7 +155,7 @@ namespace KTX_Management
 
         private void ClearSearchFields()
         {
-      
+
             TenSVtxb.Text = string.Empty;
 
             txbMSV.Text = string.Empty;
@@ -174,6 +174,13 @@ namespace KTX_Management
         private void btnOutQLHD_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            HopDongKTX hdktx = new HopDongKTX();
+            hdktx.Show();
+            this.Hide();
         }
     }
 }
