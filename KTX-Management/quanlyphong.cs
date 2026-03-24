@@ -68,7 +68,7 @@ namespace KTX_Management
                 return;
             }
 
-            if (txtTrangThai.Text == "Còn trống" || txtTrangThai.Text == "Đầy" || txtTrangThai.Text == "Trống" || txtTrangThai.Text == "Đang ở")
+            if (txtTrangThai.Text == "Còn trống" || txtTrangThai.Text == "Đã đầy" || txtTrangThai.Text == "Đầy" || txtTrangThai.Text == "Trống" || txtTrangThai.Text == "Đang ở" || txtTrangThai.Text == "Quá tải")
             {
                 PhongODTO p = new PhongODTO();
                 p.maphong = txtMaPhong.Text;  // Sử dụng maphong thay vì thuộc tính int
@@ -143,7 +143,10 @@ namespace KTX_Management
                 sucChua = Convert.ToInt32(cboSucChua.SelectedItem);
                 if (sucChua > soNguoi)
                 {
-                    txtTrangThai.Text = "Trống";
+                    if (soNguoi > 0)
+                        txtTrangThai.Text = "Đang ở";
+                    else
+                        txtTrangThai.Text = "Trống";
                 }
                 else if (sucChua == soNguoi)
                 {
