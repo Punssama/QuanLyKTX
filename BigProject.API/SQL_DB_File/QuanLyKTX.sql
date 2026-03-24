@@ -61,7 +61,8 @@ CREATE TABLE PHONG
 	SUCCHUA INT,
 	SONGUOIHIENTAI INT DEFAULT 0,             
 	GIATIEN FLOAT,
-	MATOA NVARCHAR(50),                        
+	MATOA NVARCHAR(50),      
+	LOAIPHONG NVARCHAR(50),
 	TRANGTHAI NVARCHAR(50) DEFAULT N'Trống',
 	NGAYCAPNHAT DATE DEFAULT GETDATE() 
 )
@@ -106,24 +107,24 @@ VALUES
 GO
 
 
-INSERT INTO dbo.PHONG (MAPHONG, SUCCHUA, SONGUOIHIENTAI, GIATIEN, MATOA, TRANGTHAI, NGAYCAPNHAT)
+INSERT INTO dbo.PHONG (MAPHONG, SUCCHUA, SONGUOIHIENTAI, GIATIEN, MATOA, LOAIPHONG, TRANGTHAI, NGAYCAPNHAT)
 VALUES 
-	('A101', 8, 0, 1500000, 'A', N'Trống', '2023-10-01'),
-	('A102', 8, 8, 1500000, 'A', N'Đã đầy', '2023-10-15'),
-	('A103', 8, 6, 1500000, 'A', N'Đang ở', '2023-11-05'),
-	('A104', 8, 4, 1500000, 'A', N'Đang ở', '2023-11-12'),
-	('A201', 8, 8, 1500000, 'A', N'Đã đầy', '2023-12-01'),
-	('A202', 8, 2, 1500000, 'A', N'Đang ở', '2023-12-15'),
+	('A101', 8, 0, 1500000, 'A', N'Nam', N'Trống', '2023-10-01'),
+	('A102', 8, 8, 1500000, 'A', N'Nam', N'Đã đầy', '2023-10-15'),
+	('A103', 8, 6, 1500000, 'A', N'Nam', N'Đang ở', '2023-11-05'),
+	('A104', 8, 4, 1500000, 'A', N'Nam', N'Đang ở', '2023-11-12'),
+	('A201', 8, 8, 1500000, 'A', N'Nam', N'Đã đầy', '2023-12-01'),
+	('A202', 8, 2, 1500000, 'A', N'Nữ', N'Đang ở', '2023-12-15'),
 
-	('B101', 4, 4, 2500000, 'B', N'Đã đầy', '2023-10-10'),
-	('B102', 4, 1, 2500000, 'B', N'Đang ở', '2023-10-25'),
-	('B201', 4, 2, 2500000, 'B', N'Đang ở', '2023-11-20'),
-	('B202', 4, 4, 2500000, 'B', N'Đã đầy', '2023-12-05'),
+	('B101', 4, 4, 2500000, 'B', N'Nữ', N'Đã đầy', '2023-10-10'),
+	('B102', 4, 1, 2500000, 'B', N'Nữ', N'Đang ở', '2023-10-25'),
+	('B201', 4, 2, 2500000, 'B', N'Nam', N'Đang ở', '2023-11-20'),
+	('B202', 4, 4, 2500000, 'B', N'Nam', N'Đã đầy', '2023-12-05'),
 
-	('C101', 6, 6, 1800000, 'C', N'Đã đầy', '2023-09-15'),
-	('C102', 6, 0, 1800000, 'C', N'Trống', '2023-11-01'),
-	('C201', 6, 3, 1800000, 'C', N'Đang ở', '2023-11-18'),
-	('C202', 6, 5, 1800000, 'C', N'Đang ở', '2023-12-10');
+	('C101', 6, 6, 1800000, 'C', N'Nam', N'Đã đầy', '2023-09-15'),
+	('C102', 6, 0, 1800000, 'C', N'Nam', N'Trống', '2023-11-01'),
+	('C201', 6, 3, 1800000, 'C', N'Nữ', N'Đang ở', '2023-11-18'),
+	('C202', 6, 5, 1800000, 'C', N'Nữ', N'Đang ở', '2023-12-10');
 GO
 
 INSERT INTO dbo.HOPDONG (MaHopDong, MaSV, TenSV, NgayKy, SoPhong, TinhTrang)

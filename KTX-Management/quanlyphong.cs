@@ -62,9 +62,9 @@ namespace KTX_Management
 
         private async void button1_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtMaPhong.Text) || string.IsNullOrEmpty(txtTenPhong.Text))
+            if (string.IsNullOrEmpty(txtMaPhong.Text) || string.IsNullOrEmpty(txtToa.Text) || string.IsNullOrEmpty(cboLoaiPhong.Text))
             {
-                MessageBox.Show("Vui lòng nhập đầy đủ thông tin phòng (Mã, Tên).", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin phòng (Mã, Tòa, Loại phòng).", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -72,7 +72,8 @@ namespace KTX_Management
             {
                 PhongODTO p = new PhongODTO();
                 p.maphong = txtMaPhong.Text;  // Sử dụng maphong thay vì thuộc tính int
-                p.matoa = cboLoaiPhong.Text; // Map LoaiPhong sang Tòa
+                p.matoa = txtToa.Text; 
+                p.loaiphong = cboLoaiPhong.Text;
 
                 int.TryParse(txtSoNguoi.Text, out int parsedSoNguoi);
                 p.songuoihientai = parsedSoNguoi;
@@ -113,7 +114,7 @@ namespace KTX_Management
         {
             txtMaPhong.Clear();
             txtSoNguoi.Clear();
-            txtTenPhong.Clear();
+            txtToa.Clear();
             cboSucChua.SelectedIndex = -1;
             cboLoaiPhong.SelectedIndex = -1;
             txtTrangThai.Clear();

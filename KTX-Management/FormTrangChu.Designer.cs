@@ -33,6 +33,7 @@
             panel2 = new Panel();
             btnLogOut = new Button();
             button1 = new Button();
+            btnQuanLyTaiKhoan = new Button();
             btnGoQLPO = new Button();
             btnGoQLHD = new Button();
             tableLayoutPanel1 = new TableLayoutPanel();
@@ -65,6 +66,7 @@
             // lbTitle
             // 
             lbTitle.AccessibleDescription = "";
+            lbTitle.Anchor = AnchorStyles.None;
             lbTitle.AutoSize = true;
             lbTitle.Font = new Font("Montserrat", 20F, FontStyle.Bold);
             lbTitle.Location = new Point(179, 8);
@@ -78,6 +80,7 @@
             panel2.BorderStyle = BorderStyle.FixedSingle;
             panel2.Controls.Add(btnLogOut);
             panel2.Controls.Add(button1);
+            panel2.Controls.Add(btnQuanLyTaiKhoan);
             panel2.Controls.Add(btnGoQLPO);
             panel2.Controls.Add(btnGoQLHD);
             panel2.Dock = DockStyle.Left;
@@ -108,6 +111,17 @@
             button1.Text = "Báo cáo thống kê";
             button1.UseVisualStyleBackColor = true;
             button1.Click += btnGoBCTK_Click;
+            // 
+            // btnQuanLyTaiKhoan
+            // 
+            btnQuanLyTaiKhoan.Font = new Font("Montserrat", 9F);
+            btnQuanLyTaiKhoan.Location = new Point(5, 283);
+            btnQuanLyTaiKhoan.Name = "btnQuanLyTaiKhoan";
+            btnQuanLyTaiKhoan.Size = new Size(153, 77);
+            btnQuanLyTaiKhoan.TabIndex = 0;
+            btnQuanLyTaiKhoan.Text = "Quản lý tài khoản";
+            btnQuanLyTaiKhoan.UseVisualStyleBackColor = true;
+            btnQuanLyTaiKhoan.Click += btnQuanLyTaiKhoan_Click;
             // 
             // btnGoQLPO
             // 
@@ -269,5 +283,6 @@
         private TextBox tbNumOPeople;
         private TextBox tbRoomName;
         private Button button1;
+        private Button btnQuanLyTaiKhoan;
     }
 }

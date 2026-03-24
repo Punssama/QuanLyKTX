@@ -112,5 +112,11 @@ namespace KTX_Management
             quanlyphong quanlyphong = new quanlyphong();
             quanlyphong.ShowDialog();
         }
+        
+        private void btnQuanLyTaiKhoan_Click(object sender, EventArgs e)
+        {
+            ThemTaiKhoan themtaikhoan = new ThemTaiKhoan();
+            themtaikhoan.ShowDialog();
+        }
     }
 }
