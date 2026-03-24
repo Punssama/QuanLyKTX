@@ -5,6 +5,7 @@
 
 # dotenv files
 .env
+.vs\
 #postman
 .postman
 # User-specific files
