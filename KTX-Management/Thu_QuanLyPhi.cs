@@ -110,12 +110,16 @@ namespace KTX_Management
 
                 MessageBox.Show("Lưu thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+<<<<<<< HEAD
+
+=======
                 // Reset form (nếu muốn)
                 textBox6.Text = "";
                 tbdc.Text = tbdm.Text = tbdtt.Text = "";
                 tbnc.Text = tbnm.Text = tbntt.Text = "";
                 tbtiendien.Text = tbtiennuoc.Text = tbtiendv.Text = tbtongtien.Text = "";
                 radioButton1.Checked = radioButton2.Checked = false;
+>>>>>>> 70a2fd262d038d7c7d81cf5098cd3c6727026bc2
             }
             catch (Exception ex)
             {
@@ -173,6 +177,43 @@ namespace KTX_Management
         }
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+<<<<<<< HEAD
+            if (e.RowIndex < 0)
+                return;
+
+            DialogResult result = MessageBox.Show(
+                "Bạn có muốn sửa dòng này không?",
+                "Xác nhận sửa",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+
+            if (result == DialogResult.No)
+                return;
+
+            psuaxoa.Visible = true;
+
+            if (pthem.Visible)
+                pthem.Visible = false;
+
+            var row = dataGridView1.Rows[e.RowIndex];
+
+            tbsuatienphong.Text = row.Cells["Column13"].Value?.ToString() ?? "";
+            tbsuaphong.Text = row.Cells["Column1"].Value?.ToString() ?? "";
+            tbsuadiencu.Text = row.Cells["Column2"].Value?.ToString() ?? "";
+            tbsuadienmoi.Text = row.Cells["Column3"].Value?.ToString() ?? "";
+            tbsuadtt.Text = row.Cells["Column4"].Value?.ToString() ?? "";
+            tbsuanuoccu.Text = row.Cells["Column5"].Value?.ToString() ?? "";
+            tbsuanuocmoi.Text = row.Cells["Column6"].Value?.ToString() ?? "";
+            tbsuantt.Text = row.Cells["Column7"].Value?.ToString() ?? "";
+
+            string trangThai = row.Cells["Column10"].Value?.ToString() ?? "";
+
+            radioButton4.Checked = trangThai.Equals("Đã thanh toán", StringComparison.OrdinalIgnoreCase);
+            radioButton3.Checked = !radioButton4.Checked;
+
+            tbsuathang.Text = row.Cells["Column11"].Value?.ToString() ?? "";
+            tbsuanam.Text = row.Cells["Column12"].Value?.ToString() ?? "";
+=======
             if (e.RowIndex < 0) { 
 
                 return; }
@@ -208,6 +249,7 @@ namespace KTX_Management
 
 
             
+>>>>>>> 70a2fd262d038d7c7d81cf5098cd3c6727026bc2
         }
 
 
@@ -287,6 +329,31 @@ namespace KTX_Management
             }
         }
 
+<<<<<<< HEAD
+        private void button5_Click(object sender, EventArgs e)
+        {
+            // lay dữ liệu từ TextBox tìm kiếm
+            string tkphong = cbtkphong.SelectedItem?.ToString() ?? "";
+            string tkthang = cbtkthang.SelectedItem?.ToString() ?? "";
+            string tknam = cbtknam.SelectedItem?.ToString() ?? "";
+            string tktrangthai = cbtktrangthai.SelectedItem?.ToString() ?? "";
+            // lọc dữ liệu trong DataGridView dựa trên điều kiện tìm kiếm
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                bool match = true;
+                if (!string.IsNullOrEmpty(tkphong) && row.Cells["Column1"].Value?.ToString() != tkphong)
+                    match = false;
+                if (!string.IsNullOrEmpty(tkthang) && row.Cells["Column11"].Value?.ToString() != tkthang)
+                    match = false;
+                if (!string.IsNullOrEmpty(tknam) && row.Cells["Column12"].Value?.ToString() != tknam)
+                    match = false;
+                if (!string.IsNullOrEmpty(tktrangthai) && row.Cells["Column10"].Value?.ToString() != tktrangthai)
+                    match = false;
+                row.Visible = match;
+            }
+        }
+=======
+>>>>>>> 70a2fd262d038d7c7d81cf5098cd3c6727026bc2
     }
 }
 

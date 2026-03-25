@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             pmain = new Panel();
+<<<<<<< HEAD
+=======
             psuaxoa = new Panel();
             tbsuanam = new TextBox();
             label20 = new Label();
@@ -59,6 +61,7 @@
             label30 = new Label();
             label31 = new Label();
             button6 = new Button();
+>>>>>>> 70a2fd262d038d7c7d81cf5098cd3c6727026bc2
             pthem = new Panel();
             button2 = new Button();
             btluuthem = new Button();
@@ -94,6 +97,39 @@
             label8 = new Label();
             label7 = new Label();
             label6 = new Label();
+<<<<<<< HEAD
+            psuaxoa = new Panel();
+            tbsuanam = new TextBox();
+            label20 = new Label();
+            label19 = new Label();
+            tbsuathang = new TextBox();
+            button3 = new Button();
+            button4 = new Button();
+            groupBox5 = new GroupBox();
+            radioButton3 = new RadioButton();
+            radioButton4 = new RadioButton();
+            tbsuatienphong = new TextBox();
+            tbsuaphong = new TextBox();
+            groupBox7 = new GroupBox();
+            tbsuanuocmoi = new TextBox();
+            tbsuantt = new TextBox();
+            tbsuanuoccu = new TextBox();
+            label23 = new Label();
+            label24 = new Label();
+            label25 = new Label();
+            label26 = new Label();
+            groupBox8 = new GroupBox();
+            tbsuadienmoi = new TextBox();
+            tbsuadtt = new TextBox();
+            tbsuadiencu = new TextBox();
+            label27 = new Label();
+            label28 = new Label();
+            label29 = new Label();
+            label30 = new Label();
+            label31 = new Label();
+            button6 = new Button();
+=======
+>>>>>>> 70a2fd262d038d7c7d81cf5098cd3c6727026bc2
             btsuaxoa = new Button();
             cbtktrangthai = new ComboBox();
             cbtknam = new ComboBox();
@@ -123,15 +159,25 @@
             Column11 = new DataGridViewTextBoxColumn();
             Column12 = new DataGridViewTextBoxColumn();
             pmain.SuspendLayout();
+<<<<<<< HEAD
+=======
             psuaxoa.SuspendLayout();
             groupBox5.SuspendLayout();
             groupBox7.SuspendLayout();
             groupBox8.SuspendLayout();
+>>>>>>> 70a2fd262d038d7c7d81cf5098cd3c6727026bc2
             pthem.SuspendLayout();
             groupBox4.SuspendLayout();
             groupBox3.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox1.SuspendLayout();
+<<<<<<< HEAD
+            psuaxoa.SuspendLayout();
+            groupBox5.SuspendLayout();
+            groupBox7.SuspendLayout();
+            groupBox8.SuspendLayout();
+=======
+>>>>>>> 70a2fd262d038d7c7d81cf5098cd3c6727026bc2
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -160,6 +206,8 @@
             pmain.Size = new Size(957, 494);
             pmain.TabIndex = 0;
             // 
+<<<<<<< HEAD
+=======
             // psuaxoa
             // 
             psuaxoa.Controls.Add(tbsuanam);
@@ -448,6 +496,7 @@
             button6.UseVisualStyleBackColor = true;
             button6.Click += button6_Click;
             // 
+>>>>>>> 70a2fd262d038d7c7d81cf5098cd3c6727026bc2
             // pthem
             // 
             pthem.Controls.Add(button2);
@@ -787,6 +836,297 @@
             label6.Text = "nhập thông tin phòng";
             label6.TextAlign = ContentAlignment.TopCenter;
             // 
+<<<<<<< HEAD
+            // psuaxoa
+            // 
+            psuaxoa.Controls.Add(tbsuanam);
+            psuaxoa.Controls.Add(label20);
+            psuaxoa.Controls.Add(label19);
+            psuaxoa.Controls.Add(tbsuathang);
+            psuaxoa.Controls.Add(button3);
+            psuaxoa.Controls.Add(button4);
+            psuaxoa.Controls.Add(groupBox5);
+            psuaxoa.Controls.Add(tbsuatienphong);
+            psuaxoa.Controls.Add(tbsuaphong);
+            psuaxoa.Controls.Add(groupBox7);
+            psuaxoa.Controls.Add(label26);
+            psuaxoa.Controls.Add(groupBox8);
+            psuaxoa.Controls.Add(label30);
+            psuaxoa.Controls.Add(label31);
+            psuaxoa.Controls.Add(button6);
+            psuaxoa.Location = new Point(1, 3);
+            psuaxoa.Name = "psuaxoa";
+            psuaxoa.Size = new Size(247, 494);
+            psuaxoa.TabIndex = 8;
+            // 
+            // tbsuanam
+            // 
+            tbsuanam.Location = new Point(154, 345);
+            tbsuanam.Name = "tbsuanam";
+            tbsuanam.Size = new Size(97, 27);
+            tbsuanam.TabIndex = 1;
+            tbsuanam.TextChanged += tbnm_TextChanged_1;
+            // 
+            // label20
+            // 
+            label20.AutoSize = true;
+            label20.Location = new Point(112, 348);
+            label20.Name = "label20";
+            label20.Size = new Size(38, 20);
+            label20.TabIndex = 9;
+            label20.Text = "năm";
+            // 
+            // label19
+            // 
+            label19.AutoSize = true;
+            label19.Location = new Point(8, 348);
+            label19.Name = "label19";
+            label19.Size = new Size(47, 20);
+            label19.TabIndex = 8;
+            label19.Text = "tháng";
+            // 
+            // tbsuathang
+            // 
+            tbsuathang.Location = new Point(52, 345);
+            tbsuathang.Name = "tbsuathang";
+            tbsuathang.Size = new Size(54, 27);
+            tbsuathang.TabIndex = 1;
+            // 
+            // button3
+            // 
+            button3.Location = new Point(154, 465);
+            button3.Name = "button3";
+            button3.Size = new Size(94, 29);
+            button3.TabIndex = 7;
+            button3.Text = "lưu";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
+            // 
+            // button4
+            // 
+            button4.Location = new Point(0, 465);
+            button4.Name = "button4";
+            button4.Size = new Size(94, 29);
+            button4.TabIndex = 7;
+            button4.Text = "xóa";
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
+            // 
+            // groupBox5
+            // 
+            groupBox5.Controls.Add(radioButton3);
+            groupBox5.Controls.Add(radioButton4);
+            groupBox5.Location = new Point(2, 272);
+            groupBox5.Name = "groupBox5";
+            groupBox5.Size = new Size(245, 63);
+            groupBox5.TabIndex = 6;
+            groupBox5.TabStop = false;
+            groupBox5.Text = "trạng thái";
+            // 
+            // radioButton3
+            // 
+            radioButton3.AutoSize = true;
+            radioButton3.Location = new Point(79, 39);
+            radioButton3.Name = "radioButton3";
+            radioButton3.Size = new Size(137, 24);
+            radioButton3.TabIndex = 1;
+            radioButton3.TabStop = true;
+            radioButton3.Text = "chưa thanh toán";
+            radioButton3.UseVisualStyleBackColor = true;
+            // 
+            // radioButton4
+            // 
+            radioButton4.AutoSize = true;
+            radioButton4.Location = new Point(79, 11);
+            radioButton4.Name = "radioButton4";
+            radioButton4.Size = new Size(122, 24);
+            radioButton4.TabIndex = 0;
+            radioButton4.TabStop = true;
+            radioButton4.Text = "đã thanh toán";
+            radioButton4.UseVisualStyleBackColor = true;
+            // 
+            // tbsuatienphong
+            // 
+            tbsuatienphong.Location = new Point(77, 114);
+            tbsuatienphong.Name = "tbsuatienphong";
+            tbsuatienphong.Size = new Size(171, 27);
+            tbsuatienphong.TabIndex = 5;
+            // 
+            // tbsuaphong
+            // 
+            tbsuaphong.Location = new Point(66, 81);
+            tbsuaphong.Name = "tbsuaphong";
+            tbsuaphong.Size = new Size(182, 27);
+            tbsuaphong.TabIndex = 5;
+            // 
+            // groupBox7
+            // 
+            groupBox7.Controls.Add(tbsuanuocmoi);
+            groupBox7.Controls.Add(tbsuantt);
+            groupBox7.Controls.Add(tbsuanuoccu);
+            groupBox7.Controls.Add(label23);
+            groupBox7.Controls.Add(label24);
+            groupBox7.Controls.Add(label25);
+            groupBox7.Location = new Point(5, 203);
+            groupBox7.Name = "groupBox7";
+            groupBox7.Size = new Size(243, 68);
+            groupBox7.TabIndex = 3;
+            groupBox7.TabStop = false;
+            groupBox7.Text = "số nước";
+            // 
+            // tbsuanuocmoi
+            // 
+            tbsuanuocmoi.Location = new Point(184, 10);
+            tbsuanuocmoi.Name = "tbsuanuocmoi";
+            tbsuanuocmoi.Size = new Size(59, 27);
+            tbsuanuocmoi.TabIndex = 1;
+            // 
+            // tbsuantt
+            // 
+            tbsuantt.Location = new Point(156, 37);
+            tbsuantt.Name = "tbsuantt";
+            tbsuantt.ReadOnly = true;
+            tbsuantt.Size = new Size(82, 27);
+            tbsuantt.TabIndex = 1;
+            // 
+            // tbsuanuoccu
+            // 
+            tbsuanuoccu.Location = new Point(88, 10);
+            tbsuanuoccu.Name = "tbsuanuoccu";
+            tbsuanuoccu.Size = new Size(54, 27);
+            tbsuanuoccu.TabIndex = 1;
+            // 
+            // label23
+            // 
+            label23.AutoSize = true;
+            label23.Location = new Point(4, 40);
+            label23.Name = "label23";
+            label23.Size = new Size(150, 20);
+            label23.TabIndex = 0;
+            label23.Text = "tổng số nước tiêu thụ";
+            // 
+            // label24
+            // 
+            label24.AutoSize = true;
+            label24.Location = new Point(143, 13);
+            label24.Name = "label24";
+            label24.Size = new Size(35, 20);
+            label24.TabIndex = 0;
+            label24.Text = "mới";
+            // 
+            // label25
+            // 
+            label25.AutoSize = true;
+            label25.Location = new Point(56, 17);
+            label25.Name = "label25";
+            label25.Size = new Size(24, 20);
+            label25.TabIndex = 0;
+            label25.Text = "cũ";
+            // 
+            // label26
+            // 
+            label26.AutoSize = true;
+            label26.Location = new Point(0, 114);
+            label26.Name = "label26";
+            label26.Size = new Size(81, 20);
+            label26.TabIndex = 2;
+            label26.Text = "tiền phòng";
+            // 
+            // groupBox8
+            // 
+            groupBox8.Controls.Add(tbsuadienmoi);
+            groupBox8.Controls.Add(tbsuadtt);
+            groupBox8.Controls.Add(tbsuadiencu);
+            groupBox8.Controls.Add(label27);
+            groupBox8.Controls.Add(label28);
+            groupBox8.Controls.Add(label29);
+            groupBox8.Location = new Point(4, 140);
+            groupBox8.Name = "groupBox8";
+            groupBox8.Size = new Size(243, 64);
+            groupBox8.TabIndex = 3;
+            groupBox8.TabStop = false;
+            groupBox8.Text = "số điện";
+            // 
+            // tbsuadienmoi
+            // 
+            tbsuadienmoi.Location = new Point(185, 7);
+            tbsuadienmoi.Name = "tbsuadienmoi";
+            tbsuadienmoi.Size = new Size(59, 27);
+            tbsuadienmoi.TabIndex = 1;
+            // 
+            // tbsuadtt
+            // 
+            tbsuadtt.Location = new Point(152, 37);
+            tbsuadtt.Name = "tbsuadtt";
+            tbsuadtt.ReadOnly = true;
+            tbsuadtt.Size = new Size(82, 27);
+            tbsuadtt.TabIndex = 1;
+            // 
+            // tbsuadiencu
+            // 
+            tbsuadiencu.Location = new Point(89, 7);
+            tbsuadiencu.Name = "tbsuadiencu";
+            tbsuadiencu.Size = new Size(54, 27);
+            tbsuadiencu.TabIndex = 1;
+            // 
+            // label27
+            // 
+            label27.AutoSize = true;
+            label27.Location = new Point(0, 40);
+            label27.Name = "label27";
+            label27.Size = new Size(146, 20);
+            label27.TabIndex = 0;
+            label27.Text = "tổng số điện tiêu thụ";
+            // 
+            // label28
+            // 
+            label28.AutoSize = true;
+            label28.Location = new Point(144, 10);
+            label28.Name = "label28";
+            label28.Size = new Size(35, 20);
+            label28.TabIndex = 0;
+            label28.Text = "mới";
+            // 
+            // label29
+            // 
+            label29.AutoSize = true;
+            label29.Location = new Point(57, 14);
+            label29.Name = "label29";
+            label29.Size = new Size(24, 20);
+            label29.TabIndex = 0;
+            label29.Text = "cũ";
+            // 
+            // label30
+            // 
+            label30.AutoSize = true;
+            label30.Location = new Point(5, 81);
+            label30.Name = "label30";
+            label30.Size = new Size(52, 20);
+            label30.TabIndex = 2;
+            label30.Text = "phòng";
+            // 
+            // label31
+            // 
+            label31.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label31.Location = new Point(8, 41);
+            label31.Name = "label31";
+            label31.Size = new Size(239, 37);
+            label31.TabIndex = 1;
+            label31.Text = "nhập thông tin phòng";
+            label31.TextAlign = ContentAlignment.TopCenter;
+            // 
+            // button6
+            // 
+            button6.Location = new Point(-2, -1);
+            button6.Name = "button6";
+            button6.Size = new Size(94, 29);
+            button6.TabIndex = 0;
+            button6.Text = "quay lại";
+            button6.UseVisualStyleBackColor = true;
+            button6.Click += button6_Click;
+            // 
+=======
+>>>>>>> 70a2fd262d038d7c7d81cf5098cd3c6727026bc2
             // btsuaxoa
             // 
             btsuaxoa.Location = new Point(0, 117);
@@ -883,6 +1223,10 @@
             button5.TabIndex = 1;
             button5.Text = "tìm kiếm";
             button5.UseVisualStyleBackColor = true;
+<<<<<<< HEAD
+            button5.Click += button5_Click;
+=======
+>>>>>>> 70a2fd262d038d7c7d81cf5098cd3c6727026bc2
             // 
             // btthem
             // 
@@ -1041,6 +1385,8 @@
             Text = "Thu_QuanLyPhi";
             pmain.ResumeLayout(false);
             pmain.PerformLayout();
+<<<<<<< HEAD
+=======
             psuaxoa.ResumeLayout(false);
             psuaxoa.PerformLayout();
             groupBox5.ResumeLayout(false);
@@ -1049,6 +1395,7 @@
             groupBox7.PerformLayout();
             groupBox8.ResumeLayout(false);
             groupBox8.PerformLayout();
+>>>>>>> 70a2fd262d038d7c7d81cf5098cd3c6727026bc2
             pthem.ResumeLayout(false);
             pthem.PerformLayout();
             groupBox4.ResumeLayout(false);
@@ -1059,6 +1406,17 @@
             groupBox2.PerformLayout();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
+<<<<<<< HEAD
+            psuaxoa.ResumeLayout(false);
+            psuaxoa.PerformLayout();
+            groupBox5.ResumeLayout(false);
+            groupBox5.PerformLayout();
+            groupBox7.ResumeLayout(false);
+            groupBox7.PerformLayout();
+            groupBox8.ResumeLayout(false);
+            groupBox8.PerformLayout();
+=======
+>>>>>>> 70a2fd262d038d7c7d81cf5098cd3c6727026bc2
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
