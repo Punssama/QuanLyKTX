@@ -110,7 +110,16 @@ namespace KTX_Management
 
                 MessageBox.Show("Lưu thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+<<<<<<< HEAD
 
+=======
+                // Reset form (nếu muốn)
+                textBox6.Text = "";
+                tbdc.Text = tbdm.Text = tbdtt.Text = "";
+                tbnc.Text = tbnm.Text = tbntt.Text = "";
+                tbtiendien.Text = tbtiennuoc.Text = tbtiendv.Text = tbtongtien.Text = "";
+                radioButton1.Checked = radioButton2.Checked = false;
+>>>>>>> 70a2fd262d038d7c7d81cf5098cd3c6727026bc2
             }
             catch (Exception ex)
             {
@@ -168,6 +177,7 @@ namespace KTX_Management
         }
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+<<<<<<< HEAD
             if (e.RowIndex < 0)
                 return;
 
@@ -203,6 +213,43 @@ namespace KTX_Management
 
             tbsuathang.Text = row.Cells["Column11"].Value?.ToString() ?? "";
             tbsuanam.Text = row.Cells["Column12"].Value?.ToString() ?? "";
+=======
+            if (e.RowIndex < 0) { 
+
+                return; }
+            // nếu psuaxoa chưa hiển thị thì thông báo có muôn sửa không
+            if (e.RowIndex == 0)
+            {
+                MessageBox.Show("Bạn có muốn sửa dòng này không?", "Xác nhận sửa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (DialogResult.No == DialogResult.No)
+                {
+                    return;
+                }
+                else {
+                    psuaxoa.Visible = true;
+                    //nếu dang hiện thị pthem thì ẩn nó 
+                    if(pthem.Visible)
+                    pthem.Visible = false;
+                    var row = dataGridView1.Rows[e.RowIndex];
+                    tbsuatienphong.Text = row.Cells["Column13"].Value?.ToString() ?? "";
+                    tbsuaphong.Text = row.Cells["Column1"].Value?.ToString() ?? "";
+                    tbsuadiencu.Text = row.Cells["Column2"].Value?.ToString() ?? "";
+                    tbsuadienmoi.Text = row.Cells["Column3"].Value?.ToString() ?? "";
+                    tbsuadtt.Text = row.Cells["Column4"].Value?.ToString() ?? "";
+                    tbsuanuoccu.Text = row.Cells["Column5"].Value?.ToString() ?? "";
+                    tbsuanuocmoi.Text = row.Cells["Column6"].Value?.ToString() ?? "";
+                    tbsuantt.Text = row.Cells["Column7"].Value?.ToString() ?? "";
+                    string trangThai = row.Cells["Column10"].Value?.ToString() ?? "";
+                    radioButton4.Checked = trangThai.Equals("Đã thanh toán", StringComparison.OrdinalIgnoreCase);
+                    radioButton3.Checked = !radioButton4.Checked;
+                    tbsuathang.Text = row.Cells["Column11"].Value?.ToString() ?? "";
+                    tbsuanam.Text = row.Cells["Column12"].Value?.ToString() ?? "";
+                    }
+            }
+
+
+            
+>>>>>>> 70a2fd262d038d7c7d81cf5098cd3c6727026bc2
         }
 
 
@@ -282,6 +329,7 @@ namespace KTX_Management
             }
         }
 
+<<<<<<< HEAD
         private void button5_Click(object sender, EventArgs e)
         {
             // lay dữ liệu từ TextBox tìm kiếm
@@ -304,6 +352,8 @@ namespace KTX_Management
                 row.Visible = match;
             }
         }
+=======
+>>>>>>> 70a2fd262d038d7c7d81cf5098cd3c6727026bc2
     }
 }
 
