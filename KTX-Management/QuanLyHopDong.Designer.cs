@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             label1 = new Label();
             label2 = new Label();
             TenSVtxb = new TextBox();
@@ -52,10 +53,18 @@
             button1 = new Button();
             groupBox1 = new GroupBox();
             pictureBox1 = new PictureBox();
+            hopDongDTOBindingSource = new BindingSource(components);
+            maHopDongDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            maSVDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            tenSVDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            ngayKyDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            soPhongDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            tinhTrangDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             BangTimKiemNangCao.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)hopDongDTOBindingSource).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -257,7 +266,10 @@
             // 
             // dataGridView1
             // 
+            dataGridView1.AutoGenerateColumns = false;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { maHopDongDataGridViewTextBoxColumn, maSVDataGridViewTextBoxColumn, tenSVDataGridViewTextBoxColumn, ngayKyDataGridViewTextBoxColumn, soPhongDataGridViewTextBoxColumn, tinhTrangDataGridViewTextBoxColumn });
+            dataGridView1.DataSource = hopDongDTOBindingSource;
             dataGridView1.Location = new Point(3, 601);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 72;
@@ -296,6 +308,58 @@
             pictureBox1.TabIndex = 9;
             pictureBox1.TabStop = false;
             // 
+            // hopDongDTOBindingSource
+            // 
+            hopDongDTOBindingSource.DataSource = typeof(KTX.Shared.DTOs.HopDongDTO);
+            // 
+            // maHopDongDataGridViewTextBoxColumn
+            // 
+            maHopDongDataGridViewTextBoxColumn.DataPropertyName = "MaHopDong";
+            maHopDongDataGridViewTextBoxColumn.HeaderText = "MaHopDong";
+            maHopDongDataGridViewTextBoxColumn.MinimumWidth = 9;
+            maHopDongDataGridViewTextBoxColumn.Name = "maHopDongDataGridViewTextBoxColumn";
+            maHopDongDataGridViewTextBoxColumn.Width = 175;
+            // 
+            // maSVDataGridViewTextBoxColumn
+            // 
+            maSVDataGridViewTextBoxColumn.DataPropertyName = "MaSV";
+            maSVDataGridViewTextBoxColumn.HeaderText = "MaSV";
+            maSVDataGridViewTextBoxColumn.MinimumWidth = 9;
+            maSVDataGridViewTextBoxColumn.Name = "maSVDataGridViewTextBoxColumn";
+            maSVDataGridViewTextBoxColumn.Width = 250;
+            // 
+            // tenSVDataGridViewTextBoxColumn
+            // 
+            tenSVDataGridViewTextBoxColumn.DataPropertyName = "TenSV";
+            tenSVDataGridViewTextBoxColumn.HeaderText = "TenSV";
+            tenSVDataGridViewTextBoxColumn.MinimumWidth = 9;
+            tenSVDataGridViewTextBoxColumn.Name = "tenSVDataGridViewTextBoxColumn";
+            tenSVDataGridViewTextBoxColumn.Width = 250;
+            // 
+            // ngayKyDataGridViewTextBoxColumn
+            // 
+            ngayKyDataGridViewTextBoxColumn.DataPropertyName = "NgayKy";
+            ngayKyDataGridViewTextBoxColumn.HeaderText = "NgayKy";
+            ngayKyDataGridViewTextBoxColumn.MinimumWidth = 9;
+            ngayKyDataGridViewTextBoxColumn.Name = "ngayKyDataGridViewTextBoxColumn";
+            ngayKyDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // soPhongDataGridViewTextBoxColumn
+            // 
+            soPhongDataGridViewTextBoxColumn.DataPropertyName = "SoPhong";
+            soPhongDataGridViewTextBoxColumn.HeaderText = "SoPhong";
+            soPhongDataGridViewTextBoxColumn.MinimumWidth = 9;
+            soPhongDataGridViewTextBoxColumn.Name = "soPhongDataGridViewTextBoxColumn";
+            soPhongDataGridViewTextBoxColumn.Width = 175;
+            // 
+            // tinhTrangDataGridViewTextBoxColumn
+            // 
+            tinhTrangDataGridViewTextBoxColumn.DataPropertyName = "TinhTrang";
+            tinhTrangDataGridViewTextBoxColumn.HeaderText = "TinhTrang";
+            tinhTrangDataGridViewTextBoxColumn.MinimumWidth = 9;
+            tinhTrangDataGridViewTextBoxColumn.Name = "tinhTrangDataGridViewTextBoxColumn";
+            tinhTrangDataGridViewTextBoxColumn.Width = 175;
+            // 
             // QuanLyHopDong
             // 
             AutoScaleDimensions = new SizeF(12F, 30F);
@@ -320,6 +384,7 @@
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)hopDongDTOBindingSource).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -350,5 +415,12 @@
         private Button button1;
         private GroupBox groupBox1;
         private PictureBox pictureBox1;
+        private DataGridViewTextBoxColumn maHopDongDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn maSVDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn tenSVDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn ngayKyDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn soPhongDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn tinhTrangDataGridViewTextBoxColumn;
+        private BindingSource hopDongDTOBindingSource;
     }
 }

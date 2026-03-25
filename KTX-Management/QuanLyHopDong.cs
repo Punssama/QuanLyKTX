@@ -180,7 +180,7 @@ namespace KTX_Management
         {
             HopDongKTX hdktx = new HopDongKTX();
             hdktx.Show();
-            this.Hide();
+            
         }
     }
 }
