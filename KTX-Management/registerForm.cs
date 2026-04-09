@@ -14,5 +14,15 @@ namespace KTX_Management
         {
             InitializeComponent();
         }
+
+        private void RegisterBtn_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Đăng ký đã được gửi, vui lòng chờ phản hồi từ quản lý!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void RegisterAccountNameTb_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

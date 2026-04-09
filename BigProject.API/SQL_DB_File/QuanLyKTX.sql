@@ -14,124 +14,130 @@ GO
 USE QUANLYKTX;
 GO
 
-IF OBJECT_ID('dbo.TAIKHOAN', 'U') IS NOT NULL
-BEGIN
-	DROP TABLE dbo.TAIKHOAN;
-END
-IF OBJECT_ID('dbo.ThongKeSinhVienToa', 'U') IS NOT NULL
-	DROP TABLE dbo.ThongKeSinhVienToa;
-GO
-IF OBJECT_ID('dbo.ThongKeDoanhThuToa', 'U') IS NOT NULL
-	DROP TABLE dbo.ThongKeDoanhThuToa;
-GO
-IF OBJECT_ID('dbo.NHANVIEN', 'U') IS NOT NULL
-	DROP TABLE dbo.NHANVIEN
-GO
-IF OBJECT_ID('dbo.PHONG', 'U') IS NOT NULL
-	DROP TABLE dbo.PHONG;
-GO
-
-GO
-
-CREATE TABLE dbo.TAIKHOAN
-(
-	ID INT PRIMARY KEY NOT NULL,
-	TENDANGNHAP VARCHAR(50) UNIQUE NOT NULL,
-	MATKHAU VARCHAR(50) NOT NULL,
-	QUYENHAN NVARCHAR(50) DEFAULT N'Nhân viên',
-	MANV INT, 
-	TRANGTHAI BIT DEFAULT 1 
+-- 1. Bảng TÀI KHOẢN
+CREATE TABLE TAIKHOAN (
+    maTaiKhoan VARCHAR(50) PRIMARY KEY,
+    soDienThoai VARCHAR(20),
+    email VARCHAR(100),
+    tenDangNhap VARCHAR(50) UNIQUE NOT NULL,
+    matKhau VARCHAR(50) NOT NULL,
+    quyen NVARCHAR(50)
 );
 GO
 
-CREATE TABLE NHANVIEN
-(
-	ID INT PRIMARY KEY NOT NULL,
-	HOTEN NVARCHAR(50),
-	NGAYSINH DATE,
-	DIACHI NVARCHAR(100),
-	SODIENTHOAI VARCHAR(20),
-	LUONG FLOAT,
-)
-GO
-
-CREATE TABLE PHONG
-(
-	MAPHONG VARCHAR(50) PRIMARY KEY NOT NULL, 
-	SUCCHUA INT,
-	SONGUOIHIENTAI INT DEFAULT 0,             
-	GIATIEN FLOAT,
-	MATOA NVARCHAR(50),      
-	LOAIPHONG NVARCHAR(50),
-	TRANGTHAI NVARCHAR(50) DEFAULT N'Trống',
-	NGAYCAPNHAT DATE DEFAULT GETDATE() 
-)
-GO
-
-IF OBJECT_ID('dbo.HOPDONG', 'U') IS NOT NULL
-	DROP TABLE dbo.HOPDONG;
-GO
-
-CREATE TABLE dbo.HOPDONG
-(
-	MaHopDong VARCHAR(50) PRIMARY KEY NOT NULL,
-	MaSV VARCHAR(50) NOT NULL,
-	TenSV NVARCHAR(100),
-	NgayKy DATE,
-	SoPhong VARCHAR(50),
-	TinhTrang NVARCHAR(50) DEFAULT N'Vẫn còn'
-)
-GO
-
-
-CREATE TABLE dbo.ThongKeSinhVienToa
-(
-	MaToa NVARCHAR(50) PRIMARY KEY,
-	TongSoSinhVien INT
+-- 2. Bảng QUẢN LÝ
+CREATE TABLE QUANLY (
+    maNguoiQuanLy VARCHAR(50) PRIMARY KEY,
+    maTaiKhoan VARCHAR(50) FOREIGN KEY REFERENCES TAIKHOAN(maTaiKhoan) ON DELETE CASCADE
 );
 GO
 
-
-CREATE TABLE dbo.ThongKeDoanhThuToa
-(
-	MaToa NVARCHAR(50) PRIMARY KEY,
-	TongDoanhThu FLOAT
+-- 3. Bảng NHÂN VIÊN
+CREATE TABLE NHANVIEN (
+    maNhanVien VARCHAR(50) PRIMARY KEY,
+    hoTen NVARCHAR(100),
+    ngaySinh DATE,
+    gioiTinh NVARCHAR(10),
+    soDienThoai VARCHAR(20),
+    email VARCHAR(100),
+    maTaiKhoan VARCHAR(50) FOREIGN KEY REFERENCES TAIKHOAN(maTaiKhoan) ON DELETE CASCADE
 );
 GO
 
-INSERT INTO dbo.TAIKHOAN (ID, TENDANGNHAP, MATKHAU, QUYENHAN, MANV, TRANGTHAI)
-VALUES 
-	(1, 'admin', '123456', N'Quản lý', 1, 1),
-	(2, 'nhanvien1', '123456', N'Nhân viên', 2, 1),
-	(3,'PhongDang', '123456', N'Quản lý', 3, 1);
+-- 4. Bảng SINH VIÊN
+CREATE TABLE SINHVIEN (
+    maSinhVien VARCHAR(50) PRIMARY KEY,
+    hoTen NVARCHAR(100),
+    ngaySinh DATE,
+    gioiTinh NVARCHAR(10),
+    soDienThoai VARCHAR(20),
+    email VARCHAR(100),
+    maTaiKhoan VARCHAR(50) FOREIGN KEY REFERENCES TAIKHOAN(maTaiKhoan) ON DELETE CASCADE
+);
 GO
 
-
-INSERT INTO dbo.PHONG (MAPHONG, SUCCHUA, SONGUOIHIENTAI, GIATIEN, MATOA, LOAIPHONG, TRANGTHAI, NGAYCAPNHAT)
-VALUES 
-	('A101', 8, 0, 1500000, 'A', N'Nam', N'Trống', '2023-10-01'),
-	('A102', 8, 8, 1500000, 'A', N'Nam', N'Đã đầy', '2023-10-15'),
-	('A103', 8, 6, 1500000, 'A', N'Nam', N'Đang ở', '2023-11-05'),
-	('A104', 8, 4, 1500000, 'A', N'Nam', N'Đang ở', '2023-11-12'),
-	('A201', 8, 8, 1500000, 'A', N'Nam', N'Đã đầy', '2023-12-01'),
-	('A202', 8, 2, 1500000, 'A', N'Nữ', N'Đang ở', '2023-12-15'),
-
-	('B101', 4, 4, 2500000, 'B', N'Nữ', N'Đã đầy', '2023-10-10'),
-	('B102', 4, 1, 2500000, 'B', N'Nữ', N'Đang ở', '2023-10-25'),
-	('B201', 4, 2, 2500000, 'B', N'Nam', N'Đang ở', '2023-11-20'),
-	('B202', 4, 4, 2500000, 'B', N'Nam', N'Đã đầy', '2023-12-05'),
-
-	('C101', 6, 6, 1800000, 'C', N'Nam', N'Đã đầy', '2023-09-15'),
-	('C102', 6, 0, 1800000, 'C', N'Nam', N'Trống', '2023-11-01'),
-	('C201', 6, 3, 1800000, 'C', N'Nữ', N'Đang ở', '2023-11-18'),
-	('C202', 6, 5, 1800000, 'C', N'Nữ', N'Đang ở', '2023-12-10');
+-- 5. Bảng PHÒNG
+CREATE TABLE PHONG (
+    soPhong VARCHAR(50) PRIMARY KEY,
+    toa VARCHAR(50),
+    loaiPhong NVARCHAR(50),
+    sucChua INT,
+    trangThai NVARCHAR(50)
+);
 GO
 
-INSERT INTO dbo.HOPDONG (MaHopDong, MaSV, TenSV, NgayKy, SoPhong, TinhTrang)
-VALUES
-	('HD001', 'SV001', N'Nguyễn Văn A', '2023-10-15', 'A102', N'Vẫn còn'),
-	('HD002', 'SV002', N'Trần Thị B', '2023-11-05', 'A103', N'Vẫn còn'),
-	('HD003', 'SV003', N'Lê Văn C', '2023-09-01', 'A101', N'Không còn');
+-- 6. Bảng HỢP ĐỒNG
+CREATE TABLE HOPDONG (
+    maHopDong VARCHAR(50) PRIMARY KEY,
+    maSinhVien VARCHAR(50) FOREIGN KEY REFERENCES SINHVIEN(maSinhVien),
+    soPhong VARCHAR(50) FOREIGN KEY REFERENCES PHONG(soPhong),
+    ngayKy VARCHAR(50), -- Theo biểu đồ là string
+    ngayBatDau VARCHAR(50), -- Theo biểu đồ là string
+    ngayKetThuc VARCHAR(50), -- Theo biểu đồ là string
+    maNguoiQuanLy VARCHAR(50) FOREIGN KEY REFERENCES QUANLY(maNguoiQuanLy)
+);
+GO
+
+-- 7. Bảng HOÁ ĐƠN
+CREATE TABLE HOADON (
+    maHoaDon VARCHAR(50) PRIMARY KEY,
+    ngayLap DATE,
+    tienPhong FLOAT,
+    tienDien FLOAT,
+    tienNuoc FLOAT,
+    tongTien FLOAT,
+    trangThai NVARCHAR(50),
+    soPhong VARCHAR(50) FOREIGN KEY REFERENCES PHONG(soPhong),
+    maNhanVien VARCHAR(50) FOREIGN KEY REFERENCES NHANVIEN(maNhanVien)
+);
+GO
+
+-- 8. Bảng ĐƠN PHẢN ÁNH
+CREATE TABLE DONPHANANH (
+    maPhanAnh VARCHAR(50) PRIMARY KEY,
+    thoiGianPhanAnh DATE,
+    loaiPhanAnh NVARCHAR(100),
+    noiDung NVARCHAR(MAX),
+    trangThai NVARCHAR(50),
+    maSinhVien VARCHAR(50) FOREIGN KEY REFERENCES SINHVIEN(maSinhVien),
+    maNhanVien VARCHAR(50) NULL FOREIGN KEY REFERENCES NHANVIEN(maNhanVien)
+);
+GO
+
+-- ================= INSERTS (Dữ liệu mẫu) =================
+
+INSERT INTO TAIKHOAN (maTaiKhoan, soDienThoai, email, tenDangNhap, matKhau, quyen) VALUES
+('TK01', '0123456789', 'admin@ktx.com', 'admin', '123456', N'Quản lý'),
+('TK02', '0987654321', 'nv1@ktx.com', 'nhanvien1', '123456', N'Nhân viên'),
+('TK03', '0112233445', 'sv1@ktx.com', 'sinhvien1', '123456', N'Sinh viên');
+GO
+
+INSERT INTO QUANLY (maNguoiQuanLy, maTaiKhoan) VALUES ('QL01', 'TK01');
+GO
+
+INSERT INTO NHANVIEN (maNhanVien, hoTen, ngaySinh, gioiTinh, soDienThoai, email, maTaiKhoan) VALUES
+('NV01', N'Nguyễn Văn A', '1990-01-01', N'Nam', '0987654321', 'nv1@ktx.com', 'TK02');
+GO
+
+INSERT INTO SINHVIEN (maSinhVien, hoTen, ngaySinh, gioiTinh, soDienThoai, email, maTaiKhoan) VALUES
+('SV01', N'Trần Thị B', '2000-05-10', N'Nữ', '0112233445', 'sv1@ktx.com', 'TK03');
+GO
+
+INSERT INTO PHONG (soPhong, toa, loaiPhong, sucChua, trangThai) VALUES
+('A101', 'A', N'Nam', 8, N'Trống'),
+('A102', 'A', N'Nữ', 8, N'Đang ở');
+GO
+
+INSERT INTO HOPDONG (maHopDong, maSinhVien, soPhong, ngayKy, ngayBatDau, ngayKetThuc, maNguoiQuanLy) VALUES
+('HD01', 'SV01', 'A102', '2023-08-01', '2023-08-05', '2024-08-05', 'QL01');
+GO
+
+INSERT INTO HOADON (maHoaDon, ngayLap, tienPhong, tienDien, tienNuoc, tongTien, trangThai, soPhong, maNhanVien) VALUES
+('HDN01', '2023-09-01', 1500000, 200000, 100000, 1800000, N'Chưa thanh toán', 'A102', 'NV01');
+GO
+
+INSERT INTO DONPHANANH (maPhanAnh, thoiGianPhanAnh, loaiPhanAnh, noiDung, trangThai, maSinhVien, maNhanVien) VALUES
+('PA01', '2023-09-15', N'Sửa chữa', N'Hỏng bóng đèn', N'Chưa xử lý', 'SV01', NULL);
 GO
 
 

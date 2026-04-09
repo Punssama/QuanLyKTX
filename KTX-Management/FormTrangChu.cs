@@ -30,12 +30,9 @@ namespace KTX_Management
             }
             this.Load += FormTrangChu_Load;
 
-            // Allow selecting the entire row instead of single cell
-            dgrvPhongO.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            // Handle cell click
-            dgrvPhongO.CellClick += DgrvPhongO_CellClick;
+
         }
-        
+
         private async void FormTrangChu_Load(object? sender, EventArgs e)
         {
             await LoadDanhSachPhongO();
@@ -121,11 +118,16 @@ namespace KTX_Management
             quanlyphong quanlyphong = new quanlyphong();
             quanlyphong.ShowDialog();
         }
-        
+
         private void btnQuanLyTaiKhoan_Click(object sender, EventArgs e)
         {
             ThemTaiKhoan themtaikhoan = new ThemTaiKhoan();
             themtaikhoan.ShowDialog();
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

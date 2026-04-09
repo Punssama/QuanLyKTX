@@ -110,12 +110,7 @@ namespace KTX_Management
 
                 MessageBox.Show("Lưu thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                // Reset form (nếu muốn)
-                textBox6.Text = "";
-                tbdc.Text = tbdm.Text = tbdtt.Text = "";
-                tbnc.Text = tbnm.Text = tbntt.Text = "";
-                tbtiendien.Text = tbtiennuoc.Text = tbtiendv.Text = tbtongtien.Text = "";
-                radioButton1.Checked = radioButton2.Checked = false;
+
             }
             catch (Exception ex)
             {
@@ -173,9 +168,11 @@ namespace KTX_Management
         }
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex < 0) { 
+            if (e.RowIndex < 0)
+            {
 
-                return; }
+                return;
+            }
             // nếu psuaxoa chưa hiển thị thì thông báo có muôn sửa không
             if (e.RowIndex == 0)
             {
@@ -184,11 +181,12 @@ namespace KTX_Management
                 {
                     return;
                 }
-                else {
+                else
+                {
                     psuaxoa.Visible = true;
                     //nếu dang hiện thị pthem thì ẩn nó 
-                    if(pthem.Visible)
-                    pthem.Visible = false;
+                    if (pthem.Visible)
+                        pthem.Visible = false;
                     var row = dataGridView1.Rows[e.RowIndex];
                     tbsuatienphong.Text = row.Cells["Column13"].Value?.ToString() ?? "";
                     tbsuaphong.Text = row.Cells["Column1"].Value?.ToString() ?? "";
@@ -203,11 +201,11 @@ namespace KTX_Management
                     radioButton3.Checked = !radioButton4.Checked;
                     tbsuathang.Text = row.Cells["Column11"].Value?.ToString() ?? "";
                     tbsuanam.Text = row.Cells["Column12"].Value?.ToString() ?? "";
-                    }
+                }
             }
 
 
-            
+
         }
 
 
@@ -287,6 +285,11 @@ namespace KTX_Management
             }
         }
 
+        private void button5_Click(object sender, EventArgs e)
+        {
+          //lay thong tin tim kiem
+
+        }
     }
 }
 

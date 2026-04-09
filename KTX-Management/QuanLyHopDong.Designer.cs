@@ -50,21 +50,21 @@
             label8 = new Label();
             btnOutQLHD = new Button();
             dataGridView1 = new DataGridView();
-            button1 = new Button();
-            groupBox1 = new GroupBox();
-            pictureBox1 = new PictureBox();
-            hopDongDTOBindingSource = new BindingSource(components);
             maHopDongDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             maSVDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             tenSVDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             ngayKyDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             soPhongDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             tinhTrangDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            hopDongDTOBindingSource = new BindingSource(components);
+            button1 = new Button();
+            groupBox1 = new GroupBox();
+            pictureBox1 = new PictureBox();
             BangTimKiemNangCao.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)hopDongDTOBindingSource).BeginInit();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)hopDongDTOBindingSource).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -73,9 +73,10 @@
             label1.BackColor = SystemColors.Highlight;
             label1.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.ButtonHighlight;
-            label1.Location = new Point(463, 65);
+            label1.Location = new Point(309, 43);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(390, 48);
+            label1.Size = new Size(286, 36);
             label1.TabIndex = 0;
             label1.Text = "Quản Lý Hợp Đồng";
             // 
@@ -83,25 +84,28 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 9.857143F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(57, 155);
+            label2.Location = new Point(38, 103);
+            label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new Size(225, 32);
+            label2.Size = new Size(159, 23);
             label2.TabIndex = 1;
             label2.Text = "Tìm kiếm hợp đồng";
             // 
             // TenSVtxb
             // 
-            TenSVtxb.Location = new Point(158, 211);
+            TenSVtxb.Location = new Point(105, 141);
+            TenSVtxb.Margin = new Padding(2, 2, 2, 2);
             TenSVtxb.Name = "TenSVtxb";
-            TenSVtxb.Size = new Size(488, 35);
+            TenSVtxb.Size = new Size(327, 27);
             TenSVtxb.TabIndex = 2;
             // 
             // rdbtnTImKiemNangCao
             // 
             rdbtnTImKiemNangCao.AutoSize = true;
-            rdbtnTImKiemNangCao.Location = new Point(686, 212);
+            rdbtnTImKiemNangCao.Location = new Point(457, 141);
+            rdbtnTImKiemNangCao.Margin = new Padding(2, 2, 2, 2);
             rdbtnTImKiemNangCao.Name = "rdbtnTImKiemNangCao";
-            rdbtnTImKiemNangCao.Size = new Size(214, 34);
+            rdbtnTImKiemNangCao.Size = new Size(156, 24);
             rdbtnTImKiemNangCao.TabIndex = 3;
             rdbtnTImKiemNangCao.TabStop = true;
             rdbtnTImKiemNangCao.Text = "Tìm kiếm nâng cao";
@@ -121,18 +125,21 @@
             BangTimKiemNangCao.Controls.Add(txbSignedDate);
             BangTimKiemNangCao.Controls.Add(txbContractNumber);
             BangTimKiemNangCao.Controls.Add(txbMSV);
-            BangTimKiemNangCao.Location = new Point(158, 266);
+            BangTimKiemNangCao.Location = new Point(105, 177);
+            BangTimKiemNangCao.Margin = new Padding(2, 2, 2, 2);
             BangTimKiemNangCao.Name = "BangTimKiemNangCao";
-            BangTimKiemNangCao.Size = new Size(742, 297);
+            BangTimKiemNangCao.Padding = new Padding(2, 2, 2, 2);
+            BangTimKiemNangCao.Size = new Size(495, 198);
             BangTimKiemNangCao.TabIndex = 4;
             BangTimKiemNangCao.TabStop = false;
             // 
             // rdbtnCtNotAvail
             // 
             rdbtnCtNotAvail.AutoSize = true;
-            rdbtnCtNotAvail.Location = new Point(470, 170);
+            rdbtnCtNotAvail.Location = new Point(313, 113);
+            rdbtnCtNotAvail.Margin = new Padding(2, 2, 2, 2);
             rdbtnCtNotAvail.Name = "rdbtnCtNotAvail";
-            rdbtnCtNotAvail.Size = new Size(138, 34);
+            rdbtnCtNotAvail.Size = new Size(101, 24);
             rdbtnCtNotAvail.TabIndex = 10;
             rdbtnCtNotAvail.TabStop = true;
             rdbtnCtNotAvail.Text = "Không còn";
@@ -141,9 +148,10 @@
             // rdbtnCtAvail
             // 
             rdbtnCtAvail.AutoSize = true;
-            rdbtnCtAvail.Location = new Point(470, 100);
+            rdbtnCtAvail.Location = new Point(313, 67);
+            rdbtnCtAvail.Margin = new Padding(2, 2, 2, 2);
             rdbtnCtAvail.Name = "rdbtnCtAvail";
-            rdbtnCtAvail.Size = new Size(114, 34);
+            rdbtnCtAvail.Size = new Size(83, 24);
             rdbtnCtAvail.TabIndex = 9;
             rdbtnCtAvail.TabStop = true;
             rdbtnCtAvail.Text = "Vẫn còn";
@@ -152,83 +160,93 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(444, 44);
+            label7.Location = new Point(296, 29);
+            label7.Margin = new Padding(2, 0, 2, 0);
             label7.Name = "label7";
-            label7.Size = new Size(280, 30);
+            label7.Size = new Size(198, 20);
             label7.TabIndex = 8;
             label7.Text = "Tình trạng hợp đồng hiện tại";
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(32, 246);
+            label6.Location = new Point(21, 164);
+            label6.Margin = new Padding(2, 0, 2, 0);
             label6.Name = "label6";
-            label6.Size = new Size(102, 30);
+            label6.Size = new Size(73, 20);
             label6.TabIndex = 7;
             label6.Text = "Số phòng";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(32, 174);
+            label5.Location = new Point(21, 116);
+            label5.Margin = new Padding(2, 0, 2, 0);
             label5.Name = "label5";
-            label5.Size = new Size(94, 30);
+            label5.Size = new Size(66, 20);
             label5.TabIndex = 6;
             label5.Text = "Ngày ký ";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(32, 104);
+            label4.Location = new Point(21, 69);
+            label4.Margin = new Padding(2, 0, 2, 0);
             label4.Name = "label4";
-            label4.Size = new Size(140, 30);
+            label4.Size = new Size(99, 20);
             label4.TabIndex = 5;
             label4.Text = "Mã hợp đồng";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(32, 39);
+            label3.Location = new Point(21, 26);
+            label3.Margin = new Padding(2, 0, 2, 0);
             label3.Name = "label3";
-            label3.Size = new Size(131, 30);
+            label3.Size = new Size(91, 20);
             label3.TabIndex = 4;
             label3.Text = "Mã sinh viên";
             // 
             // txbRoomNumber
             // 
-            txbRoomNumber.Location = new Point(208, 243);
+            txbRoomNumber.Location = new Point(139, 162);
+            txbRoomNumber.Margin = new Padding(2, 2, 2, 2);
             txbRoomNumber.Name = "txbRoomNumber";
-            txbRoomNumber.Size = new Size(175, 35);
+            txbRoomNumber.Size = new Size(118, 27);
             txbRoomNumber.TabIndex = 3;
             txbRoomNumber.TextChanged += textBox4_TextChanged;
             // 
             // txbSignedDate
             // 
-            txbSignedDate.Location = new Point(208, 171);
+            txbSignedDate.Location = new Point(139, 114);
+            txbSignedDate.Margin = new Padding(2, 2, 2, 2);
             txbSignedDate.Name = "txbSignedDate";
-            txbSignedDate.Size = new Size(175, 35);
+            txbSignedDate.Size = new Size(118, 27);
             txbSignedDate.TabIndex = 2;
             txbSignedDate.TextChanged += textBox3_TextChanged;
             // 
             // txbContractNumber
             // 
-            txbContractNumber.Location = new Point(208, 100);
+            txbContractNumber.Location = new Point(139, 67);
+            txbContractNumber.Margin = new Padding(2, 2, 2, 2);
             txbContractNumber.Name = "txbContractNumber";
-            txbContractNumber.Size = new Size(175, 35);
+            txbContractNumber.Size = new Size(118, 27);
             txbContractNumber.TabIndex = 1;
             // 
             // txbMSV
             // 
-            txbMSV.Location = new Point(208, 39);
+            txbMSV.Location = new Point(139, 26);
+            txbMSV.Margin = new Padding(2, 2, 2, 2);
             txbMSV.Name = "txbMSV";
-            txbMSV.Size = new Size(175, 35);
+            txbMSV.Size = new Size(118, 27);
             txbMSV.TabIndex = 0;
             // 
             // btnSearchHD
             // 
-            btnSearchHD.Location = new Point(956, 177);
+            btnSearchHD.Location = new Point(637, 118);
+            btnSearchHD.Margin = new Padding(2, 2, 2, 2);
             btnSearchHD.Name = "btnSearchHD";
-            btnSearchHD.Size = new Size(170, 104);
+            btnSearchHD.Size = new Size(113, 69);
             btnSearchHD.TabIndex = 5;
             btnSearchHD.Text = "Tìm kiếm";
             btnSearchHD.UseVisualStyleBackColor = true;
@@ -236,9 +254,10 @@
             // 
             // btnDeleteKeyWords
             // 
-            btnDeleteKeyWords.Location = new Point(956, 297);
+            btnDeleteKeyWords.Location = new Point(637, 198);
+            btnDeleteKeyWords.Margin = new Padding(2, 2, 2, 2);
             btnDeleteKeyWords.Name = "btnDeleteKeyWords";
-            btnDeleteKeyWords.Size = new Size(170, 105);
+            btnDeleteKeyWords.Size = new Size(113, 70);
             btnDeleteKeyWords.TabIndex = 6;
             btnDeleteKeyWords.Text = "Xóa từ khóa";
             btnDeleteKeyWords.UseVisualStyleBackColor = true;
@@ -248,18 +267,20 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI", 9.857143F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label8.Location = new Point(57, 566);
+            label8.Location = new Point(38, 377);
+            label8.Margin = new Padding(2, 0, 2, 0);
             label8.Name = "label8";
-            label8.Size = new Size(197, 32);
+            label8.Size = new Size(140, 23);
             label8.TabIndex = 7;
             label8.Text = "Kết quả tìm kiếm";
             // 
             // btnOutQLHD
             // 
             btnOutQLHD.BackColor = SystemColors.ButtonShadow;
-            btnOutQLHD.Location = new Point(1171, 34);
+            btnOutQLHD.Location = new Point(781, 23);
+            btnOutQLHD.Margin = new Padding(2, 2, 2, 2);
             btnOutQLHD.Name = "btnOutQLHD";
-            btnOutQLHD.Size = new Size(130, 40);
+            btnOutQLHD.Size = new Size(87, 27);
             btnOutQLHD.TabIndex = 8;
             btnOutQLHD.Text = "Thoát";
             btnOutQLHD.UseVisualStyleBackColor = false;
@@ -267,20 +288,70 @@
             // dataGridView1
             // 
             dataGridView1.AutoGenerateColumns = false;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { maHopDongDataGridViewTextBoxColumn, maSVDataGridViewTextBoxColumn, tenSVDataGridViewTextBoxColumn, ngayKyDataGridViewTextBoxColumn, soPhongDataGridViewTextBoxColumn, tinhTrangDataGridViewTextBoxColumn });
             dataGridView1.DataSource = hopDongDTOBindingSource;
-            dataGridView1.Location = new Point(3, 601);
+            dataGridView1.Location = new Point(2, 401);
+            dataGridView1.Margin = new Padding(2, 2, 2, 2);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 72;
-            dataGridView1.Size = new Size(1300, 235);
+            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridView1.Size = new Size(867, 157);
             dataGridView1.TabIndex = 9;
+            // 
+            // maHopDongDataGridViewTextBoxColumn
+            // 
+            maHopDongDataGridViewTextBoxColumn.DataPropertyName = "MaHopDong";
+            maHopDongDataGridViewTextBoxColumn.HeaderText = "MaHopDong";
+            maHopDongDataGridViewTextBoxColumn.MinimumWidth = 9;
+            maHopDongDataGridViewTextBoxColumn.Name = "maHopDongDataGridViewTextBoxColumn";
+            // 
+            // maSVDataGridViewTextBoxColumn
+            // 
+            maSVDataGridViewTextBoxColumn.DataPropertyName = "MaSV";
+            maSVDataGridViewTextBoxColumn.HeaderText = "MaSV";
+            maSVDataGridViewTextBoxColumn.MinimumWidth = 9;
+            maSVDataGridViewTextBoxColumn.Name = "maSVDataGridViewTextBoxColumn";
+            // 
+            // tenSVDataGridViewTextBoxColumn
+            // 
+            tenSVDataGridViewTextBoxColumn.DataPropertyName = "TenSV";
+            tenSVDataGridViewTextBoxColumn.HeaderText = "TenSV";
+            tenSVDataGridViewTextBoxColumn.MinimumWidth = 9;
+            tenSVDataGridViewTextBoxColumn.Name = "tenSVDataGridViewTextBoxColumn";
+            // 
+            // ngayKyDataGridViewTextBoxColumn
+            // 
+            ngayKyDataGridViewTextBoxColumn.DataPropertyName = "NgayKy";
+            ngayKyDataGridViewTextBoxColumn.HeaderText = "NgayKy";
+            ngayKyDataGridViewTextBoxColumn.MinimumWidth = 9;
+            ngayKyDataGridViewTextBoxColumn.Name = "ngayKyDataGridViewTextBoxColumn";
+            // 
+            // soPhongDataGridViewTextBoxColumn
+            // 
+            soPhongDataGridViewTextBoxColumn.DataPropertyName = "SoPhong";
+            soPhongDataGridViewTextBoxColumn.HeaderText = "SoPhong";
+            soPhongDataGridViewTextBoxColumn.MinimumWidth = 9;
+            soPhongDataGridViewTextBoxColumn.Name = "soPhongDataGridViewTextBoxColumn";
+            // 
+            // tinhTrangDataGridViewTextBoxColumn
+            // 
+            tinhTrangDataGridViewTextBoxColumn.DataPropertyName = "TinhTrang";
+            tinhTrangDataGridViewTextBoxColumn.HeaderText = "TinhTrang";
+            tinhTrangDataGridViewTextBoxColumn.MinimumWidth = 9;
+            tinhTrangDataGridViewTextBoxColumn.Name = "tinhTrangDataGridViewTextBoxColumn";
+            // 
+            // hopDongDTOBindingSource
+            // 
+            hopDongDTOBindingSource.DataSource = typeof(KTX.Shared.DTOs.HopDongDTO);
             // 
             // button1
             // 
-            button1.Location = new Point(956, 422);
+            button1.Location = new Point(637, 281);
+            button1.Margin = new Padding(2, 2, 2, 2);
             button1.Name = "button1";
-            button1.Size = new Size(170, 102);
+            button1.Size = new Size(113, 68);
             button1.TabIndex = 10;
             button1.Text = "Tạo hợp đồng";
             button1.UseVisualStyleBackColor = true;
@@ -292,79 +363,30 @@
             groupBox1.Controls.Add(pictureBox1);
             groupBox1.Controls.Add(btnOutQLHD);
             groupBox1.Controls.Add(label1);
-            groupBox1.Location = new Point(2, -27);
+            groupBox1.Location = new Point(1, -18);
+            groupBox1.Margin = new Padding(2, 2, 2, 2);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(1308, 166);
+            groupBox1.Padding = new Padding(2, 2, 2, 2);
+            groupBox1.Size = new Size(872, 111);
             groupBox1.TabIndex = 11;
             groupBox1.TabStop = false;
             // 
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.Logo_WRU;
-            pictureBox1.Location = new Point(159, 45);
+            pictureBox1.Location = new Point(106, 30);
+            pictureBox1.Margin = new Padding(2, 2, 2, 2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(184, 110);
+            pictureBox1.Size = new Size(123, 73);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 9;
             pictureBox1.TabStop = false;
             // 
-            // hopDongDTOBindingSource
-            // 
-            hopDongDTOBindingSource.DataSource = typeof(KTX.Shared.DTOs.HopDongDTO);
-            // 
-            // maHopDongDataGridViewTextBoxColumn
-            // 
-            maHopDongDataGridViewTextBoxColumn.DataPropertyName = "MaHopDong";
-            maHopDongDataGridViewTextBoxColumn.HeaderText = "MaHopDong";
-            maHopDongDataGridViewTextBoxColumn.MinimumWidth = 9;
-            maHopDongDataGridViewTextBoxColumn.Name = "maHopDongDataGridViewTextBoxColumn";
-            maHopDongDataGridViewTextBoxColumn.Width = 175;
-            // 
-            // maSVDataGridViewTextBoxColumn
-            // 
-            maSVDataGridViewTextBoxColumn.DataPropertyName = "MaSV";
-            maSVDataGridViewTextBoxColumn.HeaderText = "MaSV";
-            maSVDataGridViewTextBoxColumn.MinimumWidth = 9;
-            maSVDataGridViewTextBoxColumn.Name = "maSVDataGridViewTextBoxColumn";
-            maSVDataGridViewTextBoxColumn.Width = 250;
-            // 
-            // tenSVDataGridViewTextBoxColumn
-            // 
-            tenSVDataGridViewTextBoxColumn.DataPropertyName = "TenSV";
-            tenSVDataGridViewTextBoxColumn.HeaderText = "TenSV";
-            tenSVDataGridViewTextBoxColumn.MinimumWidth = 9;
-            tenSVDataGridViewTextBoxColumn.Name = "tenSVDataGridViewTextBoxColumn";
-            tenSVDataGridViewTextBoxColumn.Width = 250;
-            // 
-            // ngayKyDataGridViewTextBoxColumn
-            // 
-            ngayKyDataGridViewTextBoxColumn.DataPropertyName = "NgayKy";
-            ngayKyDataGridViewTextBoxColumn.HeaderText = "NgayKy";
-            ngayKyDataGridViewTextBoxColumn.MinimumWidth = 9;
-            ngayKyDataGridViewTextBoxColumn.Name = "ngayKyDataGridViewTextBoxColumn";
-            ngayKyDataGridViewTextBoxColumn.Width = 200;
-            // 
-            // soPhongDataGridViewTextBoxColumn
-            // 
-            soPhongDataGridViewTextBoxColumn.DataPropertyName = "SoPhong";
-            soPhongDataGridViewTextBoxColumn.HeaderText = "SoPhong";
-            soPhongDataGridViewTextBoxColumn.MinimumWidth = 9;
-            soPhongDataGridViewTextBoxColumn.Name = "soPhongDataGridViewTextBoxColumn";
-            soPhongDataGridViewTextBoxColumn.Width = 175;
-            // 
-            // tinhTrangDataGridViewTextBoxColumn
-            // 
-            tinhTrangDataGridViewTextBoxColumn.DataPropertyName = "TinhTrang";
-            tinhTrangDataGridViewTextBoxColumn.HeaderText = "TinhTrang";
-            tinhTrangDataGridViewTextBoxColumn.MinimumWidth = 9;
-            tinhTrangDataGridViewTextBoxColumn.Name = "tinhTrangDataGridViewTextBoxColumn";
-            tinhTrangDataGridViewTextBoxColumn.Width = 175;
-            // 
             // QuanLyHopDong
             // 
-            AutoScaleDimensions = new SizeF(12F, 30F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1310, 842);
+            ClientSize = new Size(873, 561);
             Controls.Add(groupBox1);
             Controls.Add(button1);
             Controls.Add(dataGridView1);
@@ -375,16 +397,17 @@
             Controls.Add(rdbtnTImKiemNangCao);
             Controls.Add(TenSVtxb);
             Controls.Add(label2);
+            Margin = new Padding(2, 2, 2, 2);
             Name = "QuanLyHopDong";
             StartPosition = FormStartPosition.CenterParent;
             Text = "QuanLyHopDong";
             BangTimKiemNangCao.ResumeLayout(false);
             BangTimKiemNangCao.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)hopDongDTOBindingSource).EndInit();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)hopDongDTOBindingSource).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }

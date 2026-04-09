@@ -60,7 +60,7 @@
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(759, 83);
+            panel1.Size = new Size(1149, 83);
             panel1.TabIndex = 0;
             // 
             // lbTitle
@@ -69,7 +69,7 @@
             lbTitle.Anchor = AnchorStyles.None;
             lbTitle.AutoSize = true;
             lbTitle.Font = new Font("Montserrat", 20F, FontStyle.Bold);
-            lbTitle.Location = new Point(179, 8);
+            lbTitle.Location = new Point(374, 8);
             lbTitle.Name = "lbTitle";
             lbTitle.Size = new Size(381, 53);
             lbTitle.TabIndex = 0;
@@ -159,7 +159,7 @@
             tableLayoutPanel1.RowCount = 2;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 37.1031761F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 62.8968239F));
-            tableLayoutPanel1.Size = new Size(594, 505);
+            tableLayoutPanel1.Size = new Size(984, 505);
             tableLayoutPanel1.TabIndex = 2;
             // 
             // panel3
@@ -173,8 +173,9 @@
             panel3.Dock = DockStyle.Fill;
             panel3.Location = new Point(4, 4);
             panel3.Name = "panel3";
-            panel3.Size = new Size(586, 180);
+            panel3.Size = new Size(976, 180);
             panel3.TabIndex = 1;
+            panel3.Paint += panel3_Paint;
             // 
             // tbState
             // 
@@ -239,15 +240,16 @@
             dgrvPhongO.Name = "dgrvPhongO";
             dgrvPhongO.ReadOnly = true;
             dgrvPhongO.RowHeadersWidth = 51;
-            dgrvPhongO.SelectionMode = DataGridViewSelectionMode.FullColumnSelect;
-            dgrvPhongO.Size = new Size(586, 310);
+            dgrvPhongO.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgrvPhongO.Size = new Size(976, 310);
             dgrvPhongO.TabIndex = 0;
+            dgrvPhongO.CellClick += DgrvPhongO_CellClick;
             // 
             // FormTrangChu
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(759, 588);
+            ClientSize = new Size(1149, 588);
             Controls.Add(tableLayoutPanel1);
             Controls.Add(panel2);
             Controls.Add(panel1);
