@@ -31,7 +31,7 @@ namespace KTX_Management
             await FetchAllDataAsync();
             UpdateDataView();
         }
-         private
+         privatesdfawe
         private async Task FetchAllDataAsync()
         {
             try
